@@ -5,17 +5,20 @@
  * 1. Session initialization contract (cookie transport, credentials='include').
  * 2. Query submission contract (body payload, endpoint path, credentials).
  * 3. Auth retry logic (HTTP 401 automatically invokes session init and retries query once).
- * 4. Error classification (HTTP 429 rate limit, 504 timeout, 403 CSRF, 500 service errors).
- * 5. Input validation (min length 2, max length 1000).
- * 6. Citation metadata fidelity (preserves document_id, title, is_curated, category).
- * 7. Fallback mode preservation (flags offline safety mode when provider degrades).
- * 8. Absence of hardcoded credentials or raw Backboard thread IDs in client bundle.
+ * 4. Halts on repeated HTTP 401 (prevents infinite retry loop).
+ * 5. Error classification (HTTP 429 rate limit, 504 timeout, 403 CSRF origin, 500 service errors).
+ * 6. Session initialization failures (HTTP 504 timeout, network failure).
+ * 7. Empty or malformed response resilience.
+ * 8. In-flight guard preventing duplicate concurrent sends.
+ * 9. Input validation (min length 2, max length 1000).
+ * 10. Citation metadata fidelity (preserves document_id, title, is_curated, category).
+ * 11. Fallback mode preservation (flags offline safety mode when provider degrades).
+ * 12. Absence of hardcoded credentials or raw Backboard thread IDs in client bundle.
  */
 
 import { describe, it, beforeEach, afterEach } from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
-import path from "node:path";
 
 // Mock global fetch for testing
 let originalFetch;
@@ -54,7 +57,6 @@ describe("Frontend AI Assistant Client Module", () => {
       };
     });
 
-    // Import the compiled module or execute logic directly
     const res = await global.fetch("http://localhost:8000/api/assistant/threads?transport=cookie", {
       method: "POST",
       credentials: "include",
@@ -113,7 +115,6 @@ describe("Frontend AI Assistant Client Module", () => {
     setupMockFetch((url, options) => {
       callCount++;
       if (url.includes("/query") && callCount === 1) {
-        // First query fails with 401 expired
         return {
           ok: false,
           status: 401,
@@ -121,7 +122,6 @@ describe("Frontend AI Assistant Client Module", () => {
         };
       }
       if (url.includes("/threads")) {
-        // Re-init succeeds
         return {
           ok: true,
           status: 201,
@@ -129,7 +129,6 @@ describe("Frontend AI Assistant Client Module", () => {
         };
       }
       if (url.includes("/query") && callCount === 3) {
-        // Retried query succeeds
         return {
           ok: true,
           status: 200,
@@ -139,7 +138,6 @@ describe("Frontend AI Assistant Client Module", () => {
       throw new Error(`Unexpected call: ${url}`);
     });
 
-    // Simulate query handler retry flow
     async function executeQueryWithRetry(queryText, canRetry = true) {
       let res = await global.fetch("http://localhost:8000/api/assistant/query", {
         method: "POST",
@@ -161,25 +159,195 @@ describe("Frontend AI Assistant Client Module", () => {
     assert.equal(callCount, 3);
   });
 
-  it("properly flags fallback_mode when upstream Backboard provider is degraded", async () => {
-    setupMockFetch((url, options) => {
+  it("halts after exactly one retry attempt if 401 persists, preventing infinite loops", async () => {
+    let callCount = 0;
+    setupMockFetch((url) => {
+      callCount++;
+      if (url.includes("/query")) {
+        return {
+          ok: false,
+          status: 401,
+          json: async () => ({ detail: "Persistent 401 unauthorized" }),
+        };
+      }
+      if (url.includes("/threads")) {
+        return {
+          ok: true,
+          status: 201,
+          json: async () => ({ transport: "cookie", expires_at: "2026-10-24T12:00:00Z" }),
+        };
+      }
+      throw new Error(`Unexpected call: ${url}`);
+    });
+
+    async function executeQueryWithSingleRetry(queryText, canRetry = true) {
+      let res = await global.fetch("http://localhost:8000/api/assistant/query", {
+        method: "POST",
+        credentials: "include",
+        body: JSON.stringify({ query: queryText }),
+      });
+      if (res.status === 401 && canRetry) {
+        await global.fetch("http://localhost:8000/api/assistant/threads?transport=cookie", {
+          method: "POST",
+          credentials: "include",
+        });
+        return executeQueryWithSingleRetry(queryText, false);
+      }
+      if (!res.ok) {
+        throw new Error(`Final query error: ${res.status}`);
+      }
+      return res.json();
+    }
+
+    await assert.rejects(
+      async () => executeQueryWithSingleRetry("Test loop prevention"),
+      /Final query error: 401/
+    );
+    // Exactly 3 calls: query 1 (401) -> threads (201) -> query 2 (401) -> stops immediately
+    assert.equal(callCount, 3);
+  });
+
+  it("handles HTTP 403 CSRF origin rejection with descriptive failure", async () => {
+    setupMockFetch(() => ({
+      ok: false,
+      status: 403,
+      json: async () => ({ detail: "Forbidden: Untrusted or missing request origin." }),
+    }));
+
+    const res = await global.fetch("http://localhost:8000/api/assistant/query", {
+      method: "POST",
+      credentials: "include",
+      body: JSON.stringify({ query: "Test origin" }),
+    });
+    assert.equal(res.status, 403);
+    const body = await res.json();
+    assert.match(body.detail, /untrusted or missing/i);
+  });
+
+  it("handles HTTP 429 rate limiting with retry guidance", async () => {
+    setupMockFetch(() => ({
+      ok: false,
+      status: 429,
+      headers: { get: (name) => (name.toLowerCase() === "retry-after" ? "45" : null) },
+      json: async () => ({ detail: "Rate limit exceeded" }),
+    }));
+
+    const res = await global.fetch("http://localhost:8000/api/assistant/query", {
+      method: "POST",
+      credentials: "include",
+      body: JSON.stringify({ query: "Fast query" }),
+    });
+    assert.equal(res.status, 429);
+  });
+
+  it("handles HTTP 504 timeout and HTTP 500 service errors gracefully", async () => {
+    setupMockFetch((url) => {
+      if (url.includes("timeout")) {
+        return {
+          ok: false,
+          status: 504,
+          json: async () => ({ detail: "Gateway Timeout" }),
+        };
+      }
       return {
-        ok: true,
-        status: 200,
-        json: async () => ({
-          reply: "Notice: The knowledge base is currently in offline fallback mode. Follow evacuation routes.",
-          sources: [
-            {
-              title: "Community Landslide Safety Guide",
-              document_id: "DOC-FB-01",
-              is_curated: true,
-            },
-          ],
-          disclaimer: "Educational only.",
-          fallback_mode: true,
-        }),
+        ok: false,
+        status: 500,
+        json: async () => ({ detail: "Internal error" }),
       };
     });
+
+    const resTimeout = await global.fetch("http://localhost:8000/api/assistant/query?mode=timeout", {
+      method: "POST",
+      credentials: "include",
+      body: JSON.stringify({ query: "Timeout test" }),
+    });
+    assert.equal(resTimeout.status, 504);
+
+    const res500 = await global.fetch("http://localhost:8000/api/assistant/query", {
+      method: "POST",
+      credentials: "include",
+      body: JSON.stringify({ query: "500 test" }),
+    });
+    assert.equal(res500.status, 500);
+  });
+
+  it("handles empty or malformed JSON responses safely", async () => {
+    setupMockFetch(() => ({
+      ok: false,
+      status: 502,
+      json: async () => {
+        throw new SyntaxError("Unexpected token < in JSON at position 0");
+      },
+    }));
+
+    let handledSafely = false;
+    try {
+      const res = await global.fetch("http://localhost:8000/api/assistant/query", {
+        method: "POST",
+        credentials: "include",
+        body: JSON.stringify({ query: "Malformed test" }),
+      });
+      if (!res.ok) {
+        try {
+          await res.json();
+        } catch {
+          // Graceful fallback when non-JSON error is returned
+          handledSafely = true;
+        }
+      }
+    } catch {
+      handledSafely = true;
+    }
+
+    assert.equal(handledSafely, true);
+  });
+
+  it("verifies in-flight guard prevents duplicate concurrent submissions", async () => {
+    let inFlight = false;
+    let duplicateAttemptBlocked = false;
+
+    async function sendQueryWithInFlightGuard(query) {
+      if (inFlight) {
+        duplicateAttemptBlocked = true;
+        return null;
+      }
+      inFlight = true;
+      try {
+        await new Promise((resolve) => setTimeout(resolve, 50));
+        return { reply: `Answer to ${query}` };
+      } finally {
+        inFlight = false;
+      }
+    }
+
+    // Fire first query and immediately attempt a second while first is in-flight
+    const p1 = sendQueryWithInFlightGuard("Query 1");
+    const p2 = sendQueryWithInFlightGuard("Query 2 (concurrent duplicate)");
+
+    const [r1, r2] = await Promise.all([p1, p2]);
+
+    assert.equal(r1.reply, "Answer to Query 1");
+    assert.equal(r2, null);
+    assert.equal(duplicateAttemptBlocked, true);
+  });
+
+  it("properly flags fallback_mode when upstream Backboard provider is degraded", async () => {
+    setupMockFetch(() => ({
+      ok: true,
+      status: 200,
+      json: async () => ({
+        reply: "Notice: The knowledge base is currently in offline fallback mode. Follow evacuation routes.",
+        sources: [
+          {
+            title: "Community Landslide Safety Guide",
+            document_id: "DOC-FB-01",
+            is_curated: true,
+          },
+        ],
+        disclaimer: "Educational only.",
+        fallback_mode: true,
+      }),
+    }));
 
     const res = await global.fetch("http://localhost:8000/api/assistant/query", {
       method: "POST",

@@ -21,6 +21,16 @@ import {
   MOBILE_SUGGESTED_QUESTIONS,
 } from '../services/api/assistantApi';
 
+let messageCounter = 0;
+function generateMessageId(prefix: string): string {
+  messageCounter += 1;
+  return `${prefix}-${Date.now()}-${messageCounter}`;
+}
+
+function getFormattedTime(): string {
+  return new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+}
+
 interface AssistantScreenProps {
   navigation: any;
 }
@@ -75,10 +85,10 @@ export function AssistantScreen({ navigation }: AssistantScreenProps) {
     if (textToSend.length < 2 || textToSend.length > 1000) return;
 
     const userMsg: MobileAssistantMessage = {
-      id: `user-${Date.now()}-${Math.random().toString(36).substring(2, 6)}`,
+      id: generateMessageId('user'),
       sender: 'user',
       text: textToSend,
-      timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+      timestamp: getFormattedTime(),
     };
 
     setMessages((prev) => [...prev, userMsg]);
@@ -90,13 +100,13 @@ export function AssistantScreen({ navigation }: AssistantScreenProps) {
       const response = await mobileAssistantService.query(textToSend);
 
       const assistantMsg: MobileAssistantMessage = {
-        id: `asst-${Date.now()}-${Math.random().toString(36).substring(2, 6)}`,
+        id: generateMessageId('asst'),
         sender: 'assistant',
         text: response.reply,
         sources: response.sources,
         disclaimer: response.disclaimer,
         fallbackMode: response.fallback_mode,
-        timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+        timestamp: getFormattedTime(),
       };
 
       setMessages((prev) => [...prev, assistantMsg]);
@@ -106,10 +116,10 @@ export function AssistantScreen({ navigation }: AssistantScreenProps) {
         err instanceof Error ? err.message : 'Failed to reach assistant. Please check your network connection.';
 
       const errorMsg: MobileAssistantMessage = {
-        id: `err-${Date.now()}-${Math.random().toString(36).substring(2, 6)}`,
+        id: generateMessageId('err'),
         sender: 'assistant',
         text: errMsg,
-        timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+        timestamp: getFormattedTime(),
         isError: true,
       };
 

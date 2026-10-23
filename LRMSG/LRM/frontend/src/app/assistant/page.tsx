@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import {
-  Bot,
   Send,
   Sparkles,
   RotateCcw,
@@ -20,16 +19,24 @@ import {
   AssistantChatMessage,
   initWebAssistantSession,
   sendAssistantQuery,
-  SourceCitation,
   SUGGESTED_QUESTIONS,
 } from "@/lib/assistant";
+
+let messageCounter = 0;
+function generateMessageId(prefix: string): string {
+  messageCounter += 1;
+  return `${prefix}-${Date.now()}-${messageCounter}`;
+}
+
+function getFormattedTime(): string {
+  return new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+}
 
 export default function AssistantPage() {
   const [messages, setMessages] = useState<AssistantChatMessage[]>([]);
   const [inputQuery, setInputQuery] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [initError, setInitError] = useState<string | null>(null);
-  const [sessionReady, setSessionReady] = useState(false);
   const [expandedSources, setExpandedSources] = useState<Record<string, boolean>>({});
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -42,15 +49,12 @@ export default function AssistantPage() {
       try {
         await initWebAssistantSession();
         if (isMounted) {
-          setSessionReady(true);
           setInitError(null);
         }
       } catch (err) {
         if (isMounted) {
           const msg = err instanceof Error ? err.message : "Failed to initialize session";
           setInitError(msg);
-          // Still allow the user to attempt a query; sendAssistantQuery will retry init
-          setSessionReady(true);
         }
       }
     }
@@ -80,10 +84,10 @@ export default function AssistantPage() {
     if (textToSend.length > 1000) return;
 
     const userMessage: AssistantChatMessage = {
-      id: `user-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`,
+      id: generateMessageId("user"),
       sender: "user",
       text: textToSend,
-      timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
+      timestamp: getFormattedTime(),
     };
 
     setMessages((prev) => [...prev, userMessage]);
@@ -94,13 +98,13 @@ export default function AssistantPage() {
       const response = await sendAssistantQuery(textToSend);
 
       const assistantMessage: AssistantChatMessage = {
-        id: `asst-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`,
+        id: generateMessageId("asst"),
         sender: "assistant",
         text: response.reply,
         sources: response.sources,
         disclaimer: response.disclaimer,
         fallbackMode: response.fallback_mode,
-        timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
+        timestamp: getFormattedTime(),
       };
 
       setMessages((prev) => [...prev, assistantMessage]);
@@ -109,10 +113,10 @@ export default function AssistantPage() {
         err instanceof Error ? err.message : "An unexpected error occurred while communicating with the assistant.";
 
       const errorMessage: AssistantChatMessage = {
-        id: `err-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`,
+        id: generateMessageId("err"),
         sender: "assistant",
         text: errorMsg,
-        timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
+        timestamp: getFormattedTime(),
         isError: true,
       };
 
