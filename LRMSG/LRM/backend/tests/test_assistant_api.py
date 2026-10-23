@@ -428,6 +428,53 @@ class TestAssistantApiEndpoints(unittest.TestCase):
         self.assertIn("status", data)
         self.assertEqual(data["status"], "healthy")
 
+    def test_query_rejects_client_supplied_thread_or_assistant_id(self):
+        """Query schema forbids extra fields like thread_id or assistant_id with HTTP 422."""
+        create_res = self.client.post("/api/assistant/threads?transport=bearer")
+        token = create_res.json()["session_token"]
+
+        # Attempt to inject client-controlled thread_id
+        res = self.client.post(
+            "/api/assistant/query",
+            headers={"Authorization": f"Bearer {token}"},
+            json={"query": "What are warning signs?", "thread_id": "malicious-injected-thread-id"},
+        )
+        self.assertEqual(res.status_code, 422)
+
+        # Attempt to inject client-controlled assistant_id
+        res2 = self.client.post(
+            "/api/assistant/query",
+            headers={"Authorization": f"Bearer {token}"},
+            json={"query": "What are warning signs?", "assistant_id": "malicious-injected-assistant-id"},
+        )
+        self.assertEqual(res2.status_code, 422)
+
+    def test_query_failed_upstream_generation_returns_fallback_response(self):
+        """When upstream returns status='FAILED', query endpoint returns safety fallback response."""
+        create_res = self.client.post("/api/assistant/threads?transport=bearer")
+        token = create_res.json()["session_token"]
+
+        # Configure mock provider to return status="FAILED"
+        async def mock_failed_send(*args, **kwargs):
+            return BackboardMessageOutput(
+                content="Credit limit exhausted.",
+                thread_id="th-failed",
+                assistant_id="asst-1",
+                status="FAILED",
+            )
+        self.mock_provider.send_message = mock_failed_send
+
+        res = self.client.post(
+            "/api/assistant/query",
+            headers={"Authorization": f"Bearer {token}"},
+            json={"query": "What should people do during heavy rainfall?"},
+        )
+        self.assertEqual(res.status_code, 200)
+        data = res.json()
+        self.assertTrue(data["fallback_mode"])
+        self.assertIn("offline fallback mode", data["reply"])
+        self.assertIn("Community Landslide Safety", data["sources"][0]["title"])
+
 
 if __name__ == "__main__":
     unittest.main()

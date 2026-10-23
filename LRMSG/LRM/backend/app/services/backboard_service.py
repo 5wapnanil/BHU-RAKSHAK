@@ -34,6 +34,7 @@ from backend.app.services.backboard.config import BackboardSettings, settings
 from backend.app.services.backboard.exceptions import (
     BackboardAuthenticationError,
     BackboardConfigurationError,
+    BackboardError,
     BackboardMalformedOutputError,
     BackboardNotFoundError,
     BackboardQueryValidationError,
@@ -442,6 +443,16 @@ class BackboardService:
             logger.warning(
                 f"Backboard provider {self.provider.provider_name} encountered {transient_err.__class__.__name__}. "
                 "Returning safety fallback guidance."
+            )
+            return self._build_fallback_response()
+
+        # Handle upstream completion failure or billing restriction
+        if not output.is_successful:
+            if not enable_fallback:
+                raise BackboardError(f"Upstream Backboard generation failed: {output.status}")
+            logger.warning(
+                f"Backboard provider {self.provider.provider_name} returned non-successful status '{output.status}' "
+                f"(billing_restricted={output.is_billing_restricted}). Returning safety fallback guidance."
             )
             return self._build_fallback_response()
 

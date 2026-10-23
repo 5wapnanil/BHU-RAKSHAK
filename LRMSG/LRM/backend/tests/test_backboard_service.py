@@ -441,6 +441,44 @@ class TestBackboardServiceQueryAndOrchestration(unittest.IsolatedAsyncioTestCase
                 enable_fallback=True,
             )
 
+    async def test_failed_upstream_generation_triggers_resilient_fallback(self):
+        """When upstream returns status='FAILED' or billing restriction, fallback is returned."""
+        provider = MockBackboardProvider(mode="success")
+        # Override send_message to return status="FAILED"
+        async def mock_failed_send(*args, **kwargs):
+            return BackboardMessageOutput(
+                content="Your free credit is reserved for Memory & RAG, so it can't cover LLM chat.",
+                thread_id="th-failed-gen",
+                assistant_id="asst-1",
+                status="FAILED",
+            )
+        provider.send_message = mock_failed_send
+
+        service = BackboardService(
+            provider=provider,
+            signing_key=VALID_TEST_KEY,
+            is_production=False,
+        )
+        token = service.create_session_token("mock-thread-uuid-1234")
+
+        # Fallback enabled (default)
+        response = await service.query(
+            session_token=token,
+            query="What are warning signs?",
+            enable_fallback=True,
+        )
+        self.assertTrue(response.fallback_mode)
+        self.assertIn("offline fallback mode", response.reply)
+
+        # Fallback disabled raises BackboardError
+        from backend.app.services.backboard.exceptions import BackboardError
+        with self.assertRaises(BackboardError):
+            await service.query(
+                session_token=token,
+                query="What are warning signs?",
+                enable_fallback=False,
+            )
+
     def test_secrets_and_raw_thread_ids_not_leaked_in_exceptions(self):
         secret_raw_thread = "super-secret-raw-thread-id-xyz-987"
         token = self.service.create_session_token(secret_raw_thread)
