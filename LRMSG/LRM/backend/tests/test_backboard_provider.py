@@ -118,6 +118,70 @@ class TestBackboardModels(unittest.TestCase):
         with self.assertRaises(KeyError):
             _ = output["unknown_field"]
 
+    def test_backboard_message_output_billing_restriction_detection(self):
+        """Detect credit exhaustion / billing restrictions without treating them as answers."""
+        billing_content = (
+            "Your free credit is reserved for Memory & RAG, so it can't cover LLM chat. "
+            "Add credits or start a subscription on the Billing page to continue."
+        )
+        output = BackboardMessageOutput(
+            content=billing_content,
+            thread_id="th-billing",
+            assistant_id="asst-1",
+            status="FAILED",
+        )
+        self.assertTrue(output.is_billing_restricted)
+        self.assertFalse(output.is_successful)
+
+        # Alternative phrasing
+        alt_output = BackboardMessageOutput(
+            content="Error: insufficient credit on account. Please add credits or start a subscription.",
+            thread_id="th-billing",
+            assistant_id="asst-1",
+            status="FAILED",
+        )
+        self.assertTrue(alt_output.is_billing_restricted)
+        self.assertFalse(alt_output.is_successful)
+
+        # Legitimate content is NOT billing restricted
+        valid_output = BackboardMessageOutput(
+            content="Warning signs include tension cracks and unusual soil saturation.",
+            thread_id="th-valid",
+            assistant_id="asst-1",
+            status="COMPLETED",
+        )
+        self.assertFalse(valid_output.is_billing_restricted)
+        self.assertTrue(valid_output.is_successful)
+
+    def test_backboard_message_output_is_successful_evaluation(self):
+        """is_successful requires COMPLETED status and absence of billing restrictions."""
+        # Non-completed status is not successful
+        failed_output = BackboardMessageOutput(
+            content="Some error text",
+            thread_id="th-1",
+            assistant_id="asst-1",
+            status="FAILED",
+        )
+        self.assertFalse(failed_output.is_successful)
+
+        # COMPLETED status with normal content is successful
+        success_output = BackboardMessageOutput(
+            content="Detailed safety response",
+            thread_id="th-1",
+            assistant_id="asst-1",
+            status="COMPLETED",
+        )
+        self.assertTrue(success_output.is_successful)
+
+        # COMPLETED with billing text is NOT successful
+        bizarre_output = BackboardMessageOutput(
+            content="can't cover llm chat. Add credits on the Billing page to continue.",
+            thread_id="th-1",
+            assistant_id="asst-1",
+            status="COMPLETED",
+        )
+        self.assertFalse(bizarre_output.is_successful)
+
 
 class TestBackboardSettings(unittest.TestCase):
     """Test configuration loading and offline default behavior."""
@@ -458,6 +522,51 @@ class TestLiveBackboardProviderOffline(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(len(output.documents), 2)
         self.assertEqual(output.documents[0].filename, "01_why_do_landslides_happen.md")
         self.assertEqual(output.documents[1].filename, "04_rainfall.md")
+
+    async def test_send_message_with_status_failed_billing_restriction(self):
+        """HTTP 200 with status='FAILED' and billing restriction message parses properly."""
+        def handler(request: httpx.Request) -> httpx.Response:
+            return httpx.Response(
+                200,
+                json={
+                    "content": "Your free credit is reserved for Memory & RAG, so it can't cover LLM chat. Add credits or start a subscription on the Billing page to continue.",
+                    "thread_id": "th-fail-1",
+                    "assistant_id": "asst-1",
+                    "status": "FAILED",
+                    "retrieved_files": [],
+                },
+            )
+
+        client = httpx.AsyncClient(transport=httpx.MockTransport(handler))
+        provider = LiveBackboardProvider(config=self.cfg, http_client=client)
+
+        output = await provider.send_message("th-fail-1", "Query")
+        self.assertEqual(output.status, "FAILED")
+        self.assertTrue(output.is_billing_restricted)
+        self.assertFalse(output.is_successful)
+        self.assertEqual(output.retrieved_files_count, 0)
+
+    async def test_send_message_with_status_failed_generic(self):
+        """HTTP 200 with status='FAILED' and non-billing error parses properly."""
+        def handler(request: httpx.Request) -> httpx.Response:
+            return httpx.Response(
+                200,
+                json={
+                    "content": "Inference process encountered an unrecoverable exception.",
+                    "thread_id": "th-fail-2",
+                    "assistant_id": "asst-1",
+                    "status": "FAILED",
+                },
+            )
+
+        client = httpx.AsyncClient(transport=httpx.MockTransport(handler))
+        provider = LiveBackboardProvider(config=self.cfg, http_client=client)
+
+        output = await provider.send_message("th-fail-2", "Query")
+        self.assertEqual(output.status, "FAILED")
+        self.assertFalse(output.is_billing_restricted)
+        self.assertFalse(output.is_successful)
+
 
     async def test_auth_failure_401(self):
         def handler(request: httpx.Request) -> httpx.Response:

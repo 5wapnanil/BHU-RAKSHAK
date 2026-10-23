@@ -3,3 +3,5 @@
 !.env.example
 docker-compose.override.yml
 data/public_candidates/
+backend/data/ingestion_state.json
+

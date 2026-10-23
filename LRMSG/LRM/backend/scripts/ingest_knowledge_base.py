@@ -396,6 +396,47 @@ async def execute_live_ingestion(
             filename = doc["filename"]
             file_path = kb_dir / filename
             sha256 = doc["content_sha256"]
+            bb_doc_id = None
+
+            # Guard against duplicate uploads: check if document was already uploaded remotely with matching hash
+            existing_doc_state = state_data.get("documents", {}).get(doc_id)
+            if (
+                existing_doc_state
+                and existing_doc_state.get("content_sha256") == sha256
+                and existing_doc_state.get("backboard_document_id")
+            ):
+                candidate_doc_id = existing_doc_state["backboard_document_id"]
+                print(
+                    f"\n--> Found existing remote document ID {redact_secret(candidate_doc_id)} for {doc_id} ({filename}). "
+                    "Verifying indexing status to avoid duplicate upload..."
+                )
+                try:
+                    status_res = await poll_document_status(
+                        client=client,
+                        base_url=settings.base_url,
+                        api_key=settings.api_key,
+                        document_id=candidate_doc_id,
+                        max_wait_seconds=poll_timeout,
+                        poll_interval=poll_interval,
+                    )
+                    chunks = status_res.get("chunk_count") or status_res.get("chunks", 0)
+                    print(f"    [INDEXED] Verified existing document is indexed into {chunks} chunks.")
+                    state_data["documents"][doc_id] = {
+                        "filename": filename,
+                        "content_sha256": sha256,
+                        "backboard_document_id": candidate_doc_id,
+                        "status": "indexed",
+                        "chunks": chunks,
+                        "indexed_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+                    }
+                    save_ingestion_state(state_file, state_data)
+                    success_count += 1
+                    continue
+                except Exception as resume_err:
+                    print(
+                        f"    Existing document status verification failed: {resume_err}. "
+                        "Falling back to fresh upload..."
+                    )
 
             print(f"\n--> Uploading {doc_id} ({filename})...")
             try:
@@ -407,7 +448,18 @@ async def execute_live_ingestion(
                     file_path=file_path,
                 )
                 bb_doc_id = upload_res.get("document_id") or upload_res.get("id")
-                print(f"    Uploaded successfully. Remote doc ID: {bb_doc_id}")
+                print(f"    Uploaded successfully. Remote doc ID: {redact_secret(bb_doc_id)}")
+
+                # Atomically record uploaded state before polling to avoid duplicate uploads if polling is interrupted
+                state_data["documents"][doc_id] = {
+                    "filename": filename,
+                    "content_sha256": sha256,
+                    "backboard_document_id": bb_doc_id,
+                    "status": "processing",
+                    "uploaded_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+                }
+                save_ingestion_state(state_file, state_data)
+
                 print(f"    Polling indexing status (timeout: {poll_timeout}s)...")
 
                 status_res = await poll_document_status(
@@ -419,10 +471,10 @@ async def execute_live_ingestion(
                     poll_interval=poll_interval,
                 )
 
-                chunks = status_res.get("chunks", 0)
+                chunks = status_res.get("chunk_count") or status_res.get("chunks", 0)
                 print(f"    [INDEXED] Successfully indexed into {chunks} chunks.")
 
-                # Update state
+                # Update state to indexed
                 state_data["documents"][doc_id] = {
                     "filename": filename,
                     "content_sha256": sha256,
@@ -436,15 +488,26 @@ async def execute_live_ingestion(
 
             except Exception as e:
                 print(f"    [FAILED] {e}")
-                state_data["documents"][doc_id] = {
+                err_record = {
                     "filename": filename,
                     "content_sha256": sha256,
                     "status": "error",
                     "error_message": str(e),
                     "failed_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
                 }
+                if bb_doc_id:
+                    err_record["backboard_document_id"] = bb_doc_id
+                state_data["documents"][doc_id] = err_record
                 save_ingestion_state(state_file, state_data)
                 fail_count += 1
+
+                # If upload failed before a remote document ID was received, halt further uploads
+                if not bb_doc_id:
+                    print(
+                        f"    [HALT] Upload failed before remote document ID was received for {doc_id}. "
+                        "Halting further uploads to prevent orphaned or ambiguous remote operations."
+                    )
+                    break
 
     finally:
         if manage_client:

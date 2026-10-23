@@ -75,6 +75,28 @@ class BackboardMessageOutput:
             return getattr(self, item)
         raise KeyError(item)
 
+    @property
+    def is_billing_restricted(self) -> bool:
+        """True if the response text indicates an account credit or billing restriction."""
+        if not self.content:
+            return False
+        content_lower = self.content.lower()
+        patterns = (
+            "free credit is reserved for memory & rag",
+            "can't cover llm chat",
+            "cannot cover llm chat",
+            "billing page to continue",
+            "add credits or start a subscription",
+            "turn on auto-reload",
+            "insufficient credit",
+        )
+        return any(p in content_lower for p in patterns)
+
+    @property
+    def is_successful(self) -> bool:
+        """True if upstream status is COMPLETED and no billing restriction was returned."""
+        return (self.status or "").upper() == "COMPLETED" and not self.is_billing_restricted
+
     def get(self, item: str, default: Any = None) -> Any:
         """Dictionary-style get for backwards compatibility."""
         return getattr(self, item, default)

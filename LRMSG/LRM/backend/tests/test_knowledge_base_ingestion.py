@@ -519,9 +519,192 @@ class TestMockedLiveIngestionFlow(unittest.TestCase):
                 state = load_ingestion_state(state_file)
                 self.assertEqual(state["documents"]["DOC-001"]["status"], "error")
                 self.assertIn("timed out", state["documents"]["DOC-001"]["error_message"].lower())
+                # Remote doc ID must be preserved even if polling timed out
+                self.assertEqual(state["documents"]["DOC-001"]["backboard_document_id"], "doc-timeout-1")
+
+        asyncio.run(run_test())
+
+    def test_strict_auth_headers_and_assistant_association(self):
+        """Upload and polling requests must strictly use X-API-Key and bind to assistant_id."""
+        captured_requests = []
+
+        def handler(request: httpx.Request) -> httpx.Response:
+            captured_requests.append(request)
+            url_str = str(request.url)
+            if request.method == "POST":
+                return httpx.Response(201, json={"document_id": "bb-doc-auth-test", "status": "pending"})
+            if request.method == "GET":
+                return httpx.Response(200, json={"status": "indexed", "chunks": 10})
+            return httpx.Response(404)
+
+        async def run_test():
+            client = httpx.AsyncClient(transport=httpx.MockTransport(handler))
+            with tempfile.TemporaryDirectory() as tmp_dir:
+                state_file = Path(tmp_dir) / "state.json"
+                doc = {
+                    "id": "DOC-001",
+                    "filename": "01_why_do_landslides_happen.md",
+                    "content_sha256": "c874935e569322dbfb7b0d30dc02b9c5afb50fb6eadfd1a19c847d5d0de40138",
+                }
+
+                await execute_live_ingestion(
+                    documents_to_upload=[doc],
+                    kb_dir=DEFAULT_KB_DIR,
+                    state_file=state_file,
+                    settings=self.cfg,
+                    http_client=client,
+                    poll_timeout=5.0,
+                    poll_interval=0.01,
+                )
+
+                self.assertEqual(len(captured_requests), 2)
+                upload_req = captured_requests[0]
+                poll_req = captured_requests[1]
+
+                # Assert upload request endpoint and headers
+                self.assertEqual(upload_req.method, "POST")
+                self.assertEqual(
+                    str(upload_req.url),
+                    "https://app.backboard.io/api/assistants/asst-pulse-100/documents",
+                )
+                self.assertEqual(upload_req.headers.get("X-API-Key"), "bb_live_api_key_test_12345")
+                self.assertNotIn("Authorization", upload_req.headers)
+
+                # Assert status polling request endpoint and headers
+                self.assertEqual(poll_req.method, "GET")
+                self.assertEqual(
+                    str(poll_req.url),
+                    "https://app.backboard.io/api/documents/bb-doc-auth-test/status",
+                )
+                self.assertEqual(poll_req.headers.get("X-API-Key"), "bb_live_api_key_test_12345")
+                self.assertNotIn("Authorization", poll_req.headers)
+
+        asyncio.run(run_test())
+
+    def test_resumes_indexing_verification_without_duplicate_upload(self):
+        """When state has an existing remote doc ID with matching hash, resume polling instead of uploading."""
+        upload_called = False
+        poll_called = False
+
+        def handler(request: httpx.Request) -> httpx.Response:
+            nonlocal upload_called, poll_called
+            if request.method == "POST":
+                upload_called = True
+                return httpx.Response(201, json={"document_id": "bb-doc-duplicate", "status": "pending"})
+            if request.method == "GET" and "/documents/bb-doc-existing-777/status" in str(request.url):
+                poll_called = True
+                return httpx.Response(200, json={"status": "indexed", "chunks": 16})
+            return httpx.Response(404)
+
+        async def run_test():
+            client = httpx.AsyncClient(transport=httpx.MockTransport(handler))
+            with tempfile.TemporaryDirectory() as tmp_dir:
+                state_file = Path(tmp_dir) / "state.json"
+                doc_sha = "c874935e569322dbfb7b0d30dc02b9c5afb50fb6eadfd1a19c847d5d0de40138"
+                # Seed state with existing remote doc ID
+                initial_state = {
+                    "version": "1.0",
+                    "documents": {
+                        "DOC-001": {
+                            "filename": "01_why_do_landslides_happen.md",
+                            "content_sha256": doc_sha,
+                            "backboard_document_id": "bb-doc-existing-777",
+                            "status": "processing",
+                        }
+                    },
+                }
+                save_ingestion_state(state_file, initial_state)
+
+                doc = {
+                    "id": "DOC-001",
+                    "filename": "01_why_do_landslides_happen.md",
+                    "content_sha256": doc_sha,
+                }
+
+                successes, fails = await execute_live_ingestion(
+                    documents_to_upload=[doc],
+                    kb_dir=DEFAULT_KB_DIR,
+                    state_file=state_file,
+                    settings=self.cfg,
+                    http_client=client,
+                    poll_timeout=5.0,
+                    poll_interval=0.01,
+                )
+
+                self.assertEqual(successes, 1)
+                self.assertEqual(fails, 0)
+                # Must NOT have uploaded again
+                self.assertFalse(upload_called, "Duplicate upload was triggered despite existing remote doc ID!")
+                self.assertTrue(poll_called, "Status polling was not resumed for existing doc ID!")
+
+                state = load_ingestion_state(state_file)
+                self.assertEqual(state["documents"]["DOC-001"]["status"], "indexed")
+                self.assertEqual(state["documents"]["DOC-001"]["backboard_document_id"], "bb-doc-existing-777")
+                self.assertEqual(state["documents"]["DOC-001"]["chunks"], 16)
+
+        asyncio.run(run_test())
+
+    def test_resume_verification_failure_falls_back_to_upload(self):
+        """When existing remote doc ID returns 404, fall back to fresh upload."""
+        upload_called = False
+
+        def handler(request: httpx.Request) -> httpx.Response:
+            nonlocal upload_called
+            if request.method == "GET" and "/documents/bb-doc-stale-999/status" in str(request.url):
+                return httpx.Response(404, json={"detail": "Document not found"})
+            if request.method == "POST":
+                upload_called = True
+                return httpx.Response(201, json={"document_id": "bb-doc-fresh-111", "status": "pending"})
+            if request.method == "GET" and "/documents/bb-doc-fresh-111/status" in str(request.url):
+                return httpx.Response(200, json={"status": "indexed", "chunks": 12})
+            return httpx.Response(404)
+
+        async def run_test():
+            client = httpx.AsyncClient(transport=httpx.MockTransport(handler))
+            with tempfile.TemporaryDirectory() as tmp_dir:
+                state_file = Path(tmp_dir) / "state.json"
+                doc_sha = "c874935e569322dbfb7b0d30dc02b9c5afb50fb6eadfd1a19c847d5d0de40138"
+                initial_state = {
+                    "version": "1.0",
+                    "documents": {
+                        "DOC-001": {
+                            "filename": "01_why_do_landslides_happen.md",
+                            "content_sha256": doc_sha,
+                            "backboard_document_id": "bb-doc-stale-999",
+                            "status": "error",
+                        }
+                    },
+                }
+                save_ingestion_state(state_file, initial_state)
+
+                doc = {
+                    "id": "DOC-001",
+                    "filename": "01_why_do_landslides_happen.md",
+                    "content_sha256": doc_sha,
+                }
+
+                successes, fails = await execute_live_ingestion(
+                    documents_to_upload=[doc],
+                    kb_dir=DEFAULT_KB_DIR,
+                    state_file=state_file,
+                    settings=self.cfg,
+                    http_client=client,
+                    poll_timeout=5.0,
+                    poll_interval=0.01,
+                )
+
+                self.assertEqual(successes, 1)
+                self.assertEqual(fails, 0)
+                self.assertTrue(upload_called, "Fallback upload was not triggered after resume failure!")
+
+                state = load_ingestion_state(state_file)
+                self.assertEqual(state["documents"]["DOC-001"]["status"], "indexed")
+                self.assertEqual(state["documents"]["DOC-001"]["backboard_document_id"], "bb-doc-fresh-111")
+                self.assertEqual(state["documents"]["DOC-001"]["chunks"], 12)
 
         asyncio.run(run_test())
 
 
 if __name__ == "__main__":
     unittest.main()
+
