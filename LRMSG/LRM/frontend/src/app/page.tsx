@@ -11,6 +11,7 @@ import {
   MapPin,
   ShieldCheck,
   Mountain,
+  Sparkles,
 } from "lucide-react";
 
 const CAPABILITIES = [
@@ -153,6 +154,29 @@ export default function HomePage() {
               >
                 <LayoutGrid size={16} style={{ color: "#736B63" }} />
                 <span>View Admin Panel</span>
+              </Link>
+
+              {/* AI Assistant Action Button */}
+              <Link
+                href="/assistant"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "8px",
+                  padding: "14px 22px",
+                  borderRadius: "8px",
+                  backgroundColor: "#FAF6F0",
+                  color: "#8E3A1A",
+                  border: "1px solid #D8CABA",
+                  font: "700 13px 'DM Sans', sans-serif",
+                  letterSpacing: "0.3px",
+                  textDecoration: "none",
+                  boxShadow: "0 2px 6px rgba(0, 0, 0, 0.04)",
+                  transition: "background-color 0.15s ease, border-color 0.15s ease",
+                }}
+              >
+                <Sparkles size={16} style={{ color: "#8E3A1A" }} />
+                <span>Ask AI Assistant</span>
               </Link>
             </div>
 

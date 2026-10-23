@@ -3,10 +3,11 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Mountain, FileText, LayoutGrid, Home, Database, Menu, X } from "lucide-react";
+import { Mountain, FileText, LayoutGrid, Home, Database, Menu, X, Sparkles } from "lucide-react";
 
 const NAV_LINKS = [
   { href: "/", label: "Home", icon: Home },
+  { href: "/assistant", label: "AI Assistant", icon: Sparkles },
   { href: "/report", label: "Field Report", icon: FileText },
   { href: "/dashboard", label: "Admin Panel", icon: LayoutGrid },
   { href: "/app-backend", label: "App Backend", icon: Database },
