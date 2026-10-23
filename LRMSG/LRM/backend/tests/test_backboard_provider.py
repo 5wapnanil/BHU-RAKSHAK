@@ -528,6 +528,71 @@ class TestLiveBackboardProviderOffline(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(output.documents[0].filename, "01_why_do_landslides_happen.md")
         self.assertEqual(output.documents[1].filename, "04_rainfall.md")
 
+    async def test_retrieved_files_as_null_safely_defaults_to_empty(self):
+        """When API returns null for retrieved_files, provider safely defaults to empty list."""
+        def handler(request: httpx.Request) -> httpx.Response:
+            return httpx.Response(
+                200,
+                json={
+                    "content": "Answer without retrieval.",
+                    "thread_id": "th-null-ret",
+                    "assistant_id": "asst-1",
+                    "status": "COMPLETED",
+                    "retrieved_files": None,
+                },
+            )
+
+        client = httpx.AsyncClient(transport=httpx.MockTransport(handler))
+        provider = LiveBackboardProvider(config=self.cfg, http_client=client)
+
+        output = await provider.send_message("th-null-ret", "Query")
+        self.assertEqual(output.retrieved_files, [])
+        self.assertEqual(output.retrieved_files_count, 0)
+        self.assertEqual(output.documents, [])
+
+    async def test_sources_fallback_when_retrieved_files_absent(self):
+        """When retrieved_files is absent but sources is present, parses sources."""
+        def handler(request: httpx.Request) -> httpx.Response:
+            return httpx.Response(
+                200,
+                json={
+                    "content": "Answer with sources.",
+                    "thread_id": "th-sources",
+                    "assistant_id": "asst-1",
+                    "status": "COMPLETED",
+                    "sources": ["02_gis_mapping.md"],
+                },
+            )
+
+        client = httpx.AsyncClient(transport=httpx.MockTransport(handler))
+        provider = LiveBackboardProvider(config=self.cfg, http_client=client)
+
+        output = await provider.send_message("th-sources", "Query")
+        self.assertEqual(output.retrieved_files, ["02_gis_mapping.md"])
+        self.assertEqual(output.retrieved_files_count, 1)
+
+    async def test_documents_fallback_when_retrieved_files_absent(self):
+        """When retrieved_files is absent but documents is present, parses documents."""
+        def handler(request: httpx.Request) -> httpx.Response:
+            return httpx.Response(
+                200,
+                json={
+                    "content": "Answer with documents.",
+                    "thread_id": "th-docs",
+                    "assistant_id": "asst-1",
+                    "status": "COMPLETED",
+                    "documents": [{"filename": "03_machine_learning.md", "document_id": "doc-99"}],
+                },
+            )
+
+        client = httpx.AsyncClient(transport=httpx.MockTransport(handler))
+        provider = LiveBackboardProvider(config=self.cfg, http_client=client)
+
+        output = await provider.send_message("th-docs", "Query")
+        self.assertEqual(output.retrieved_files, ["03_machine_learning.md"])
+        self.assertEqual(output.retrieved_files_count, 1)
+        self.assertEqual(output.documents[0].document_id, "doc-99")
+
     async def test_send_message_with_status_failed_billing_restriction(self):
         """HTTP 200 with status='FAILED' and billing restriction message parses properly."""
         def handler(request: httpx.Request) -> httpx.Response:

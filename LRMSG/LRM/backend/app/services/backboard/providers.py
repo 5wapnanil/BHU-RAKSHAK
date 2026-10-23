@@ -533,7 +533,12 @@ class LiveBackboardProvider:
             )
 
         # Parse retrieved files and structured documents
-        raw_retrieved = data.get("retrieved_files", [])
+        raw_retrieved = (
+            data.get("retrieved_files")
+            or data.get("sources")
+            or data.get("documents")
+            or []
+        )
         retrieved_files: List[str] = []
         documents: List[RetrievedDocument] = []
 
