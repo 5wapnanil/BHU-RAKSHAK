@@ -376,6 +376,21 @@ describe("Frontend AI Assistant Client Module", () => {
     assert.equal(validateQuery("a".repeat(1001)).valid, false);
   });
 
+  it("verifies citation toggle state inverts from default expanded to collapsed on initial click", () => {
+    // Initial state: unpopulated map, default is expanded (true)
+    const expandedMap = {};
+    const getIsExpanded = (id) => expandedMap[id] ?? true;
+    const toggle = (id) => {
+      expandedMap[id] = !(expandedMap[id] ?? true);
+    };
+
+    assert.equal(getIsExpanded("msg-1"), true, "Defaults to expanded when unpopulated");
+    toggle("msg-1");
+    assert.equal(getIsExpanded("msg-1"), false, "First toggle collapses it immediately");
+    toggle("msg-1");
+    assert.equal(getIsExpanded("msg-1"), true, "Second toggle re-expands it");
+  });
+
   it("verifies client bundle contains zero hardcoded Backboard API keys or signing secrets", () => {
     const assistantLibPath = new URL("../lib/assistant.ts", import.meta.url);
     const assistantPagePath = new URL("../app/assistant/page.tsx", import.meta.url);

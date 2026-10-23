@@ -44,6 +44,7 @@ export function AssistantScreen({ navigation }: AssistantScreenProps) {
   const [expandedSources, setExpandedSources] = useState<Record<string, boolean>>({});
 
   const scrollViewRef = useRef<ScrollView>(null);
+  const isSendingRef = useRef(false);
 
   // Initialize session in background on mount
   useEffect(() => {
@@ -74,16 +75,17 @@ export function AssistantScreen({ navigation }: AssistantScreenProps) {
   const toggleSources = (msgId: string) => {
     setExpandedSources((prev) => ({
       ...prev,
-      [msgId]: !prev[msgId],
+      [msgId]: !(prev[msgId] ?? true),
     }));
   };
 
   const handleSend = async (queryOverride?: string) => {
     const textToSend = (queryOverride ?? inputText).trim();
-    if (!textToSend || isLoading) return;
+    if (!textToSend || isLoading || isSendingRef.current) return;
 
     if (textToSend.length < 2 || textToSend.length > 1000) return;
 
+    isSendingRef.current = true;
     const userMsg: MobileAssistantMessage = {
       id: generateMessageId('user'),
       sender: 'user',
@@ -125,6 +127,7 @@ export function AssistantScreen({ navigation }: AssistantScreenProps) {
 
       setMessages((prev) => [...prev, errorMsg]);
     } finally {
+      isSendingRef.current = false;
       setIsLoading(false);
       scrollToBottom();
     }

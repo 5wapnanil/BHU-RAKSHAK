@@ -41,6 +41,7 @@ export default function AssistantPage() {
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
+  const isSendingRef = useRef(false);
 
   // Initialize web assistant session once on mount (sets HttpOnly cookie)
   useEffect(() => {
@@ -72,17 +73,18 @@ export default function AssistantPage() {
   const toggleSourceExpansion = (messageId: string) => {
     setExpandedSources((prev) => ({
       ...prev,
-      [messageId]: !prev[messageId],
+      [messageId]: !(prev[messageId] ?? true),
     }));
   };
 
   const handleSend = async (queryText?: string) => {
     const textToSend = (queryText ?? inputQuery).trim();
-    if (!textToSend || isLoading) return;
+    if (!textToSend || isLoading || isSendingRef.current) return;
 
     if (textToSend.length < 2) return;
     if (textToSend.length > 1000) return;
 
+    isSendingRef.current = true;
     const userMessage: AssistantChatMessage = {
       id: generateMessageId("user"),
       sender: "user",
@@ -122,6 +124,7 @@ export default function AssistantPage() {
 
       setMessages((prev) => [...prev, errorMessage]);
     } finally {
+      isSendingRef.current = false;
       setIsLoading(false);
       // Refocus textarea on desktop
       setTimeout(() => textareaRef.current?.focus(), 50);

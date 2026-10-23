@@ -340,6 +340,21 @@ describe('Landslide Mobile App — AI Assistant Service Unit Tests', () => {
     assert.equal(validate('a'.repeat(1001)), false);
   });
 
+  it('verifies mobile citation toggle state inverts from default expanded to collapsed on initial tap', () => {
+    // Initial state: unpopulated map, default is expanded (true)
+    const expandedMap = {};
+    const getIsExpanded = (id) => expandedMap[id] ?? true;
+    const toggle = (id) => {
+      expandedMap[id] = !(expandedMap[id] ?? true);
+    };
+
+    assert.equal(getIsExpanded('mob-msg-1'), true, 'Defaults to expanded when unpopulated');
+    toggle('mob-msg-1');
+    assert.equal(getIsExpanded('mob-msg-1'), false, 'First toggle collapses it immediately');
+    toggle('mob-msg-1');
+    assert.equal(getIsExpanded('mob-msg-1'), true, 'Second toggle re-expands it');
+  });
+
   it('verifies mobile code contains zero hardcoded Backboard API keys or signing secrets', () => {
     const apiPath = new URL('../services/api/assistantApi.ts', import.meta.url);
     const screenPath = new URL('../screens/AssistantScreen.tsx', import.meta.url);
