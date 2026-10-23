@@ -1,0 +1,31 @@
+path,purpose,technology,integration_relevance,included_in_bundle
+backend/app/main.py,FastAPI application entry point and router registration,Python / FastAPI,Primary registration location for new /api/assistant RAG router and CORS settings,true
+backend/app/api/deps.py,Centralized API dependencies and coordinator auth guard,Python / FastAPI,Pattern for authenticating administrative or user requests; demonstrates lack of user auth,true
+backend/app/api/endpoints/field_reports.py,Field report API endpoints (multipart/JSON),Python / FastAPI,Exemplifies existing CRUD endpoint architecture and service invocation pattern,true
+backend/app/api/endpoints/health.py,System and service health check endpoint,Python / FastAPI,Reference for liveness/readiness probes and third-party provider status,true
+backend/app/api/endpoints/coordination.py,Emergency and relief coordination endpoints,Python / FastAPI,Reference for administrative mutation patterns and coordinator key enforcement,false
+backend/app/api/endpoints/alerts.py,Alert generation and query endpoints,Python / FastAPI,Reference for alert-based knowledge querying,false
+backend/app/api/endpoints/prediction.py,Machine-learning numerical prediction endpoint,Python / FastAPI,Shows separation between ML prediction pipeline and future RAG assistant,false
+backend/app/api/schemas/field_report.py,Pydantic validation schemas for field reports,Python / Pydantic,Pattern for defining request/response schemas for RAG query and citation models,true
+backend/app/api/schemas/gemma_analysis.py,Pydantic schema for AI multimodal hazard screening,Python / Pydantic,Pattern for structured AI output parsing and hazard taxonomy,true
+backend/app/services/gemma_analysis_service.py,Orchestration service for AI screening,Python,Direct architectural model for BackboardService orchestration and database persistence,true
+backend/app/services/gemma_providers.py,AI provider abstraction and error hierarchy,Python,Architectural blueprint for Backboard client protocol error hierarchy and fallback,true
+backend/app/services/photo_storage_service.py,File storage adapter and upload verification,Python,Reference for handling uploaded documents file-size validation and path traversal safety,true
+backend/app/database/base.py,SQLAlchemy engine and SessionLocal dependency,Python / SQLAlchemy,Database session management pattern for persisting chat threads and query logs,true
+backend/app/database/config.py,Database configuration and environment loader,Python / python-dotenv,Standard for loading backend-only secrets and runtime settings,true
+backend/app/database/models.py,SQLAlchemy ORM models (User Shelter FieldReport etc),Python / SQLAlchemy,Entity definitions; demonstrates User model structure and missing chat models,true
+backend/requirements.txt,Backend Python dependencies manifest,Python / Pip,Lists installed packages (FastAPI Pydantic SQLAlchemy etc) for compatibility analysis,true
+backend/.env.example,Sanitized backend environment variable template,Configuration,Template for configuring BACKBOARD_API_KEY and service settings,true
+backend/alembic.ini,Alembic database migration configuration,Alembic / INI,Migration tool config needed if creating chat thread persistence tables,false
+docker-compose.yml,Local PostGIS database container orchestration,Docker Compose,Shows PostgreSQL runtime environment and port configuration,true
+frontend/package.json,Next.js web application manifest and dependencies,Node.js / npm,Shows Next.js 16 React 19 and frontend libraries,true
+frontend/src/lib/api.ts,API base URL resolver and fetch client wrapper,TypeScript,Primary frontend fetch mechanism for routing queries to FastAPI backend,true
+frontend/src/lib/fieldReports.ts,API client functions for field reports,TypeScript,Reference for client-side API interaction and error mapping,true
+frontend/src/app/api/field-reports/[id]/review/route.ts,Next.js App Router BFF Proxy route handler,TypeScript / Next.js,Pattern for proxying client requests with server-side secrets and CSRF checks,true
+frontend/src/app/dashboard/layout.tsx,Dashboard layout with sidebar navigation,TypeScript / React,Location to add Assistant / Knowledge Assistant navigation item,true
+frontend/src/app/dashboard/reports/page.tsx,Field reports registry list and table,TypeScript / React,Pattern for UI tables filters search and asynchronous data loading,false
+frontend/src/data/articles.ts,Curated landslide science and monitoring articles,TypeScript,High-quality initial domain knowledge corpus for Backboard RAG ingestion,true
+landslide-app/package.json,Mobile application dependencies manifest,Node.js / npm,Identifies React Native and Expo versions for mobile chat client support,true
+landslide-app/src/services/api/apiConfig.ts,Mobile API endpoint configuration and host routing,TypeScript,Location to register mobile assistant endpoint and dynamic host resolution,true
+landslide-app/src/services/api/client.ts,Mobile HTTP API client wrapper,TypeScript,Pattern for mobile app API requests and error handling,true
+landslide-app/src/screens/LandslideSafetyGuideScreen.tsx,Mobile bilingual landslide safety guide screen,TypeScript / React Native,Candidate screen for embedding or launching mobile knowledge assistant,true

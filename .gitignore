@@ -1,0 +1,64 @@
+# ── Root .gitignore for PahaarPulse / BHU-RAKSHAK ──
+
+# Desktop backups
+new 7/
+new9/
+**/.git_backup/
+
+# Environment files & Secrets (CRITICAL: DO NOT COMMIT SECRETS)
+.env
+.env.*
+!.env.example
+*.env
+*.env.local
+backend/.env
+frontend/.env.local
+LRMSG/LRM/.env
+LRMSG/LRM/backend/.env
+LRMSG/LRM/frontend/.env.local
+
+# Python & Virtual Environments
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+env/
+venv/
+.venv/
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+
+# Node / Next.js / Expo
+node_modules/
+.next/
+out/
+.expo/
+web-build/
+.yarn/
+*.tsbuildinfo
+next-env.d.ts
+
+# Mobile Native Generated Folders (Expo managed workflow)
+landslide-app/android/
+landslide-app/ios/
+.kotlin/
+*.jks
+*.key
+*.p8
+*.p12
+
+# Docker overrides
+docker-compose.override.yml
+
+# Temporary data and scrape caches
+LRMSG/LRM/data/public_candidates/
+
+# OS & Editor
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+.vscode/*
+!.vscode/settings.json

@@ -1,0 +1,4628 @@
+[
+  {
+    "title": "fgh",
+    "description": "landslide",
+    "location": "aizawl",
+    "_op_id": "op_1789042138699_hcdetsl",
+    "id": "92e8a5e7-1469-4f36-9708-2f8990140fd2",
+    "sync_time": "2026-09-10T12:08:58.699Z"
+  },
+  {
+    "type": "evacuation",
+    "formData": {
+      "location": "Test Location",
+      "numberOfPeople": "3",
+      "emergencyType": "landslide",
+      "contactName": "Test User",
+      "contactPhone": "1234567890"
+    },
+    "_op_id": "test-mobile-op-1",
+    "id": "1b2a91fe-d06d-4999-9b99-f2f9b921a22b",
+    "sync_time": "2026-09-11T00:00:00.000Z"
+  },
+  {
+    "request_type": "evacuation",
+    "location": "Guwahati Road",
+    "numberOfPeople": "5",
+    "emergencyType": "landslide",
+    "hasVulnerable": true,
+    "contactName": "Test User",
+    "contactPhone": "9876543210",
+    "additionalInfo": "Urgent - road blocked",
+    "gpsCoords": {
+      "latitude": 26.1445,
+      "longitude": 91.7362
+    },
+    "_op_id": "EVC-test-001",
+    "id": "a267734a-6e21-42c8-a0bb-573a72ed2bb4",
+    "sync_time": "2026-09-11T10:00:00.000Z"
+  },
+  {
+    "request_type": "help",
+    "location": "Shillong",
+    "category": "flood",
+    "severity": "high",
+    "peopleAffected": "12",
+    "description": "River rising fast",
+    "contactName": "Help User",
+    "contactPhone": "9876543211",
+    "gpsCoords": {
+      "latitude": 25.5788,
+      "longitude": 91.8933
+    },
+    "_op_id": "HLP-test-002",
+    "id": "61b2ff2e-9c73-41f2-a8e8-9243f64cb877",
+    "sync_time": "2026-09-11T10:05:00.000Z"
+  },
+  {
+    "request_type": "evacuation_volunteer",
+    "name": "Volunteer One",
+    "phone": "9876543212",
+    "currentLocation": "Aizawl",
+    "hasTransport": true,
+    "capacity": "10",
+    "capabilities": [
+      "firstAid",
+      "driving"
+    ],
+    "availability": "Immediately",
+    "gpsCoords": {
+      "latitude": 23.7271,
+      "longitude": 92.7177
+    },
+    "_op_id": "VEVC-test-003",
+    "id": "b81d1ea8-f268-457c-9f94-49e94d3bfc49",
+    "sync_time": "2026-09-11T10:10:00.000Z"
+  },
+  {
+    "request_type": "relief_volunteer",
+    "name": "Relief Volunteer",
+    "phone": "9876543213",
+    "location": "Imphal",
+    "category": "food",
+    "quantity": "50 meals",
+    "availability": "Next 6 hours",
+    "description": "Can provide cooked meals",
+    "gpsCoords": {
+      "latitude": 24.817,
+      "longitude": 93.9368
+    },
+    "_op_id": "VREL-test-004",
+    "id": "af6b93d7-11db-4667-a6f5-b6de1d700312",
+    "sync_time": "2026-09-11T10:15:00.000Z"
+  },
+  {
+    "request_type": "evacuation",
+    "location": "Test Location",
+    "numberOfPeople": "3",
+    "emergencyType": "landslide",
+    "contactName": "Test",
+    "contactPhone": "123",
+    "gpsCoords": {
+      "latitude": 26.14,
+      "longitude": 91.73
+    },
+    "_op_id": "EVC-lifecycle-001",
+    "id": "3ca266ed-1970-46b7-b67c-70183d8b5641",
+    "sync_time": "2026-09-11T12:00:00.000Z"
+  },
+  {
+    "request_type": "help",
+    "location": "Shillong",
+    "category": "flood",
+    "severity": "high",
+    "peopleAffected": "5",
+    "description": "Urgent help needed",
+    "contactName": "Help User",
+    "contactPhone": "456",
+    "gpsCoords": {
+      "latitude": 25.57,
+      "longitude": 91.89
+    },
+    "_op_id": "HLP-lifecycle-002",
+    "id": "ebdcddd8-e4da-4d83-af3e-4220a089e1e9",
+    "sync_time": "2026-09-11T12:05:00.000Z"
+  },
+  {
+    "request_type": "evacuation",
+    "location": "Test",
+    "_op_id": "CONN-TEST-001",
+    "id": "5cf91da4-9abd-4641-81e4-94ebb122a457",
+    "sync_time": "2026-09-11T13:00:00.000Z"
+  },
+  {
+    "request_type": "evacuation",
+    "location": "Queue Test Location",
+    "numberOfPeople": "2",
+    "emergencyType": "landslide",
+    "contactName": "Queue User",
+    "contactPhone": "111",
+    "gpsCoords": {
+      "latitude": 26.14,
+      "longitude": 91.73
+    },
+    "_op_id": "EVC-queue-001",
+    "id": "c74eadf9-944e-4def-bc36-b2bce440dffa",
+    "sync_time": "2026-09-11T14:00:00.000Z"
+  },
+  {
+    "_op_id": "BAD-002",
+    "id": "a6831f13-2e80-497e-aad5-c5252f54faf9",
+    "sync_time": "2026-09-11T14:00:00.000Z"
+  },
+  {
+    "request_type": "evacuation",
+    "location": "Multi Test 0",
+    "numberOfPeople": "1",
+    "emergencyType": "flood",
+    "contactName": "User 0",
+    "contactPhone": "9990",
+    "gpsCoords": {
+      "latitude": 26.0,
+      "longitude": 91.0
+    },
+    "_op_id": "EVC-multi-000",
+    "id": "73d982a9-8f33-45a3-ade7-4d4651a9f11b",
+    "sync_time": "2026-09-11T14:00:00.000Z"
+  },
+  {
+    "request_type": "evacuation",
+    "location": "Multi Test 1",
+    "numberOfPeople": "2",
+    "emergencyType": "flood",
+    "contactName": "User 1",
+    "contactPhone": "9991",
+    "gpsCoords": {
+      "latitude": 26.1,
+      "longitude": 91.1
+    },
+    "_op_id": "EVC-multi-001",
+    "id": "d8d40867-cdb1-4e08-823b-863b65499ffa",
+    "sync_time": "2026-09-11T14:01:00.000Z"
+  },
+  {
+    "request_type": "evacuation",
+    "location": "Multi Test 2",
+    "numberOfPeople": "3",
+    "emergencyType": "flood",
+    "contactName": "User 2",
+    "contactPhone": "9992",
+    "gpsCoords": {
+      "latitude": 26.2,
+      "longitude": 91.2
+    },
+    "_op_id": "EVC-multi-002",
+    "id": "f50834e7-f56b-41fe-b683-800b2a9edf1e",
+    "sync_time": "2026-09-11T14:02:00.000Z"
+  },
+  {
+    "request_type": "help",
+    "title": "Sync upload test",
+    "latitude": 26.5,
+    "longitude": 92.8,
+    "locationText": "Sync Test Village",
+    "severity": "moderate",
+    "peopleAffected": 3,
+    "_op_id": "test-7i-sync-850b7a48",
+    "id": "f6f91b2b-3815-40df-a0b1-24bfdcce5945",
+    "sync_time": "2026-09-11T18:08:33.251579+00:00",
+    "_db_synced": true
+  },
+  {
+    "request_type": "help",
+    "location": "behala",
+    "category": "other",
+    "severity": "high",
+    "peopleAffected": "56",
+    "description": "landslide",
+    "contactName": "swapnanil",
+    "contactPhone": "9674739408",
+    "gpsCoords": {
+      "latitude": 22.5027343,
+      "longitude": 88.3174012
+    },
+    "_op_id": "HLP-mtxai3mc-1",
+    "id": "366ea787-c8ec-47ae-8642-5d109acccf41",
+    "sync_time": "2026-09-11T18:28:42.324Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "help",
+    "location": "behala",
+    "category": "landslide",
+    "severity": "medium",
+    "peopleAffected": "56",
+    "description": "severe",
+    "contactName": "swapnanil ",
+    "contactPhone": "9674734908",
+    "gpsCoords": {
+      "latitude": 22.5025716,
+      "longitude": 88.3174012
+    },
+    "_op_id": "HLP-mtxapcy1-2",
+    "id": "07b97c2f-71f2-441e-97f1-cf2b54858cec",
+    "sync_time": "2026-09-11T18:34:21.001Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "help",
+    "title": "Sync test",
+    "latitude": 26.5,
+    "longitude": 92.8,
+    "severity": "moderate",
+    "_op_id": "test-7k-sync-13b47305",
+    "id": "1eb1bdd8-12c9-4d0a-b8c4-dadcf7ac099e",
+    "sync_time": "2026-09-11T19:17:54.819863+00:00",
+    "_db_synced": true
+  },
+  {
+    "request_type": "help",
+    "title": "Sync test",
+    "latitude": 26.5,
+    "longitude": 92.8,
+    "severity": "moderate",
+    "_op_id": "test-7k-sync-9b24f2e3",
+    "id": "9314d296-b5ae-43f6-9bf1-3f6048ae6784",
+    "sync_time": "2026-09-11T19:21:18.969464+00:00",
+    "_db_synced": true
+  },
+  {
+    "request_type": "help",
+    "title": "Sync test",
+    "latitude": 26.5,
+    "longitude": 92.8,
+    "severity": "moderate",
+    "_op_id": "test-7k-sync-f6ed2897",
+    "id": "932a09e3-eec1-4521-ae4e-657908d89f15",
+    "sync_time": "2026-09-11T19:21:53.332583+00:00",
+    "_db_synced": true
+  },
+  {
+    "type": "help",
+    "title": "SQL injection test",
+    "severity": "low",
+    "_op_id": "'; DROP TABLE emergency_requests; --",
+    "id": "171656fb-bcbe-42a1-9beb-93c3bc18507f",
+    "sync_time": "2026-09-12T00:00:00Z",
+    "_db_synced": true
+  },
+  {
+    "type": "help",
+    "title": "Idempotent test",
+    "_op_id": "test-7l-idempotent-2df273d3",
+    "id": "91d05814-6d0e-4e73-b2bc-73d15f6b2444",
+    "sync_time": "2026-09-12T00:00:00Z",
+    "_db_synced": true
+  },
+  {
+    "type": "help",
+    "title": "Compatibility test",
+    "_op_id": "test-7l-sync-24893033",
+    "id": "9a746e34-ad5f-4e97-99ef-93b20984779d",
+    "sync_time": "2026-09-12T00:00:00Z",
+    "_db_synced": true
+  },
+  {
+    "type": "help",
+    "title": "Idempotent test",
+    "_op_id": "test-7l-idempotent-b4d51bbd",
+    "id": "6058dc03-da37-4371-bc3b-46acc7061231",
+    "sync_time": "2026-09-12T00:00:00Z",
+    "_db_synced": true
+  },
+  {
+    "type": "help",
+    "title": "Compatibility test",
+    "_op_id": "test-7l-sync-b178d0d4",
+    "id": "03354012-bf56-43c6-ad94-e82ab3deb8aa",
+    "sync_time": "2026-09-12T00:00:00Z",
+    "_db_synced": true
+  },
+  {
+    "type": "help",
+    "title": "Idempotent test",
+    "_op_id": "test-7l-idempotent-00c26e4e",
+    "id": "49bcc1cb-24fa-4c99-80a1-a9fad3e43e88",
+    "sync_time": "2026-09-12T00:00:00Z",
+    "_db_synced": true
+  },
+  {
+    "type": "help",
+    "title": "Compat",
+    "_op_id": "test-7l-compat-ff565623",
+    "id": "5f4210a8-d60c-4bee-bca6-810f5211ac77",
+    "sync_time": "2026-09-12T00:00:00Z",
+    "_db_synced": true
+  },
+  {
+    "type": "help",
+    "title": "Idempotent test",
+    "_op_id": "test-7l-idempotent-2a4396c4",
+    "id": "5350ff5e-91ef-4548-b962-44b707622175",
+    "sync_time": "2026-09-12T00:00:00Z",
+    "_db_synced": true
+  },
+  {
+    "type": "help",
+    "title": "Compat",
+    "_op_id": "test-7l-compat-6b0a94d9",
+    "id": "a3d01636-be69-450a-a77f-be08e51c5441",
+    "sync_time": "2026-09-12T00:00:00Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "help",
+    "title": "Sync test",
+    "latitude": 26.5,
+    "longitude": 92.8,
+    "severity": "moderate",
+    "_op_id": "test-7k-sync-4be8bdac",
+    "id": "304443fb-5679-460a-a7e1-1ec71813347f",
+    "sync_time": "2026-09-11T19:43:45.658194+00:00",
+    "_db_synced": true
+  },
+  {
+    "type": "help",
+    "title": "Idempotent test",
+    "_op_id": "test-7l-idempotent-12f429a4",
+    "id": "15c7a48c-aae0-40d6-a50a-33ed05ae9ac0",
+    "sync_time": "2026-09-12T00:00:00Z",
+    "_db_synced": false
+  },
+  {
+    "type": "help",
+    "title": "Compat",
+    "_op_id": "test-7l-compat-cd7f58a7",
+    "id": "49eb65fa-173e-4876-bf1b-187c73f548c5",
+    "sync_time": "2026-09-12T00:00:00Z",
+    "_db_synced": false
+  },
+  {
+    "request_type": "help",
+    "title": "Sync test",
+    "latitude": 26.5,
+    "longitude": 92.8,
+    "severity": "moderate",
+    "_op_id": "test-7k-sync-3786c1b7",
+    "id": "ee93c08b-8f5e-4c20-8f27-5e1e1e17f056",
+    "sync_time": "2026-09-12T03:45:10.228948+00:00",
+    "_db_synced": true
+  },
+  {
+    "request_type": "help",
+    "location": "behala",
+    "category": "landslide",
+    "severity": "high",
+    "peopleAffected": "20",
+    "description": "severe",
+    "contactName": "Anwesha Bhattacharyya ",
+    "contactPhone": "9330893952",
+    "gpsCoords": {
+      "latitude": 22.5178805,
+      "longitude": 88.4187497
+    },
+    "_op_id": "HLP-mty3xdla-1",
+    "id": "a2780ad7-5ff6-4ac8-ae7a-04f0c8da8da4",
+    "sync_time": "2026-09-12T08:12:23.950Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "help",
+    "location": "behala",
+    "category": "landslide",
+    "severity": "high",
+    "peopleAffected": "20",
+    "description": "MANUAL TEST - mobile to PostgreSQL",
+    "contactName": "Anwesha Bhattacharyya ",
+    "contactPhone": "9330893952",
+    "_op_id": "HLP-mtycyhq9-1",
+    "id": "9e44922d-4ff6-475b-9365-4481edad88c9",
+    "sync_time": "2026-09-12T12:25:12.513Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "help",
+    "location": "behala",
+    "category": "landslide",
+    "severity": "high",
+    "peopleAffected": "78",
+    "description": "test",
+    "contactName": "test",
+    "contactPhone": "659464648",
+    "_op_id": "HLP-mtyd5gsi-2",
+    "id": "262b9fe7-7374-4e94-9565-839af31d8150",
+    "sync_time": "2026-09-12T12:30:37.890Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "evacuation",
+    "location": "vhh",
+    "numberOfPeople": "58",
+    "emergencyType": "fire",
+    "hasVulnerable": true,
+    "contactName": "test",
+    "contactPhone": "967846769",
+    "additionalInfo": "hjhv",
+    "_op_id": "EVC-mtyd7qnb-3",
+    "id": "c962c5be-97ca-4e74-9649-7304864738b5",
+    "sync_time": "2026-09-12T12:32:23.975Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "help",
+    "location": "hydjfjfjf",
+    "category": "landslide",
+    "severity": "critical",
+    "peopleAffected": "5000",
+    "description": "gf de ghh",
+    "contactName": "gfdffvh",
+    "contactPhone": "254889.8",
+    "gpsCoords": {
+      "latitude": 22.5173149,
+      "longitude": 88.4188385
+    },
+    "_op_id": "HLP-mtyda06d-4",
+    "id": "73755aa0-0d04-46d6-8047-441f215c6169",
+    "sync_time": "2026-09-12T12:34:09.637Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "evacuation_volunteer",
+    "name": "swapnanil",
+    "phone": "967946769",
+    "currentLocation": "behala",
+    "hasTransport": true,
+    "capacity": "4",
+    "capabilities": [
+      "firstAid",
+      "driving"
+    ],
+    "availability": "Next 2 hours",
+    "_op_id": "VEVC-mtydb1yn-5",
+    "id": "bbbc28a1-29d5-4719-92d3-b77471feb113",
+    "sync_time": "2026-09-12T12:34:58.607Z",
+    "_db_synced": true
+  },
+  {
+    "title": "Landslide Phase C Test",
+    "description": "Test emergency request from Phase C regression",
+    "latitude": 27.5,
+    "longitude": 94.0,
+    "locationText": "Test Location, Assam",
+    "severity": "high",
+    "peopleAffected": 15,
+    "type": "evacuation",
+    "details": {
+      "test": true
+    },
+    "syncStatus": "pending",
+    "createdAt": "2026-09-12T10:00:00Z",
+    "_op_id": "2cbc4cb6-3e88-4f5d-81ff-1ed1f145c7f9",
+    "id": "9b9ecdd6-f45d-4e91-9a0b-0578fb16c1b9",
+    "sync_time": "2026-09-12T10:00:00Z",
+    "_db_synced": true
+  },
+  {
+    "_op_id": "36204822-81fa-4b40-b1cd-961a9b359de7",
+    "id": "5c41ec6d-cc30-4cdd-b5de-c86c4f8423d1",
+    "sync_time": "2026-09-12T10:00:00Z",
+    "_db_synced": true
+  },
+  {
+    "title": "Sync Test",
+    "latitude": 28.0,
+    "longitude": 95.0,
+    "severity": "moderate",
+    "peopleAffected": 3,
+    "type": "help",
+    "createdAt": "2026-09-12T11:00:00Z",
+    "_op_id": "c0996b83-16a7-4890-a71e-481fc8229930",
+    "id": "1b30b086-e905-4595-9458-c1fbe7f73185",
+    "sync_time": "2026-09-12T11:00:00Z",
+    "_db_synced": true
+  },
+  {
+    "type": "help",
+    "severity": "moderate",
+    "title": "Bug-1 test request",
+    "latitude": 27.0,
+    "longitude": 94.0,
+    "peopleAffected": 5,
+    "createdAt": "2026-09-12T12:00:00Z",
+    "_op_id": "272013a4-bceb-4345-9dcd-93e46f2a0059",
+    "id": "5df854fa-450f-44a1-862a-2a908996f1f1",
+    "sync_time": "2026-09-12T12:00:00Z",
+    "_db_synced": true
+  },
+  {
+    "type": "help",
+    "_op_id": "43c19b71-de02-4495-962a-ec8b55593f5b",
+    "id": "88e737f3-0e7a-4351-9c8e-0ba020503a69",
+    "sync_time": "2026-09-12T13:00:00Z",
+    "_db_synced": true
+  },
+  {
+    "type": "evacuation",
+    "severity": "low",
+    "_op_id": "8bafaa25-1759-4d1e-9200-dfce9dbee8d5",
+    "id": "22c71ad4-316f-433a-8445-2c916687430a",
+    "sync_time": "2026-09-12T13:00:00Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "help",
+    "location": "D1 Village, Assam",
+    "category": "landslide",
+    "severity": "high",
+    "peopleAffected": "15",
+    "description": "Road blocked",
+    "contactName": "D1 User",
+    "contactPhone": "+91-98765",
+    "gpsCoords": {
+      "latitude": 27.5,
+      "longitude": 94
+    },
+    "_op_id": "HLP-D1-1789235428758-1",
+    "id": "7aa7d155-a9b5-45cc-80bc-6839b01e36c1",
+    "sync_time": "2026-09-12T17:50:28.758Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "help",
+    "location": "Idem Village",
+    "category": "flood",
+    "severity": "medium",
+    "peopleAffected": "3",
+    "description": "Testing idempotency",
+    "contactName": "Tester",
+    "contactPhone": "9999999999",
+    "gpsCoords": {
+      "latitude": 27,
+      "longitude": 93.5
+    },
+    "_op_id": "IDEM-1789235428832-test",
+    "id": "44739a76-469d-4c18-bf6c-b55230ffff08",
+    "sync_time": "2026-09-12T17:50:28.832Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "help",
+    "location": "Idem Village",
+    "category": "flood",
+    "severity": "medium",
+    "peopleAffected": "3",
+    "description": "Testing idempotency",
+    "contactName": "Tester",
+    "contactPhone": "9999999999",
+    "gpsCoords": {
+      "latitude": 27,
+      "longitude": 93.5
+    },
+    "_op_id": "IDEM-1789235428854-test2",
+    "id": "b627bb25-57f0-41aa-9641-de7642ef14d5",
+    "sync_time": "2026-09-12T17:50:28.854Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "help",
+    "location": "C2 Test Village, Assam",
+    "category": "landslide",
+    "severity": "high",
+    "peopleAffected": "15",
+    "description": "Road blocked by landslide",
+    "contactName": "C2 User",
+    "contactPhone": "+91-9876543210",
+    "gpsCoords": {
+      "latitude": 27.5,
+      "longitude": 94.0
+    },
+    "_op_id": "HLP-C2-1789235933011-A",
+    "id": "fce8ad2c-ae35-4f62-9ab2-eb5090fd908b",
+    "sync_time": "2026-09-12T18:00:00Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "help",
+    "location": "C2 Test Village, Assam",
+    "category": "landslide",
+    "severity": "high",
+    "peopleAffected": "15",
+    "description": "Road blocked by landslide",
+    "contactName": "C2 User",
+    "contactPhone": "+91-9876543210",
+    "gpsCoords": {
+      "latitude": 27.5,
+      "longitude": 94.0
+    },
+    "_op_id": "HLP-C2-1789235941629-A",
+    "id": "78a675e6-d7d3-42e0-b241-a7b51921f375",
+    "sync_time": "2026-09-12T18:00:00Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "help",
+    "location": "C2 Minimal",
+    "severity": "low",
+    "contactName": "Min",
+    "contactPhone": "000",
+    "_op_id": "HLP-C2-1789235941697-C",
+    "id": "a980009e-4d92-4104-afa5-4b1b5b2261d5",
+    "sync_time": "2026-09-12T18:00:00Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "evacuation",
+    "location": "C2 Flood Zone, Assam",
+    "numberOfPeople": "8",
+    "emergencyType": "flood",
+    "hasVulnerable": true,
+    "contactName": "C2 Evacuee",
+    "contactPhone": "+91-9123456789",
+    "additionalInfo": "2 children need evacuation",
+    "gpsCoords": {
+      "latitude": 26.5,
+      "longitude": 93.0
+    },
+    "_op_id": "EVC-C2-1789235941705-A",
+    "id": "7e7cd1d3-0167-4e2c-9228-20d2f0f5985b",
+    "sync_time": "2026-09-12T18:05:00Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "evacuation",
+    "location": "C2 Minimal Evac",
+    "numberOfPeople": "3",
+    "emergencyType": "flood",
+    "contactName": "Min",
+    "contactPhone": "000",
+    "_op_id": "EVC-C2-1789235941718-B",
+    "id": "17d9e6f3-0808-4786-87dd-8946f365b22d",
+    "sync_time": "2026-09-12T18:05:00Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "help",
+    "location": "C2 H6",
+    "category": "fire",
+    "severity": "medium",
+    "contactName": "H6",
+    "contactPhone": "111",
+    "_op_id": "HLP-C2-1789235941739-6",
+    "id": "5b48fabc-da2d-4359-9b3a-72049e99a307",
+    "sync_time": "2026-09-12T18:15:00Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "evacuation",
+    "location": "C2 E6",
+    "numberOfPeople": "2",
+    "emergencyType": "landslide",
+    "contactName": "E6",
+    "contactPhone": "222",
+    "_op_id": "EVC-C2-1789235941753-6",
+    "id": "1abbeacf-a483-47c7-8b03-43f5e519681e",
+    "sync_time": "2026-09-12T18:15:00Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "evacuation",
+    "location": "C2 Idem",
+    "numberOfPeople": "4",
+    "emergencyType": "flood",
+    "contactName": "I7",
+    "contactPhone": "333",
+    "_op_id": "EVC-C2-1789235941760-7",
+    "id": "a87974fd-26ed-4b15-9ea5-452c9776a420",
+    "sync_time": "2026-09-12T18:20:00Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "help",
+    "location": "C2 Test Village, Assam",
+    "category": "landslide",
+    "severity": "high",
+    "peopleAffected": "15",
+    "description": "Road blocked",
+    "contactName": "C2 User",
+    "contactPhone": "+91-9876543210",
+    "gpsCoords": {
+      "latitude": 27.5,
+      "longitude": 94.0
+    },
+    "_op_id": "HLP-C2-1789236055857-A",
+    "id": "082e2e61-ccf0-45e7-86fb-f16e999c9c3b",
+    "sync_time": "2026-09-12T18:00:00Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "help",
+    "location": "Min",
+    "severity": "low",
+    "contactName": "M",
+    "contactPhone": "0",
+    "_op_id": "HLP-C2-1789236055866-C",
+    "id": "6799bcd3-cbd7-4a9c-abec-c1df2faa2c1f",
+    "sync_time": "2026-09-12T18:00:00Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "evacuation",
+    "location": "C2 Flood Zone, Assam",
+    "numberOfPeople": "8",
+    "emergencyType": "flood",
+    "hasVulnerable": true,
+    "contactName": "C2 Evacuee",
+    "contactPhone": "+91-9123456789",
+    "additionalInfo": "2 children need evacuation",
+    "gpsCoords": {
+      "latitude": 26.5,
+      "longitude": 93.0
+    },
+    "_op_id": "EVC-C2-1789236055877-A",
+    "id": "31fbb542-b34c-4a01-96bd-e85722e78583",
+    "sync_time": "2026-09-12T18:05:00Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "evacuation",
+    "location": "Min Evac",
+    "numberOfPeople": "3",
+    "emergencyType": "flood",
+    "contactName": "Min",
+    "contactPhone": "0",
+    "_op_id": "EVC-C2-1789236056322-B",
+    "id": "02b73ed1-1a6e-49bd-9b4c-8608426b366f",
+    "sync_time": "2026-09-12T18:05:00Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "help",
+    "location": "H6",
+    "category": "fire",
+    "severity": "medium",
+    "contactName": "H6",
+    "contactPhone": "111",
+    "_op_id": "HLP-C2-1789236057163-6",
+    "id": "9216550b-06b8-4901-bf04-dcdd44dabb04",
+    "sync_time": "2026-09-12T18:15:00Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "evacuation",
+    "location": "E6",
+    "numberOfPeople": "2",
+    "emergencyType": "landslide",
+    "contactName": "E6",
+    "contactPhone": "222",
+    "_op_id": "EVC-C2-1789236057177-6",
+    "id": "fb7ea9e8-7851-4b9c-9302-b23519b9fc28",
+    "sync_time": "2026-09-12T18:15:00Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "evacuation",
+    "location": "Idem",
+    "numberOfPeople": "4",
+    "emergencyType": "flood",
+    "contactName": "I7",
+    "contactPhone": "333",
+    "_op_id": "EVC-C2-1789236057188-7",
+    "id": "4f51e3f3-0f9e-4738-b065-f011de85b5a1",
+    "sync_time": "2026-09-12T18:20:00Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "help",
+    "location": "Reg Test Village, Assam 786001",
+    "category": "landslide",
+    "severity": "high",
+    "peopleAffected": "20",
+    "description": "Road blocked by landslide, need food and water",
+    "contactName": "Regression Tester",
+    "contactPhone": "+91-9000012345",
+    "gpsCoords": {
+      "latitude": 27.1,
+      "longitude": 94.2
+    },
+    "_op_id": "HLP-REG-1789237112937-1",
+    "id": "638653c3-9538-4805-9747-be4fe1877631",
+    "sync_time": "2026-09-12T19:00:00Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "evacuation",
+    "location": "Reg Flood Zone A, Dibrugarh",
+    "numberOfPeople": "12",
+    "emergencyType": "flood",
+    "hasVulnerable": true,
+    "contactName": "Reg Evacuee",
+    "contactPhone": "+91-9000054321",
+    "additionalInfo": "3 elderly, 2 children",
+    "gpsCoords": {
+      "latitude": 26.8,
+      "longitude": 94.5
+    },
+    "_op_id": "EVC-REG-1789237113020-2",
+    "id": "cb81c4b7-0d98-439f-b67a-1b1582ebd031",
+    "sync_time": "2026-09-12T19:05:00Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "help",
+    "location": "Minimal Village",
+    "severity": "low",
+    "contactName": "Min Help",
+    "contactPhone": "0000000000",
+    "_op_id": "HLP-REG-1789237113104-6",
+    "id": "8c67cdd2-548f-4eae-b70d-cd718f3f0750",
+    "sync_time": "2026-09-12T19:15:00Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "evacuation",
+    "location": "Idem Test Zone",
+    "numberOfPeople": "6",
+    "emergencyType": "earthquake",
+    "contactName": "Idem Tester",
+    "contactPhone": "1111111111",
+    "_op_id": "EVC-REG-1789237113118-7",
+    "id": "8a6b7b24-2c6d-4b60-b12a-05c1f7047a53",
+    "sync_time": "2026-09-12T19:20:00Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "help",
+    "location": "Reg Test Village, Assam 786001",
+    "category": "landslide",
+    "severity": "high",
+    "peopleAffected": "20",
+    "description": "Road blocked by landslide, need food and water",
+    "contactName": "Regression Tester",
+    "contactPhone": "+91-9000012345",
+    "gpsCoords": {
+      "latitude": 27.1,
+      "longitude": 94.2
+    },
+    "_op_id": "HLP-REG-1789237172699-1",
+    "id": "01c40b54-984c-4af4-beff-02838f716421",
+    "sync_time": "2026-09-12T19:00:00Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "evacuation",
+    "location": "Reg Flood Zone A, Dibrugarh",
+    "numberOfPeople": "12",
+    "emergencyType": "flood",
+    "hasVulnerable": true,
+    "contactName": "Reg Evacuee",
+    "contactPhone": "+91-9000054321",
+    "additionalInfo": "3 elderly, 2 children",
+    "gpsCoords": {
+      "latitude": 26.8,
+      "longitude": 94.5
+    },
+    "_op_id": "EVC-REG-1789237172728-2",
+    "id": "9d7039f3-ca8c-48de-b569-1a476fd3f66f",
+    "sync_time": "2026-09-12T19:05:00Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "help",
+    "location": "Minimal Village",
+    "severity": "low",
+    "contactName": "Min Help",
+    "contactPhone": "0000000000",
+    "_op_id": "HLP-REG-1789237175104-6",
+    "id": "b45e99c3-99fb-4c41-8cc5-4daade32328b",
+    "sync_time": "2026-09-12T19:15:00Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "evacuation",
+    "location": "Idem Test Zone",
+    "numberOfPeople": "6",
+    "emergencyType": "earthquake",
+    "contactName": "Idem Tester",
+    "contactPhone": "1111111111",
+    "_op_id": "EVC-REG-1789237175116-7",
+    "id": "36a97686-8dc9-4f03-9596-727f1839859f",
+    "sync_time": "2026-09-12T19:20:00Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "help",
+    "location": "E4 Village",
+    "severity": "medium",
+    "contactName": "E4 User",
+    "contactPhone": "111",
+    "_op_id": "HLP-E-1789237614221",
+    "id": "bc6b349f-4383-4be7-bfe4-9b3466a2ab77",
+    "sync_time": "2026-09-12T20:00:00Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "evacuation",
+    "location": "E4 Flood Zone",
+    "numberOfPeople": "5",
+    "emergencyType": "flood",
+    "contactName": "E4 Evac",
+    "contactPhone": "222",
+    "gpsCoords": {
+      "latitude": 27.0,
+      "longitude": 94.0
+    },
+    "_op_id": "EVC-E-1789237614262",
+    "id": "165ee25a-231e-4fc8-828c-ba4267956279",
+    "sync_time": "2026-09-12T20:00:00Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "help",
+    "location": "S1",
+    "severity": "low",
+    "contactName": "S1",
+    "contactPhone": "0",
+    "_op_id": "S1-E-1789237614716",
+    "id": "69d8844e-d0db-43aa-9386-34883988edaf",
+    "sync_time": "2026-09-12T21:00:00Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "help",
+    "location": "B1",
+    "severity": "low",
+    "contactName": "B1",
+    "contactPhone": "0",
+    "_op_id": "B1-E-1789237614740",
+    "id": "dab23fa4-38be-4e1f-ab78-d3f3fa649af3",
+    "sync_time": "2026-09-12T21:00:00Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "evacuation",
+    "location": "B2",
+    "numberOfPeople": "2",
+    "emergencyType": "flood",
+    "contactName": "B2",
+    "contactPhone": "0",
+    "_op_id": "B2-E-1789237614740",
+    "id": "d50efd46-97f9-46f4-8b49-702648f3d9cd",
+    "sync_time": "2026-09-12T21:00:00Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "help",
+    "location": "Mix",
+    "severity": "low",
+    "contactName": "Mix",
+    "contactPhone": "0",
+    "_op_id": "MIX-V-1789237614794",
+    "id": "bad397dc-467c-4c30-b3c7-bb5f600d732d",
+    "sync_time": "2026-09-12T21:00:00Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "help",
+    "location": "E4 Village",
+    "severity": "medium",
+    "contactName": "E4 User",
+    "contactPhone": "111",
+    "_op_id": "HLP-E-1789237696187",
+    "id": "d524c353-1cb6-448e-80b5-d20be2df02be",
+    "sync_time": "2026-09-12T20:00:00Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "evacuation",
+    "location": "E4 Flood Zone",
+    "numberOfPeople": "5",
+    "emergencyType": "flood",
+    "contactName": "E4 Evac",
+    "contactPhone": "222",
+    "gpsCoords": {
+      "latitude": 27.0,
+      "longitude": 94.0
+    },
+    "_op_id": "EVC-E-1789237696200",
+    "id": "1ca101ef-65c9-47a8-b8c0-ba5fcb3cf51f",
+    "sync_time": "2026-09-12T20:00:00Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "help",
+    "location": "S1",
+    "severity": "low",
+    "contactName": "S1",
+    "contactPhone": "0",
+    "_op_id": "S1-E-1789237697707",
+    "id": "3d1017e3-fef7-4f2a-9939-2be861e3bd6a",
+    "sync_time": "2026-09-12T21:00:00Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "help",
+    "location": "B1",
+    "severity": "low",
+    "contactName": "B1",
+    "contactPhone": "0",
+    "_op_id": "B1-E-1789237697730",
+    "id": "e6c5060e-bbda-4003-b03d-7ccb1ddd0abf",
+    "sync_time": "2026-09-12T21:00:00Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "evacuation",
+    "location": "B2",
+    "numberOfPeople": "2",
+    "emergencyType": "flood",
+    "contactName": "B2",
+    "contactPhone": "0",
+    "_op_id": "B2-E-1789237697730",
+    "id": "336e88fb-a0cf-48e0-a227-770597d3c64f",
+    "sync_time": "2026-09-12T21:00:00Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "help",
+    "location": "Mix",
+    "severity": "low",
+    "contactName": "Mix",
+    "contactPhone": "0",
+    "_op_id": "MIX-V-1789237697744",
+    "id": "e0b2b8f2-48bb-4620-97f3-20f5f655074a",
+    "sync_time": "2026-09-12T21:00:00Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "help",
+    "location": "Regression Village",
+    "severity": "medium",
+    "contactName": "Reg User",
+    "contactPhone": "111",
+    "_op_id": "HLP-REG-1789239340240",
+    "id": "3ac1b5c4-9083-4872-9a81-54c30d557a06",
+    "sync_time": "2026-09-13T10:00:00Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "evacuation",
+    "location": "Reg Flood Zone",
+    "numberOfPeople": "5",
+    "emergencyType": "flood",
+    "contactName": "Reg Evac",
+    "contactPhone": "222",
+    "gpsCoords": {
+      "latitude": 26.8,
+      "longitude": 94.5
+    },
+    "_op_id": "EVC-REG-1789239340279",
+    "id": "646c6957-1b7f-43ab-9c73-1762f9aa5289",
+    "sync_time": "2026-09-13T10:00:00Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "help",
+    "location": "Reg Village",
+    "severity": "medium",
+    "contactName": "Reg",
+    "contactPhone": "111",
+    "_op_id": "HLP-REG-1789239476414",
+    "id": "85e19e2e-d11a-490b-8dc9-b4d0b6455e1a",
+    "sync_time": "2026-09-13T10:00:00Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "evacuation",
+    "location": "Reg Flood",
+    "numberOfPeople": "5",
+    "emergencyType": "flood",
+    "contactName": "RegE",
+    "contactPhone": "222",
+    "gpsCoords": {
+      "latitude": 26.8,
+      "longitude": 94.5
+    },
+    "_op_id": "EVC-REG-1789239476438",
+    "id": "4458a7b4-2720-4f27-8a75-0de5d9231a8d",
+    "sync_time": "2026-09-13T10:00:00Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "help",
+    "location": "Reg Village",
+    "severity": "medium",
+    "contactName": "Reg",
+    "contactPhone": "111",
+    "_op_id": "HLP-REG-1789240038241",
+    "id": "503783ff-90fd-4671-9242-9f8041df7cda",
+    "sync_time": "2026-09-13T10:00:00Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "evacuation",
+    "location": "Reg Flood",
+    "numberOfPeople": "5",
+    "emergencyType": "flood",
+    "contactName": "RegE",
+    "contactPhone": "222",
+    "gpsCoords": {
+      "latitude": 26.8,
+      "longitude": 94.5
+    },
+    "_op_id": "EVC-REG-1789240038278",
+    "id": "00c45dfd-2d82-4d12-a1bb-7a51aaf9f486",
+    "sync_time": "2026-09-13T10:00:00Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "help",
+    "location": "F2 Village Road, Dibrugarh",
+    "category": "flood",
+    "severity": "high",
+    "peopleAffected": "15",
+    "description": "F2 house flooding rapidly",
+    "contactName": "F2 User",
+    "contactPhone": "9876543210",
+    "gpsCoords": {
+      "latitude": 27.4739,
+      "longitude": 94.9124
+    },
+    "_op_id": "HLP-F-1789240741134",
+    "id": "565cd18f-b926-41e7-981d-7c0133a41217",
+    "sync_time": "2026-09-13T12:00:00Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "evacuation",
+    "location": "F3 Flood Zone A",
+    "numberOfPeople": "12",
+    "emergencyType": "flood",
+    "hasVulnerable": true,
+    "contactName": "F3 Evac User",
+    "contactPhone": "1112223333",
+    "additionalInfo": "elderly and children present",
+    "gpsCoords": {
+      "latitude": 26.8,
+      "longitude": 94.5
+    },
+    "_op_id": "EVC-F-1789240742862",
+    "id": "76b2fe77-f7b8-42ba-902d-a3ef56455a11",
+    "sync_time": "2026-09-13T12:30:00Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "evacuation_volunteer",
+    "name": "F5 Evac Volunteer",
+    "phone": "4444444444",
+    "currentLocation": "F5 Location",
+    "hasTransport": true,
+    "capacity": "5",
+    "capabilities": [
+      "first_aid",
+      "driving"
+    ],
+    "availability": "Immediately",
+    "gpsCoords": {
+      "latitude": 27.0,
+      "longitude": 94.0
+    },
+    "_op_id": "VEVC-F-1789240743848",
+    "id": "f56b0ebf-58bf-4f77-b060-c22f374e910e",
+    "sync_time": "2026-09-13T12:30:00Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "relief_volunteer",
+    "name": "F5 Relief Volunteer",
+    "phone": "5555555555",
+    "location": "F5 Relief Center",
+    "category": "food",
+    "quantity": "50",
+    "availability": "Next 6 hours",
+    "description": "Rice and water",
+    "gpsCoords": {
+      "latitude": 27.1,
+      "longitude": 94.1
+    },
+    "_op_id": "VREL-F-1789240743877",
+    "id": "41d64946-f4ba-42c5-94b4-8dc2cf852cfa",
+    "sync_time": "2026-09-13T12:30:00Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "help",
+    "location": "dup1",
+    "severity": "low",
+    "contactName": "D1",
+    "contactPhone": "0",
+    "_op_id": "DUP-F-1789240745970",
+    "id": "2fc1dbfb-9691-4d86-b6e5-3d5eccd01a39",
+    "sync_time": "2026-09-13T12:00:00Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "help",
+    "location": "behala",
+    "category": "landslide",
+    "severity": "medium",
+    "peopleAffected": "69985",
+    "description": "severe",
+    "contactName": "swapnanil",
+    "contactPhone": "9674734908",
+    "gpsCoords": {
+      "latitude": 22.5173693,
+      "longitude": 88.4187516
+    },
+    "_op_id": "HLP-mtywejmt-1",
+    "id": "a8da299c-5de1-4857-9b38-9473bf310e48",
+    "sync_time": "2026-09-12T21:29:34.181Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "evacuation",
+    "location": "Abv",
+    "numberOfPeople": "12",
+    "emergencyType": "landslide",
+    "hasVulnerable": true,
+    "contactName": "sb",
+    "contactPhone": "236",
+    "additionalInfo": "zui",
+    "_op_id": "EVC-mtywhszu-2",
+    "id": "744ee045-98a3-466b-aab0-04d869ff7bbe",
+    "sync_time": "2026-09-12T21:32:06.282Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "evacuation",
+    "location": "Test Evacuation Location",
+    "numberOfPeople": "5",
+    "emergencyType": "flood",
+    "hasVulnerable": true,
+    "contactName": "Test User",
+    "contactPhone": "9876543210",
+    "additionalInfo": "Need help",
+    "gpsCoords": {
+      "latitude": 27.0,
+      "longitude": 93.0
+    },
+    "_op_id": "80ab17c3-f63d-4b7a-9311-03590f86154b",
+    "id": "33cf023e-7bec-4788-907e-508ca9b8b9cc",
+    "sync_time": "2026-01-01T00:00:00Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "help",
+    "location": "Test Relief Location",
+    "reliefCategory": "food",
+    "requiredItems": "rice, water, blankets",
+    "quantity": "10 families",
+    "peopleAffected": "15",
+    "severity": "high",
+    "hasVulnerable": true,
+    "contactName": "Test User",
+    "contactPhone": "9876543210",
+    "additionalInfo": "Need food and water",
+    "gpsCoords": {
+      "latitude": 26.5,
+      "longitude": 92.5
+    },
+    "_op_id": "c47d1a61-bd17-45a0-9c39-e2a31b3ccf24",
+    "id": "deb97a3a-1c25-43cc-959f-d1f07ff54e59",
+    "sync_time": "2026-01-01T00:00:00Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "relief",
+    "location": "Test Relief Location 2",
+    "reliefCategory": "medical",
+    "requiredItems": "medicines, bandages",
+    "quantity": "5 kits",
+    "peopleAffected": "8",
+    "severity": "critical",
+    "hasVulnerable": false,
+    "contactName": "Test User 2",
+    "contactPhone": "9876543211",
+    "additionalInfo": "Medical emergency",
+    "gpsCoords": {
+      "latitude": 27.1,
+      "longitude": 93.1
+    },
+    "_op_id": "97353e6e-b6c0-4e46-aabf-75efa0bd1900",
+    "id": "bbbd0ac4-0faf-4297-a8be-d45fee2a4f13",
+    "sync_time": "2026-01-01T00:00:00Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "help",
+    "location": "GPS Test Location",
+    "reliefCategory": "water",
+    "requiredItems": "clean water",
+    "quantity": "20 liters",
+    "peopleAffected": "10",
+    "severity": "high",
+    "contactName": "GPS Test",
+    "contactPhone": "9999999999",
+    "gpsCoords": {
+      "latitude": 26.8,
+      "longitude": 92.8
+    },
+    "_op_id": "e8c85712-a38e-457a-aeb2-9eebb52b938a",
+    "id": "0fc49212-5be4-466a-b6c9-e7ad6cf01503",
+    "sync_time": "2026-01-01T00:00:00Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "relief",
+    "location": "Test Village, Assam",
+    "reliefCategory": "food",
+    "requiredItems": "rice, water, blankets",
+    "quantity": "10 families",
+    "peopleAffected": "15",
+    "severity": "high",
+    "hasVulnerable": true,
+    "contactName": "Test User",
+    "contactPhone": "9876543210",
+    "additionalInfo": "Need food and water urgently",
+    "gpsCoords": {
+      "latitude": 26.5,
+      "longitude": 92.5
+    },
+    "_op_id": "mobile-relief-test-1",
+    "id": "7ada53ce-e86a-4096-ad97-4d0ce6dfcd75",
+    "sync_time": "2026-01-01T00:00:00Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "relief",
+    "peopleAffected": 5,
+    "contactName": "Test User",
+    "severity": "high",
+    "location": "Test Location",
+    "contactPhone": "9876543210",
+    "_op_id": "test-contact-v2-20260913113109",
+    "id": "6fb3342c-a5df-4b5a-808f-7e3fcd9eaab3",
+    "sync_time": "2026-09-13T06:01:09.3190683Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "relief",
+    "location": "Chak Kolarkhal, West Bengal, India",
+    "reliefCategory": "food",
+    "requiredItems": "rice",
+    "quantity": "30 meals",
+    "peopleAffected": "20",
+    "severity": "high",
+    "hasVulnerable": null,
+    "contactName": "Anwesha",
+    "contactPhone": "9330893952",
+    "additionalInfo": "none",
+    "gpsCoords": {
+      "latitude": 22.517377,
+      "longitude": 88.4187796
+    },
+    "_op_id": "REL-mtzesx7n-1",
+    "id": "627ac2d4-336c-4f40-bcb5-d20ba7f06b49",
+    "sync_time": "2026-09-13T06:04:38.051Z",
+    "_db_synced": true
+  },
+  {
+    "contactPhone": "9876543210",
+    "contactName": "Test User",
+    "location": "Live Test Village, Assam",
+    "request_type": "relief",
+    "severity": "high",
+    "reliefCategory": "food",
+    "requiredItems": "rice, water",
+    "peopleAffected": 15,
+    "_op_id": "LIVE-E2E-20260913114448",
+    "id": "67a6b7b6-85c6-4b9e-a5ed-194955cea3db",
+    "sync_time": "2026-09-13T06:14:48.6250341Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "relief",
+    "peopleAffected": 10,
+    "contactName": "Restart User",
+    "severity": "high",
+    "location": "Restart Test Village",
+    "contactPhone": "1112223333",
+    "_op_id": "RESTART-TEST-20260913114558",
+    "id": "22550603-464d-4b1a-b016-78d6dbdb57c1",
+    "sync_time": "2026-09-13T06:15:58.5514930Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "relief",
+    "peopleAffected": 10,
+    "contactName": "Fresh User",
+    "severity": "high",
+    "location": "Fresh Test Village, Assam",
+    "contactPhone": "5556667777",
+    "_op_id": "FRESH-TEST-20260913114842",
+    "id": "3ba97b52-40be-445d-84d9-792e32db06a1",
+    "sync_time": "2026-09-13T06:18:42.2531043Z",
+    "_db_synced": true
+  },
+  {
+    "contactPhone": "1111111111",
+    "hasVulnerable": true,
+    "numberOfPeople": 8,
+    "severity": "high",
+    "emergencyType": "flood",
+    "gpsCoords": {
+      "longitude": 91.7,
+      "latitude": 26.1
+    },
+    "location": "WF Test Location A",
+    "request_type": "evacuation",
+    "contactName": "Evac User",
+    "_op_id": "WF-EVC-20260913115412",
+    "id": "a08218e4-1508-40cc-a4d8-bd0e9161e19e",
+    "sync_time": "2026-09-13T06:24:12.6436483Z",
+    "_db_synced": true
+  },
+  {
+    "contactPhone": "2222222222",
+    "gpsCoords": {
+      "longitude": 91.8,
+      "latitude": 26.2
+    },
+    "severity": "moderate",
+    "reliefCategory": "medical",
+    "requiredItems": "first aid kits",
+    "location": "WF Test Location B",
+    "request_type": "relief",
+    "peopleAffected": 12,
+    "contactName": "Relief User",
+    "_op_id": "WF-REL-20260913115412",
+    "id": "6fcc04ed-5874-4b07-bd9c-2b74a8639642",
+    "sync_time": "2026-09-13T06:24:12.7390295Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "evacuation_volunteer",
+    "name": "EVol User",
+    "phone": "3333333333",
+    "gpsCoords": {
+      "longitude": 91.9,
+      "latitude": 26.3
+    },
+    "currentLocation": "WF Location C",
+    "capacity": 5,
+    "hasTransport": true,
+    "_op_id": "WF-VEVC-20260913115412",
+    "id": "3101d029-de04-423b-9708-db058fff83d7",
+    "sync_time": "2026-09-13T06:24:12.7585808Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "relief_volunteer",
+    "name": "RVol User",
+    "phone": "4444444444",
+    "gpsCoords": {
+      "longitude": 92,
+      "latitude": 26.4
+    },
+    "category": "food",
+    "location": "WF Location D",
+    "_op_id": "WF-VREL-20260913115412",
+    "id": "9c7d4956-2779-441c-8d28-5e8860eb56b5",
+    "sync_time": "2026-09-13T06:24:12.7751024Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "relief",
+    "location": "Chak Kolarkhal, West Bengal, India",
+    "reliefCategory": "medical",
+    "requiredItems": "i",
+    "quantity": "dk",
+    "peopleAffected": "20",
+    "severity": "critical",
+    "hasVulnerable": true,
+    "contactName": "abc",
+    "contactPhone": "9330893952",
+    "additionalInfo": "no",
+    "gpsCoords": {
+      "latitude": 22.517278,
+      "longitude": 88.4188132
+    },
+    "_op_id": "REL-mtzh8w1d-1",
+    "id": "6f8f6979-822d-4318-a0c4-5953f79417a7",
+    "sync_time": "2026-09-13T07:13:02.257Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "evacuation",
+    "location": "Kolkata, West Bengal, India",
+    "numberOfPeople": "67",
+    "emergencyType": "landslide",
+    "hasVulnerable": true,
+    "contactName": "sg",
+    "contactPhone": "112233445566",
+    "additionalInfo": "need help urgent",
+    "gpsCoords": {
+      "latitude": 22.5170429,
+      "longitude": 88.4187171
+    },
+    "_op_id": "EVC-mtzj4dc8-1",
+    "id": "ec7c55ad-300b-4c9b-804e-368fe3459325",
+    "sync_time": "2026-09-13T08:05:30.632Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "evacuation_volunteer",
+    "name": "swapnanil",
+    "phone": "9674739405",
+    "currentLocation": "Kolkata, West Bengal, India",
+    "hasTransport": true,
+    "capacity": "98",
+    "capabilities": [
+      "firstAid",
+      "driving"
+    ],
+    "availability": "Immediately",
+    "gpsCoords": {
+      "latitude": 22.5170429,
+      "longitude": 88.4187171
+    },
+    "_op_id": "VEVC-mtzj7kyf-2",
+    "id": "d133e1b3-bcbf-4197-b1c6-09e3dbdc8b04",
+    "sync_time": "2026-09-13T08:08:00.471Z",
+    "_db_synced": true
+  },
+  {
+    "gpsCoords": {
+      "longitude": 92,
+      "latitude": 26.5
+    },
+    "request_type": "relief_volunteer",
+    "availability": "Immediately",
+    "category": "medical",
+    "name": "Relief Volunteer Test",
+    "description": "First aid certified",
+    "location": "Test Relief Center",
+    "phone": "9999999999",
+    "_op_id": "VOL-TEST-20260921011455",
+    "id": "e25f56b7-3c72-422b-b9d2-469f80dc4a86",
+    "sync_time": "2026-09-20T19:44:55.4259094Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "relief",
+    "location": "Kolkata, West Bengal, India",
+    "reliefCategory": "food",
+    "requiredItems": "rice",
+    "quantity": "20 unit",
+    "peopleAffected": "50",
+    "severity": "critical",
+    "hasVulnerable": true,
+    "contactName": "uma",
+    "contactPhone": "8276851120",
+    "additionalInfo": "khub dorkar",
+    "gpsCoords": {
+      "latitude": 22.5176692,
+      "longitude": 88.4189752
+    },
+    "_op_id": "REL-muavskbq-1",
+    "id": "35a17aed-73ac-44a3-93b2-6752916b7773",
+    "sync_time": "2026-09-21T06:45:42.757Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "evacuation",
+    "location": "Chak Kolarkhal, West Bengal, India",
+    "numberOfPeople": "23",
+    "emergencyType": "landslide",
+    "hasVulnerable": true,
+    "contactName": "heritage",
+    "contactPhone": "9999999",
+    "additionalInfo": "help us",
+    "gpsCoords": {
+      "latitude": 22.51732,
+      "longitude": 88.4188394
+    },
+    "_op_id": "EVC-mtzmndx7-1",
+    "id": "7a51018d-88dc-4967-ad19-9120f5b72dae",
+    "sync_time": "2026-09-13T09:44:16.698Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "evacuation",
+    "location": "Kolkata, West Bengal, India",
+    "numberOfPeople": "68",
+    "emergencyType": "landslide",
+    "hasVulnerable": true,
+    "contactName": "manas maiti",
+    "contactPhone": "9674734908",
+    "additionalInfo": "very risky",
+    "gpsCoords": {
+      "latitude": 22.517655,
+      "longitude": 88.4189724
+    },
+    "_op_id": "EVC-muay6214-1",
+    "id": "33437e76-0bbc-42bb-a100-87d390e26f37",
+    "sync_time": "2026-09-21T07:52:11.464Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "relief",
+    "location": "Kolkata, West Bengal, India",
+    "reliefCategory": "medical",
+    "requiredItems": "rice",
+    "quantity": "20 unit",
+    "peopleAffected": "80",
+    "severity": "critical",
+    "hasVulnerable": true,
+    "contactName": "swastika ghosh",
+    "contactPhone": "7898780890",
+    "additionalInfo": "need asap",
+    "gpsCoords": {
+      "latitude": 22.5175944,
+      "longitude": 88.4190238
+    },
+    "_op_id": "REL-muay7pwc-2",
+    "id": "317ace53-91ac-4ea2-90b2-08a8f728f7b2",
+    "sync_time": "2026-09-21T07:53:29.052Z",
+    "_db_synced": true
+  },
+  {
+    "request_type": "evacuation",
+    "location": "Test Locus 1e2h to",
+    "numberOfPeople": "2",
+    "emergencyType": "flood",
+    "hasVulnerable": null,
+    "contactName": "Dev Tester",
+    "contactPhone": "9876543210",
+    "additionalInfo": "",
+    "_op_id": "EVC-mvikylz2-1",
+    "id": "5a06e829-db54-4826-8e96-315dff7c7782",
+    "sync_time": "2026-10-21T20:44:20.798Z",
+    "_db_synced": false
+  },
+  {
+    "request_type": "relief",
+    "location": "Offline Zone 1",
+    "reliefCategory": "medical",
+    "requiredItems": "First Aid Kit",
+    "quantity": "5",
+    "peopleAffected": "",
+    "severity": "low",
+    "hasVulnerable": null,
+    "contactName": "Dev Tester",
+    "contactPhone": "9876543210",
+    "additionalInfo": "",
+    "_op_id": "REL-mvil2821-2",
+    "id": "462eed9a-9e62-4e4d-a45c-9dfee5ba4b16",
+    "sync_time": "2026-10-21T20:47:09.385Z",
+    "_db_synced": false
+  },
+  {
+    "request_type": "evacuation",
+    "location": "Pahadi Gaon 2d4",
+    "numberOfPeople": "4",
+    "emergencyType": "flood",
+    "hasVulnerable": null,
+    "contactName": "Ramesh Kumar",
+    "contactPhone": "9876543210",
+    "additionalInfo": "",
+    "_op_id": "EVC-mvilanhd-3",
+    "id": "d803186d-1497-4d69-9af6-3400e6a38cf3",
+    "sync_time": "2026-10-21T20:53:42.625Z",
+    "_db_synced": false
+  },
+  {
+    "request_type": "help",
+    "title": "Test probe",
+    "latitude": 26.5,
+    "longitude": 92.8,
+    "severity": "moderate",
+    "_op_id": "test-probe-571731e1",
+    "id": "c67c4c16-503a-42d3-a9ad-bc8383b234e8",
+    "sync_time": "2026-10-22T11:22:39.488251+00:00",
+    "_db_synced": false
+  },
+  {
+    "title": "Field Report: shimla",
+    "description": "A section of a mountain road has collapsed along the slope edge. Exposed soil, scattered rocks, and visible road-surface cracks are present. Assess only the evidence visible in the photograph and state any uncertainty.",
+    "location": "shimla",
+    "submittedAt": "2026-10-22T11:14:31.607Z",
+    "_op_id": "op_1792667671607_1yr3mpw",
+    "id": "1b118617-11d2-4966-9a5b-09a705e096b2",
+    "sync_time": "2026-10-22T11:14:31.757Z",
+    "_db_synced": false
+  },
+  {
+    "title": "Field Report: mg",
+    "description": "A section of a mountain road has collapsed along the slope edge. Exposed soil, scattered rocks, and visible road-surface cracks are present. Assess only the evidence visible in the photograph and state any uncertainty.",
+    "location": "mg",
+    "latitude": 22.571685,
+    "longitude": 88.322236,
+    "submittedAt": "2026-10-22T11:33:31.741Z",
+    "_op_id": "op_1792668811741_bwkmq7g",
+    "id": "ddcc700e-4ebd-47b1-aa3e-c5196d57029f",
+    "sync_time": "2026-10-22T11:33:31.760Z",
+    "_db_synced": false
+  },
+  {
+    "notes": "Queued Sync Test: Roadway displacement after heavy overnight monsoon rain",
+    "location_name": "Teesta Valley Ridge",
+    "latitude": 27.062,
+    "longitude": 88.282,
+    "reporter_name": "Queued Scout",
+    "reporter_phone": "+919876543299",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/wAALCAAIAAgBAREA/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/9oACAEBAAA/AL8A/9k=",
+    "_op_id": "op_test_sync_2dd8b823",
+    "id": "6e20c612-599f-4599-a44d-44242e11e7d1",
+    "sync_time": "2026-10-22T11:40:00.000Z",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-a8a05e17",
+    "id": "50e4af05-76be-4e20-ac9c-344af01a71f9",
+    "sync_time": "2026-10-22T11:46:01.947743+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-9e406f0f",
+    "id": "7bf3fce1-a89c-4452-8cfd-a936d668c530",
+    "sync_time": "2026-10-22T11:46:01.956335+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-7fd5cf99",
+    "id": "61bcf7d2-aa41-4cc6-8e76-3494bac8ff5b",
+    "sync_time": "2026-10-22T11:46:01.964022+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-3aa1eaf5",
+    "id": "1d87d483-599a-4b81-b88c-fc883d572105",
+    "sync_time": "2026-10-22T11:51:04.151329+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-f092aa39",
+    "id": "2a44c8bc-689b-4e39-bfd3-3b5b9b0c163e",
+    "sync_time": "2026-10-22T11:51:04.158467+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-6f3b70f1",
+    "id": "4bfc8b1d-e82d-455c-8bb4-0ed165ca2edf",
+    "sync_time": "2026-10-22T11:51:04.165241+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-c1547918",
+    "id": "c9f0dc37-e566-4d07-ad88-8d7bdcc2c024",
+    "sync_time": "2026-10-22T11:58:15.864035+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-90c09def",
+    "id": "f7e084c1-2838-40b2-b2c7-fe734cd7c9c7",
+    "sync_time": "2026-10-22T11:58:15.871762+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-d1410fd2",
+    "id": "b01dd5af-833e-4cf6-90f1-53df5d96b681",
+    "sync_time": "2026-10-22T11:58:15.877738+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-16b62ddb",
+    "id": "0b74a543-36c6-4807-863b-db900bb4616e",
+    "sync_time": "2026-10-22T12:01:50.374627+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-29f1465b",
+    "id": "0dd92ccf-27d1-49d7-a03c-3a194fe06a0f",
+    "sync_time": "2026-10-22T12:01:50.382139+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-ba8200c2",
+    "id": "ac726e9f-6a84-4c16-9419-afed0a93b5b7",
+    "sync_time": "2026-10-22T12:01:50.388501+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-10c252b8",
+    "id": "6a45b235-024d-4d0a-ae48-7b5cdc7c95be",
+    "sync_time": "2026-10-22T12:02:57.230206+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-7ed020cc",
+    "id": "61e50a48-64d0-4a3f-a2f8-9a5496274d96",
+    "sync_time": "2026-10-22T12:02:57.240186+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-a5f911f1",
+    "id": "810ed247-5e7e-415f-9f6c-fb4d968bb036",
+    "sync_time": "2026-10-22T12:02:57.247101+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-e6f1dd02",
+    "id": "a799119a-071d-4268-92c8-5b6198ff437c",
+    "sync_time": "2026-10-22T12:05:28.364400+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-debefca7",
+    "id": "f86afd35-2f8c-4e40-8940-fcfabe8a012d",
+    "sync_time": "2026-10-22T12:05:28.373615+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-a49c7ff3",
+    "id": "d0f9ee8a-3773-4385-8668-a61b92805a29",
+    "sync_time": "2026-10-22T12:05:28.382050+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-33954014",
+    "id": "4734806a-cc30-4962-a8a7-4984cefd9f80",
+    "sync_time": "2026-10-22T12:31:19.427548+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-f3f94468",
+    "id": "7c5a9597-f228-459a-a5e7-8255a62505cc",
+    "sync_time": "2026-10-22T12:31:19.448224+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-f38b6918",
+    "id": "e1007a04-ee4c-4721-a342-30744ed32ce5",
+    "sync_time": "2026-10-22T12:31:19.459956+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-92e57e2e",
+    "id": "77c49781-a491-4a62-887b-567631f444da",
+    "sync_time": "2026-10-22T12:31:19.470002+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-f663857f",
+    "id": "b9ef6809-b629-4aaa-b117-06d3f612df9c",
+    "sync_time": "2026-10-22T12:31:46.380247+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-6afb771c",
+    "id": "194757c5-2a4c-47b6-88f9-83311bf69012",
+    "sync_time": "2026-10-22T12:31:46.396913+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-af40925c",
+    "id": "620953b6-0adb-48f9-9fa0-353ce27363d6",
+    "sync_time": "2026-10-22T12:31:46.408826+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-a52570cd",
+    "id": "a6c05241-60a4-4d43-8f00-80101e038ec4",
+    "sync_time": "2026-10-22T12:31:46.419082+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-fe07b5c8",
+    "id": "46433a2a-57d1-41b5-9d6d-7901b6e08a07",
+    "sync_time": "2026-10-22T12:33:02.046195+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-3997a102",
+    "id": "a8d84a89-d799-434d-9cb2-f4552d8aa25e",
+    "sync_time": "2026-10-22T12:33:02.063271+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-e02af194",
+    "id": "59422c46-872c-4554-9f43-cb1f0f0754d7",
+    "sync_time": "2026-10-22T12:33:02.073203+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-fbddbf0f",
+    "id": "ccb45368-1920-452d-9087-a5faf7cd54ae",
+    "sync_time": "2026-10-22T12:33:02.083248+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "[DISPOSABLE_TEST] Synced from offline mobile client",
+    "location_name": "Disposable Sync Point - Km 18",
+    "latitude": 27.06,
+    "longitude": 88.28,
+    "reporter_name": "Mobile Offline Scout",
+    "photo_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVR4nGP4z8AAAAMBAQAY3Y2wAAAAAElFTkSuQmCC",
+    "photo_mime": "image/png",
+    "_op_id": "op_disposable_sync_32412",
+    "id": "cbeff7da-d61b-40ac-a3b8-39fd3bde75ab",
+    "sync_time": "2026-10-22T12:00:00Z",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-f7578ad7",
+    "id": "21362610-823e-4dea-a648-94dd0b458d81",
+    "sync_time": "2026-10-22T17:26:58.995885+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-1b73a838",
+    "id": "653bd552-3da3-4a55-9c38-d8d6ad2fbcef",
+    "sync_time": "2026-10-22T17:26:59.032733+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-f85e421c",
+    "id": "10edfdd3-5a0a-4fd3-a730-f2e0dcf24c2f",
+    "sync_time": "2026-10-22T17:26:59.054752+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-5df28c2e",
+    "id": "45e21e44-149c-466b-8309-93687844ec27",
+    "sync_time": "2026-10-22T17:26:59.069420+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-26677d1d",
+    "id": "81155719-3066-48d3-b888-4fbb9748fac6",
+    "sync_time": "2026-10-22T17:45:21.526834+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-db1a5620",
+    "id": "f96cf75a-beaa-4e95-9220-5c459991d910",
+    "sync_time": "2026-10-22T17:45:21.590535+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-b7fd2896",
+    "id": "9e09e224-840d-47dc-a25f-6e0f5440adb1",
+    "sync_time": "2026-10-22T17:45:21.627856+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-53456ab0",
+    "id": "ef19735d-a803-4d79-9c69-7dbf050459df",
+    "sync_time": "2026-10-22T17:45:21.650285+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-16d7b641",
+    "id": "569a030b-dd24-4216-8b21-e2bbdcae2ade",
+    "sync_time": "2026-10-22T17:50:58.185405+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-7df76cfb",
+    "id": "59f0d199-7230-4753-9096-6221fe286bb7",
+    "sync_time": "2026-10-22T17:50:58.210473+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-ee64406a",
+    "id": "a90b1b7d-5477-4a7c-b887-d5cbba198d9a",
+    "sync_time": "2026-10-22T17:50:58.224346+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-6e2b0db8",
+    "id": "f020a2e1-b317-485c-ab3e-c36a7010ddf0",
+    "sync_time": "2026-10-22T17:50:58.239285+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-573315e4",
+    "id": "4bcd8378-905b-4df6-aebf-6d5ef0a24a32",
+    "sync_time": "2026-10-22T17:51:19.930922+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-551d57a8",
+    "id": "3cb4613d-5ec0-469d-b3c8-30fee73d643d",
+    "sync_time": "2026-10-22T17:51:19.949652+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-ac8a7b19",
+    "id": "132251c7-6859-49fd-9f72-ac0e5919dd40",
+    "sync_time": "2026-10-22T17:51:19.961342+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-70122d11",
+    "id": "7934639b-b9f6-4a3a-9819-d16efddcfebd",
+    "sync_time": "2026-10-22T17:51:19.972973+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-727d771e",
+    "id": "2bf39861-6a69-4a4c-87b7-b209c016649f",
+    "sync_time": "2026-10-22T17:52:47.288831+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-4d26e05a",
+    "id": "526fca9d-2abf-41fb-9034-575e30fe572b",
+    "sync_time": "2026-10-22T17:52:47.309937+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-96ff701a",
+    "id": "0478bd69-b99a-4501-8315-b9355f3322bc",
+    "sync_time": "2026-10-22T17:52:47.324217+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-d0ad313c",
+    "id": "c2ea5f9b-13f6-4656-88fa-aeede219929d",
+    "sync_time": "2026-10-22T17:52:47.336584+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-02c5fe33",
+    "id": "e96c3ff7-de02-4aee-9c84-594ae79b3f5c",
+    "sync_time": "2026-10-22T18:03:23.693191+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-f0e18d4c",
+    "id": "fbcf904e-cbfb-4273-85a2-330bb74399b3",
+    "sync_time": "2026-10-22T18:03:23.713043+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-ad3428da",
+    "id": "a3f941c6-7b36-4f41-b346-e8a70d9ef946",
+    "sync_time": "2026-10-22T18:03:23.726132+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-8bfb165b",
+    "id": "ce836257-edb1-4124-a7ab-1ce0cf749c92",
+    "sync_time": "2026-10-22T18:03:23.738328+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-26470123",
+    "id": "1a4b09f3-5c67-4623-a23c-8109f7e4286c",
+    "sync_time": "2026-10-22T18:33:14.998479+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-97a090a6",
+    "id": "4e143c63-48cf-4303-89f4-431404ac4a5a",
+    "sync_time": "2026-10-22T18:33:15.019325+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-e28cee97",
+    "id": "41e9732d-2bc8-4f69-b990-92d6a3449470",
+    "sync_time": "2026-10-22T18:33:15.032353+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-cf4d0688",
+    "id": "feb0a15b-5a41-404d-9f69-15442f9fe9ea",
+    "sync_time": "2026-10-22T18:33:15.043702+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-f13ef2ca",
+    "id": "4cb378cb-7916-4e2a-ab11-b8b9cb46c038",
+    "sync_time": "2026-10-22T18:44:36.438053+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-5e46cf7e",
+    "id": "95901293-2669-47bb-8ade-a3ebc80dc4e5",
+    "sync_time": "2026-10-22T18:44:36.459083+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-25eb493f",
+    "id": "e2ed96bb-006a-4543-b4b2-331c124d5cf0",
+    "sync_time": "2026-10-22T18:44:36.471739+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-fedc1aee",
+    "id": "023c3657-fbac-4df1-9e07-2abd255eaeed",
+    "sync_time": "2026-10-22T18:44:36.483442+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-53e377a1",
+    "id": "6d6ae46f-0a11-4035-afe4-8eabf97ac5ef",
+    "sync_time": "2026-10-22T19:02:34.590870+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-86acccc1",
+    "id": "66ecef5e-67ea-4f8e-b5ae-625bb8d4d219",
+    "sync_time": "2026-10-22T19:02:34.619873+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-02ca32bc",
+    "id": "c4a89a47-a226-4ddf-b2a1-94ddefbd8d81",
+    "sync_time": "2026-10-22T19:02:34.637320+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-abefdc14",
+    "id": "e59daedd-6daf-4bfc-8c82-1d3799f463fb",
+    "sync_time": "2026-10-22T19:02:34.653898+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-25920410",
+    "id": "9a2ec711-022b-4fbf-a45d-05f2faa708ac",
+    "sync_time": "2026-10-22T19:15:29.930510+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-c295b9ad",
+    "id": "9fea7417-84dc-42e3-abae-326c3c60a3ea",
+    "sync_time": "2026-10-22T19:15:29.977197+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-0e301b2d",
+    "id": "892e2701-784a-4dee-9262-bd41f25f59f6",
+    "sync_time": "2026-10-22T19:15:30.014339+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-33115c59",
+    "id": "76b93eaa-aaf2-454a-b5cc-3db3c1ea0f83",
+    "sync_time": "2026-10-22T19:15:30.051761+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-d0fdd36e",
+    "id": "61c97b2f-2f58-47ac-8ed1-fce141b5025a",
+    "sync_time": "2026-10-22T19:25:56.851686+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-3e46d75d",
+    "id": "8ca0c1f7-e8bd-4463-b79a-dd9be337b1af",
+    "sync_time": "2026-10-22T19:25:56.881608+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-21106e60",
+    "id": "517ab95e-5bc9-484b-9172-cc33ae47c164",
+    "sync_time": "2026-10-22T19:25:56.900658+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-62e87dff",
+    "id": "acd0c260-8ae4-43ad-9abc-4a14cb20d305",
+    "sync_time": "2026-10-22T19:25:56.940382+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-2c2a2760",
+    "id": "04effe39-af38-48d4-aa87-716937ae5393",
+    "sync_time": "2026-10-22T19:28:39.162798+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-83a16d34",
+    "id": "f44349b1-19a7-4fd6-9fb5-8da9e9704586",
+    "sync_time": "2026-10-22T19:28:39.189419+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-55278211",
+    "id": "cdd99841-9618-4cf0-9831-9a1af947d6c9",
+    "sync_time": "2026-10-22T19:28:39.206281+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-99649570",
+    "id": "f78fc01b-d11e-4485-abf2-2bf3eb57ed46",
+    "sync_time": "2026-10-22T19:28:39.222485+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-e4753368",
+    "id": "fbba74ba-51aa-477d-af40-edae4140c402",
+    "sync_time": "2026-10-22T19:31:46.495251+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-6314bec5",
+    "id": "20a75834-f33f-4bed-8092-14a6a3fd4a67",
+    "sync_time": "2026-10-22T19:31:46.542496+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-fa4b7a72",
+    "id": "755f018d-fb22-4f37-9678-4d8434378610",
+    "sync_time": "2026-10-22T19:31:46.560433+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-15ef217b",
+    "id": "1e753bbe-7ed4-4e75-a24e-a489ad2c2762",
+    "sync_time": "2026-10-22T19:31:46.579158+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-63982130",
+    "id": "04f3751f-e22a-4a54-8b49-d0f14812f8da",
+    "sync_time": "2026-10-22T19:43:07.657352+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-c49151da",
+    "id": "192a0d41-8fae-47cb-9ee5-de1a05055506",
+    "sync_time": "2026-10-22T19:43:07.688642+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-82fd442d",
+    "id": "04f85610-5052-4e45-814c-0b515f944a73",
+    "sync_time": "2026-10-22T19:43:07.706204+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-70769733",
+    "id": "a08bb6ec-d0fd-4209-9456-ed7ed15767cf",
+    "sync_time": "2026-10-22T19:43:07.728264+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-71296879",
+    "id": "815ddfbe-4e1d-44f1-ba1f-11cded82470f",
+    "sync_time": "2026-10-22T19:47:37.084250+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-558d4b51",
+    "id": "28f1ccb6-a170-49d2-b12e-f7881acdf72a",
+    "sync_time": "2026-10-22T19:47:37.127887+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-196fead6",
+    "id": "9b0e57ee-41d0-48e7-9b41-7918d2325f56",
+    "sync_time": "2026-10-22T19:47:37.153475+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-414c0257",
+    "id": "62fb7dc5-3bca-4ab2-a5f5-703b7ee2fc1a",
+    "sync_time": "2026-10-22T19:47:37.173315+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-855cf3f6",
+    "id": "cc56a0c7-5b44-47f6-a038-67f570702b1e",
+    "sync_time": "2026-10-22T19:51:15.695775+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-b46334d5",
+    "id": "b9617e24-702f-4bb5-b725-f75e74c97410",
+    "sync_time": "2026-10-22T19:51:15.754884+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-67052461",
+    "id": "c93766bc-3714-4f2c-96a0-41f2850a9c9c",
+    "sync_time": "2026-10-22T19:51:15.781123+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-9fbc153a",
+    "id": "4f9f42e2-be4b-4662-9c57-522b12dc2a7d",
+    "sync_time": "2026-10-22T19:51:15.794391+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-a3b4ed80",
+    "id": "fad5a73c-e737-4a4f-a2fd-6fc8bda370ea",
+    "sync_time": "2026-10-22T20:05:02.142619+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-3c5835aa",
+    "id": "b61cee15-008b-4c39-a4f7-09b9ee6a288c",
+    "sync_time": "2026-10-22T20:05:02.167126+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-1fb67700",
+    "id": "36d307e5-aebf-46e8-9782-5ccba1a19d58",
+    "sync_time": "2026-10-22T20:05:02.183618+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-40e114f9",
+    "id": "82d5c322-3fcb-4965-88e7-5307aa91f66c",
+    "sync_time": "2026-10-22T20:05:02.198106+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-87351369",
+    "id": "ad8ebbc1-4fc8-457c-aa45-ffa47469fdcd",
+    "sync_time": "2026-10-22T20:09:12.802939+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-13785dbe",
+    "id": "b25d6391-6454-4436-b0a2-71bc285d8025",
+    "sync_time": "2026-10-22T20:09:12.828764+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-0a695409",
+    "id": "5e5e1b7a-7ee3-483f-8f18-b1d8d9308a6c",
+    "sync_time": "2026-10-22T20:09:12.846517+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-6d317628",
+    "id": "46daf43a-678a-456d-911e-6dcdccf74142",
+    "sync_time": "2026-10-22T20:09:12.860738+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-8c4ae84e",
+    "id": "261c5588-6df7-42dc-b2af-2c16a79ee3cd",
+    "sync_time": "2026-10-22T20:23:38.556893+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-47fecfa5",
+    "id": "0e5cebfc-daa5-43f3-a1fe-74484b12f847",
+    "sync_time": "2026-10-22T20:23:38.652919+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-7573421a",
+    "id": "c141aaf3-e798-4a4f-b0b3-26c69b286df1",
+    "sync_time": "2026-10-22T20:23:38.741963+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-f1dbc006",
+    "id": "a8e9ae5f-8e73-4742-8040-a47b91cfea06",
+    "sync_time": "2026-10-22T20:23:38.799381+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-3d07bbbe",
+    "id": "3fcca826-9520-4cae-a71f-3bd90513ae25",
+    "sync_time": "2026-10-22T20:25:07.625462+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-afb13c82",
+    "id": "b37812fa-947b-4ae0-ac3c-520aa28934b9",
+    "sync_time": "2026-10-22T20:25:07.656875+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-8de16332",
+    "id": "4612e3f2-6a58-45bd-b1b0-8cd88baf3ae9",
+    "sync_time": "2026-10-22T20:25:07.674882+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-761c487e",
+    "id": "82507fec-52d2-46aa-bab7-3c24d93f95eb",
+    "sync_time": "2026-10-22T20:25:07.691527+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-9e2ad0a6",
+    "id": "ffbae389-5fd3-4ad7-9882-f6722b40549a",
+    "sync_time": "2026-10-22T20:30:03.787935+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-4b8e5306",
+    "id": "450ee549-5085-42a6-bf00-700c1964a891",
+    "sync_time": "2026-10-22T20:30:03.815622+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-eab51231",
+    "id": "c95d1aa2-7175-4609-b594-b12395134035",
+    "sync_time": "2026-10-22T20:30:03.836367+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-f5750ed0",
+    "id": "6676096a-32cb-4790-a318-6f019f2e1f68",
+    "sync_time": "2026-10-22T20:30:03.853319+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-9a00354d",
+    "id": "bab72230-92bf-41e4-b29f-54bf0523423a",
+    "sync_time": "2026-10-22T20:40:08.243410+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-34f9a25f",
+    "id": "91a15d41-2439-4ec9-abb4-cceafb44e606",
+    "sync_time": "2026-10-22T20:40:08.259195+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-7fd1f347",
+    "id": "d79b79cd-96c7-4b6f-a72e-132ff8a79ea6",
+    "sync_time": "2026-10-22T20:40:08.270239+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-b0cd5f34",
+    "id": "796d54bf-efe9-404e-88ac-22ae3a43724e",
+    "sync_time": "2026-10-22T20:40:08.279133+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-01468217",
+    "id": "d99cce53-de4a-455b-8c0a-68511c78f9c5",
+    "sync_time": "2026-10-22T20:47:04.808771+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-f6a32748",
+    "id": "ae335e7a-783a-48bb-adf1-57e38c17b10f",
+    "sync_time": "2026-10-22T20:47:04.826619+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-d6e80eff",
+    "id": "c3d9c76e-ef9a-4933-9a67-4959a5c3187d",
+    "sync_time": "2026-10-22T20:47:04.837941+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-aaf6399f",
+    "id": "da7f6d68-5542-4611-82ed-84189b13b93b",
+    "sync_time": "2026-10-22T20:47:04.848945+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-f8003d58",
+    "id": "b70a7109-3041-464e-80d4-d0451c79a871",
+    "sync_time": "2026-10-22T20:53:44.300830+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-67cac1b3",
+    "id": "fdfb0d99-1f94-4dfd-aa10-9799ada8953e",
+    "sync_time": "2026-10-22T20:53:44.317080+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-964ed81a",
+    "id": "41a23c45-b09f-4749-a9d2-7e57ab6e2284",
+    "sync_time": "2026-10-22T20:53:44.328691+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-ae23d312",
+    "id": "147fd245-862b-4416-92a5-178930bef071",
+    "sync_time": "2026-10-22T20:53:44.337482+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-78c62c2d",
+    "id": "bb80721f-0013-40df-a23f-a33a555e633f",
+    "sync_time": "2026-10-22T21:09:49.583145+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-41f36510",
+    "id": "c50df8be-57f1-491d-8aaa-453c234100ff",
+    "sync_time": "2026-10-22T21:09:49.600520+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-0a748edc",
+    "id": "bb94bb81-0179-4364-9c41-35f97d11e50a",
+    "sync_time": "2026-10-22T21:09:49.611351+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-33ddbfb1",
+    "id": "b2cd046e-b292-49c0-baf4-87b995e27a1e",
+    "sync_time": "2026-10-22T21:09:49.620874+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-1a4ff7a3",
+    "id": "41456d52-09d4-4c8d-a5cc-de96c8b7275d",
+    "sync_time": "2026-10-23T04:12:08.723524+00:00",
+    "_db_synced": false
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-df04f3a9",
+    "id": "af341f92-d4f9-4238-9e7d-6c5e56a584b5",
+    "sync_time": "2026-10-23T04:12:08.740013+00:00",
+    "_db_synced": false
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-650c5a4b",
+    "id": "aef18bd8-b567-444b-8203-65d016b2c3d6",
+    "sync_time": "2026-10-23T04:12:08.753944+00:00",
+    "_db_synced": false
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-9409b934",
+    "id": "7e3497a3-bb2f-4e8a-b201-25b5d1aff1d7",
+    "sync_time": "2026-10-23T04:12:08.765054+00:00",
+    "_db_synced": false
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-6d8b6d9f",
+    "id": "78c4eb02-7b67-4fee-b1b5-48e10914b5f0",
+    "sync_time": "2026-10-23T04:13:01.295880+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-412ea4af",
+    "id": "8a2c20cb-d4e1-43f7-a395-56aaa0324833",
+    "sync_time": "2026-10-23T04:13:01.329249+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-8d919751",
+    "id": "594f5db5-5cf0-41b5-8d65-296733b04995",
+    "sync_time": "2026-10-23T04:13:01.349335+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-7d491f8c",
+    "id": "3ca0df3e-f599-41c4-8132-37b4854f0dbc",
+    "sync_time": "2026-10-23T04:13:01.368068+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-de33725c",
+    "id": "f1a2243a-35f1-47bf-a497-b6f0dd80b741",
+    "sync_time": "2026-10-23T04:21:12.564421+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-ac8e0a75",
+    "id": "e929a026-74a4-49be-9592-3b40d9e072ff",
+    "sync_time": "2026-10-23T04:21:12.664347+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-79ae3622",
+    "id": "b72933bf-f3e9-4d94-91ad-6eeb9b3096b6",
+    "sync_time": "2026-10-23T04:21:12.735582+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-ba876170",
+    "id": "e04a50bd-523d-4a3f-b36d-e9acd65867a8",
+    "sync_time": "2026-10-23T04:21:12.794766+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-9711c2a7",
+    "id": "47520981-333a-44e0-b8a8-6bb5ba1d5dce",
+    "sync_time": "2026-10-23T04:34:22.158866+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-fd03065f",
+    "id": "dc86d53b-82c7-4bbd-bfbc-f26857c6e601",
+    "sync_time": "2026-10-23T04:34:22.199409+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-24d21dc0",
+    "id": "9b184d93-0adf-4928-943b-2479753cc6be",
+    "sync_time": "2026-10-23T04:34:22.219099+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-179d74df",
+    "id": "bf7d0eca-2237-46ac-bb09-d524342035a6",
+    "sync_time": "2026-10-23T04:34:22.235557+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-6aae7353",
+    "id": "c0ab3ee8-d1cf-4348-8354-6be466696575",
+    "sync_time": "2026-10-23T04:36:14.603125+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-fb5421cf",
+    "id": "8cf3737f-8e9f-43a0-a1f0-354a01e1cc64",
+    "sync_time": "2026-10-23T04:36:14.632111+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-caa22bbe",
+    "id": "0cc043c1-5967-4856-9e68-4bb6f7f75dfa",
+    "sync_time": "2026-10-23T04:36:14.654791+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-97ccd234",
+    "id": "458fcb7d-1700-4da2-954c-6c6ce4562107",
+    "sync_time": "2026-10-23T04:36:14.672705+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-2edeb556",
+    "id": "0a6292be-a378-4339-9b65-c6e61ceff2d7",
+    "sync_time": "2026-10-23T04:39:14.972986+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-bc883c3e",
+    "id": "9bf4594c-587b-48fa-a89a-c64654305c4d",
+    "sync_time": "2026-10-23T04:39:15.000941+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-c86a0f96",
+    "id": "b2886532-e874-4a41-9a13-d5ef37b9fb29",
+    "sync_time": "2026-10-23T04:39:15.018021+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-4c415901",
+    "id": "8b6d13a3-2d29-44dd-a089-90f2687f9404",
+    "sync_time": "2026-10-23T04:39:15.035528+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-57d39b2d",
+    "id": "451a83f5-ea5c-4919-a36d-da9ab1abaaf2",
+    "sync_time": "2026-10-23T04:44:21.001511+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-a1443a40",
+    "id": "21815a34-a3e1-437a-a798-dddc92c14ce4",
+    "sync_time": "2026-10-23T04:44:21.026502+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-07caccda",
+    "id": "0f9a3ee8-2584-4afc-8e35-0d4545f0dade",
+    "sync_time": "2026-10-23T04:44:21.043214+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-5f08cdec",
+    "id": "60e16cc8-96d8-4099-9bde-ea545f948a84",
+    "sync_time": "2026-10-23T04:44:21.058743+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-a3472194",
+    "id": "32dbc96c-a8e7-47fb-8106-24d604c393a4",
+    "sync_time": "2026-10-23T04:46:39.046932+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-85dfb15e",
+    "id": "fcb0f03f-e571-492d-8d87-55abee2d441f",
+    "sync_time": "2026-10-23T04:46:39.083716+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-9a236ecb",
+    "id": "1cb4a155-0f92-4635-bd7f-3599a6a662d2",
+    "sync_time": "2026-10-23T04:46:39.110073+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-e84fa8ef",
+    "id": "2b47e4b5-325f-4814-bf60-4a872309321a",
+    "sync_time": "2026-10-23T04:46:39.135293+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-e776c541",
+    "id": "c8945be6-84de-49e4-b9fe-a481edea598d",
+    "sync_time": "2026-10-23T04:48:17.242007+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-72d71249",
+    "id": "5af1383b-3958-4eee-b860-e6c55754d02a",
+    "sync_time": "2026-10-23T04:48:17.270924+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-24232cd0",
+    "id": "862091de-9833-424c-9e66-99a34be70696",
+    "sync_time": "2026-10-23T04:48:17.287770+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-5ef17f89",
+    "id": "5defb2c7-263b-4c15-b01b-65003881f4a1",
+    "sync_time": "2026-10-23T04:48:17.303271+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-725acfbc",
+    "id": "9d973b65-c723-4de2-9db5-7dea84f1e70c",
+    "sync_time": "2026-10-23T04:49:04.087584+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-ddbcdaef",
+    "id": "51bdd3ff-04f8-4509-a69a-f4286571ca59",
+    "sync_time": "2026-10-23T04:49:04.170607+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-5b538729",
+    "id": "45d09457-d940-4315-8e9b-63f8e996ee6b",
+    "sync_time": "2026-10-23T04:49:04.189205+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-12a76858",
+    "id": "85910b2b-33e5-4d84-9f2d-e86fd72fe2e5",
+    "sync_time": "2026-10-23T04:49:04.206367+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-bb95e1de",
+    "id": "c3ddab52-506f-4876-87ab-b13044bf984a",
+    "sync_time": "2026-10-23T04:54:46.638150+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-1d762ff7",
+    "id": "7e5ad4ee-c96c-48be-b2f1-036d5c8af09a",
+    "sync_time": "2026-10-23T04:54:46.667408+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-1649dd5c",
+    "id": "ff2bfe77-715b-4c65-abc2-a6642c6e64aa",
+    "sync_time": "2026-10-23T04:54:46.686516+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-e5917698",
+    "id": "99f8bda6-00ad-46c3-9065-8201dfb8ef7e",
+    "sync_time": "2026-10-23T04:54:46.706103+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-8835a185",
+    "id": "3bb3b64e-6917-4c34-a1a2-82d1d0d104f5",
+    "sync_time": "2026-10-23T04:55:48.111513+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-f7855ebd",
+    "id": "04c34f54-32d6-4d23-ae35-fba2f77e50c9",
+    "sync_time": "2026-10-23T04:55:48.150297+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-c1f1b913",
+    "id": "c888cebf-8612-49be-a45c-6a36a7e7a7f9",
+    "sync_time": "2026-10-23T04:55:48.170778+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-1d6d323c",
+    "id": "8293f258-0285-4554-b681-b46e77892ab8",
+    "sync_time": "2026-10-23T04:55:48.193497+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-45c62450",
+    "id": "ddd3c858-bc11-41b7-a502-a1610e3ae76c",
+    "sync_time": "2026-10-23T04:57:41.234559+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-53451de4",
+    "id": "25302532-225c-4e78-aef4-419ddb8a547b",
+    "sync_time": "2026-10-23T04:57:41.262723+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-23b9f3d2",
+    "id": "c538e0ce-edda-4b3c-89ce-b150da718d59",
+    "sync_time": "2026-10-23T04:57:41.280228+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-149ca779",
+    "id": "8cc4f446-2a15-40af-b7bf-1f47a434de6b",
+    "sync_time": "2026-10-23T04:57:41.298376+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-2787a4aa",
+    "id": "2f075f9f-9c6b-4b4a-a6c9-fc4891a3ab91",
+    "sync_time": "2026-10-23T04:59:57.567873+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-380fb376",
+    "id": "4a51fbf1-c5d2-4d7f-a937-f03e65bc381c",
+    "sync_time": "2026-10-23T04:59:57.600270+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-3abc53b3",
+    "id": "40aa334d-a223-4be7-b97c-b6ecc0a02756",
+    "sync_time": "2026-10-23T04:59:57.618636+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-fd827683",
+    "id": "7141f764-e5e1-4611-97e9-8fc289e4f59a",
+    "sync_time": "2026-10-23T04:59:57.635484+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-7103b8fd",
+    "id": "1b1291d6-9592-4783-8e47-b8090abd00c2",
+    "sync_time": "2026-10-23T05:05:25.317839+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-4372a6a3",
+    "id": "90c8861d-6812-4d6c-8844-56549f59dede",
+    "sync_time": "2026-10-23T05:05:25.366448+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-6b1a5718",
+    "id": "ef29bd80-442b-438b-9c58-a68f3bed3131",
+    "sync_time": "2026-10-23T05:05:25.382301+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-88672c2e",
+    "id": "ec65a98f-ebac-4c95-a49d-c6275cd38c96",
+    "sync_time": "2026-10-23T05:05:25.403347+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-bd3f3181",
+    "id": "7dbaab24-65c4-471e-a1fb-3cefbfbe5bf0",
+    "sync_time": "2026-10-23T05:06:08.169275+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-7fe3fb00",
+    "id": "a0e28275-19b1-45e0-974a-5c1fc597640d",
+    "sync_time": "2026-10-23T05:06:08.201228+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-1da9aeef",
+    "id": "67c1ef8b-59ea-41be-aa70-edba2f508328",
+    "sync_time": "2026-10-23T05:06:08.220637+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-b5f43be9",
+    "id": "bc4c0aa2-3eb9-41b5-8a91-3bf10c8a7183",
+    "sync_time": "2026-10-23T05:06:08.237422+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-943ae257",
+    "id": "ca1f1989-fd3a-425f-9483-73759c1abf56",
+    "sync_time": "2026-10-23T05:09:51.719347+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-94e1f324",
+    "id": "518147d6-8fa9-4e57-9d0f-abe79481f53a",
+    "sync_time": "2026-10-23T05:09:51.752110+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-baef807b",
+    "id": "292031c1-a725-4c2b-bb7c-52c3f75b27ce",
+    "sync_time": "2026-10-23T05:09:51.769868+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-788d4bb4",
+    "id": "1da3c184-42d9-4639-8619-6e019fb3f7d0",
+    "sync_time": "2026-10-23T05:09:51.786896+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-97f062fc",
+    "id": "ae962092-7864-4e52-ba3e-b87371c73ad2",
+    "sync_time": "2026-10-23T05:14:52.347345+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-e9490415",
+    "id": "f53d5a6b-1219-40ef-b17d-b4748371de0c",
+    "sync_time": "2026-10-23T05:14:52.375826+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-a7d338e4",
+    "id": "25cc575a-2838-4384-9134-ed357224cce8",
+    "sync_time": "2026-10-23T05:14:52.394457+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-c319faec",
+    "id": "42dc4635-1337-4be3-941b-4d7fea4bb98b",
+    "sync_time": "2026-10-23T05:14:52.413703+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-df45c1f4",
+    "id": "e0189c10-7534-4ce8-b3a2-cd9bc6215d1b",
+    "sync_time": "2026-10-23T05:18:35.446461+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-e7af720e",
+    "id": "ac55d240-1a7f-4d52-bd6e-513c6c1b5ea8",
+    "sync_time": "2026-10-23T05:18:35.484481+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-5432d59e",
+    "id": "3e2c0181-6045-4b83-bba9-8c9fa54fc54a",
+    "sync_time": "2026-10-23T05:18:35.507532+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-aa6696ab",
+    "id": "b4ea2d6b-dbbf-4ff0-b7be-e1f7861b1d1e",
+    "sync_time": "2026-10-23T05:18:35.533884+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-1858ac47",
+    "id": "462e9e21-d54a-4125-8eb3-6e2f1ae1c827",
+    "sync_time": "2026-10-23T05:23:20.769078+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-6b0f0d33",
+    "id": "b54a3257-f072-4f7f-a61c-afa84e4fe75f",
+    "sync_time": "2026-10-23T05:23:20.817000+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-aeffa3c8",
+    "id": "bf417f4d-e639-49b7-9b88-56a707f40fda",
+    "sync_time": "2026-10-23T05:23:20.838886+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-808f1629",
+    "id": "1b828df0-2034-40de-bda9-f27e657a72a4",
+    "sync_time": "2026-10-23T05:23:20.858837+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-b42bca4d",
+    "id": "d1e063bc-9b5f-4fb7-85b5-1d2de660e8f2",
+    "sync_time": "2026-10-23T05:27:09.293151+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-a6d1c1de",
+    "id": "c658de0e-deef-4539-ab45-23db6d7d05fa",
+    "sync_time": "2026-10-23T05:27:09.327886+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-07933777",
+    "id": "0cd4eee7-5d09-4637-93ee-8e86ab5c6acc",
+    "sync_time": "2026-10-23T05:27:09.351330+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-2258bcd9",
+    "id": "716f0a75-9dd5-4094-a2bb-59f407f84fb9",
+    "sync_time": "2026-10-23T05:27:09.374437+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-62b22203",
+    "id": "f84ebbfb-cdc5-4c9e-aa40-bd16bcc89f68",
+    "sync_time": "2026-10-23T05:44:23.848696+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-ef9a6ff6",
+    "id": "705ebf26-d50a-4f2f-9b02-7c5d2b8bce62",
+    "sync_time": "2026-10-23T05:44:23.868139+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-80777296",
+    "id": "34cd8432-c912-4c24-89e2-4de096ab1442",
+    "sync_time": "2026-10-23T05:44:23.879649+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-9525ba1e",
+    "id": "1f07f6f0-4a9d-4409-a900-e9314e8c57d1",
+    "sync_time": "2026-10-23T05:44:23.890755+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-5c39883d",
+    "id": "3b9d8429-50a5-49b3-b96f-920eb01bbd61",
+    "sync_time": "2026-10-23T05:48:20.973078+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-27db765b",
+    "id": "bd325cea-6e62-456e-a6ca-8160b8766c59",
+    "sync_time": "2026-10-23T05:48:20.992174+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-f02f2cd8",
+    "id": "616061ec-31a0-43fb-9831-18a643765887",
+    "sync_time": "2026-10-23T05:48:21.004247+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-f0ff8de5",
+    "id": "c2d993bf-b971-40f2-b630-5a0b5c0a06a4",
+    "sync_time": "2026-10-23T05:48:21.014742+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-b365e5aa",
+    "id": "e1f8d9d2-62a1-47f3-b8e1-f73e9f02d287",
+    "sync_time": "2026-10-23T05:52:40.734244+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-156d1340",
+    "id": "2c29990b-d7dc-4d15-968b-cedfd81275ad",
+    "sync_time": "2026-10-23T05:52:40.753358+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-2d3dbc9e",
+    "id": "3ee28e2f-a3ca-4ce1-ab36-fdd893b34e76",
+    "sync_time": "2026-10-23T05:52:40.765208+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-d6b19e36",
+    "id": "fcfa579d-be79-4f66-9f59-c6be28a15cde",
+    "sync_time": "2026-10-23T05:52:40.776440+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-9dcb96f8",
+    "id": "a1dc6f68-f9e1-4893-86d9-957b9faebbd2",
+    "sync_time": "2026-10-23T05:54:13.841715+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-2efea62e",
+    "id": "7d49c383-905e-4188-821a-35c480becb38",
+    "sync_time": "2026-10-23T05:54:13.860613+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-429da74a",
+    "id": "32ff3a10-153b-4ee2-adea-4376be42af04",
+    "sync_time": "2026-10-23T05:54:13.872666+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-2dc66008",
+    "id": "1d29771f-49db-468e-aed7-3d835d0320fc",
+    "sync_time": "2026-10-23T05:54:13.882877+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-1d9f3600",
+    "id": "d7365b17-5675-4251-af12-7df5538a160b",
+    "sync_time": "2026-10-23T05:55:49.247206+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-fbca9a94",
+    "id": "e87c22a6-1f3a-4440-8577-165797f8781a",
+    "sync_time": "2026-10-23T05:55:49.266206+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-d1a5866c",
+    "id": "771997a1-ffe7-4cee-a622-10f3218c5b42",
+    "sync_time": "2026-10-23T05:55:49.277205+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-8607d100",
+    "id": "19099c9c-dc67-4e08-bf33-887a5529f3b0",
+    "sync_time": "2026-10-23T05:55:49.289389+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-bc78a233",
+    "id": "bcbbded3-5711-433f-898b-db122e7a02e7",
+    "sync_time": "2026-10-23T06:01:04.278823+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-09f4dd77",
+    "id": "fe460d00-17ff-4812-8836-5b7c762497fe",
+    "sync_time": "2026-10-23T06:01:04.303499+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-491270c5",
+    "id": "6b359d3e-aed9-430a-b0b2-9e1d1899ed0b",
+    "sync_time": "2026-10-23T06:01:04.317620+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-a2431b41",
+    "id": "9c97bc24-17e7-4cb6-a381-66ccea58c749",
+    "sync_time": "2026-10-23T06:01:04.329921+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-796f6acb",
+    "id": "432ae291-9655-4f25-b12c-bdab139ebad5",
+    "sync_time": "2026-10-23T06:03:20.127029+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-e714a313",
+    "id": "07ff0c9f-a667-4c8c-9eb1-88b687313fba",
+    "sync_time": "2026-10-23T06:03:20.146505+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-471e521d",
+    "id": "2d39a54f-23a2-44dc-a88a-67863ea95f42",
+    "sync_time": "2026-10-23T06:03:20.157262+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-732f72cb",
+    "id": "9528d5ae-7326-4c0a-9ff7-b43d1a0b64cd",
+    "sync_time": "2026-10-23T06:03:20.168363+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-dd661889",
+    "id": "7690e81b-4e6c-4be0-9c2e-1e4498d2d86f",
+    "sync_time": "2026-10-23T06:05:53.869945+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-3341b2f0",
+    "id": "d4707c9c-39d7-48d3-b7b1-1d2d4498b44d",
+    "sync_time": "2026-10-23T06:05:53.888620+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-a20ed49c",
+    "id": "164157ca-4704-4d03-baf4-3e06b1bfd7f2",
+    "sync_time": "2026-10-23T06:05:53.900827+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-1db195db",
+    "id": "7e4f5ebf-51ce-4350-8b24-a59396735d27",
+    "sync_time": "2026-10-23T06:05:53.911942+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-7f3a1111",
+    "id": "83a0ffe7-db61-4109-8cad-23a1b6cc1e74",
+    "sync_time": "2026-10-23T06:09:16.618764+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-fa9a359e",
+    "id": "eb0263d2-5699-422f-8baf-aec1a628057b",
+    "sync_time": "2026-10-23T06:09:16.637981+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-0ec022b0",
+    "id": "eb4b9180-cf62-4aca-a948-93605d6f686d",
+    "sync_time": "2026-10-23T06:09:16.650227+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-2b8526c5",
+    "id": "45bd9779-22cc-4e96-adf9-ee67aa865753",
+    "sync_time": "2026-10-23T06:09:16.661363+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-57762be6",
+    "id": "d03261fe-1cac-42af-aa38-bc9b5084767d",
+    "sync_time": "2026-10-23T06:11:59.030993+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-cde79837",
+    "id": "87383c30-9ff5-4733-a22b-1590ba4160d7",
+    "sync_time": "2026-10-23T06:11:59.050205+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-4417f41d",
+    "id": "fb44e81a-6ab4-48a0-b444-5fe2047f81b7",
+    "sync_time": "2026-10-23T06:11:59.062336+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-eb8eb4e8",
+    "id": "98d9fc3c-5992-4581-95d9-802bd9f28291",
+    "sync_time": "2026-10-23T06:11:59.073068+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-ec0ffbf8",
+    "id": "f8beb4a7-ad35-412c-99fd-81d59462dbc2",
+    "sync_time": "2026-10-23T06:18:37.723987+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-92e6048c",
+    "id": "772edcb0-f676-4568-a345-340c0b87185b",
+    "sync_time": "2026-10-23T06:18:37.743306+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-94f1d384",
+    "id": "1f6cb1ef-c16f-44eb-b2d9-b4e77faeaeed",
+    "sync_time": "2026-10-23T06:18:37.755507+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-1e904fa7",
+    "id": "614c0e37-e778-45c9-8f40-9ce69ed9f3c3",
+    "sync_time": "2026-10-23T06:18:37.767983+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-2f61649d",
+    "id": "cddbf885-e1b2-4331-a3f5-f383734275e5",
+    "sync_time": "2026-10-23T06:22:15.631133+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-57664d71",
+    "id": "a55c8544-5e90-4f1a-bfdb-529203bddf2e",
+    "sync_time": "2026-10-23T06:22:15.650139+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-6fac6d3c",
+    "id": "41af1864-99fc-47d8-a937-12b4c8735a34",
+    "sync_time": "2026-10-23T06:22:15.661984+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-c4692155",
+    "id": "195e4174-9dd5-44e5-bcab-91dd601f1d19",
+    "sync_time": "2026-10-23T06:22:15.674182+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-c33c066d",
+    "id": "67baabdd-86bf-4222-8dda-1bad242f10b5",
+    "sync_time": "2026-10-23T06:28:33.768903+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-939cf3fa",
+    "id": "87ebb762-9f3e-4a23-a43f-fae2dc0decb7",
+    "sync_time": "2026-10-23T06:28:33.788011+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-723d2ba4",
+    "id": "a911fefa-9809-4512-9edc-784e328c6a8a",
+    "sync_time": "2026-10-23T06:28:33.800206+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-a9f8e435",
+    "id": "a010f91c-9853-4782-a506-cd8dedfbbb2a",
+    "sync_time": "2026-10-23T06:28:33.812350+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-8c491fd2",
+    "id": "a418ca2d-ddb7-4475-8569-168727d7c719",
+    "sync_time": "2026-10-23T06:31:32.483653+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-db916446",
+    "id": "15aed133-1a62-40d2-8df3-e015dda586fa",
+    "sync_time": "2026-10-23T06:31:32.504006+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-475f3477",
+    "id": "65ba7446-06a1-465a-9c2d-f1bc1dbd3a05",
+    "sync_time": "2026-10-23T06:31:32.516101+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-c78cac3c",
+    "id": "f05d49e2-f973-4f0e-b5e6-34932fb263e8",
+    "sync_time": "2026-10-23T06:31:32.527858+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-419794db",
+    "id": "bd7b1b57-263d-4a18-be70-82e08b92cc67",
+    "sync_time": "2026-10-23T06:34:14.111164+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-9a175e77",
+    "id": "56e2615e-ada7-488f-aff9-4563007ebd24",
+    "sync_time": "2026-10-23T06:34:14.130856+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-d8b9a0ff",
+    "id": "fd88c2fc-0d85-4b17-8293-de9cf507a399",
+    "sync_time": "2026-10-23T06:34:14.143752+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-2ef5b4a2",
+    "id": "a48fccc4-22db-45a1-8c4c-703f68200b28",
+    "sync_time": "2026-10-23T06:34:14.155938+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-d03f3574",
+    "id": "a3dc806e-fe51-4dde-ae5e-007dda80e5b0",
+    "sync_time": "2026-10-23T06:37:11.552606+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-46876501",
+    "id": "611625fe-a749-42ae-8f3d-eef11e0fbc37",
+    "sync_time": "2026-10-23T06:37:11.574132+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-532f021b",
+    "id": "a6120ae7-fb35-44a9-9f7a-8709c8f0a0cd",
+    "sync_time": "2026-10-23T06:37:11.586244+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-22f5e404",
+    "id": "7ed22fc7-086f-4196-9f3d-8f9600fcdab6",
+    "sync_time": "2026-10-23T06:37:11.598587+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-5743896c",
+    "id": "88ce5725-e0b2-441b-80bb-4fc9a59f6d0c",
+    "sync_time": "2026-10-23T07:18:46.865345+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-3b275a39",
+    "id": "79074ac3-a953-4b26-9084-5f486ebf85fa",
+    "sync_time": "2026-10-23T07:18:46.884945+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-cea72678",
+    "id": "228a18ed-87d9-4b60-aebf-fc0645d64622",
+    "sync_time": "2026-10-23T07:18:46.899925+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-6cea90d2",
+    "id": "b9fdbcae-a098-4681-b48b-af0475c5e980",
+    "sync_time": "2026-10-23T07:18:46.913818+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-be76ffcf",
+    "id": "64dc930b-a631-4737-b870-6e95954aa4a6",
+    "sync_time": "2026-10-23T07:24:21.838573+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-5022c57a",
+    "id": "929940db-3405-4313-83da-d2ce78ea1546",
+    "sync_time": "2026-10-23T07:24:21.860445+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-b3069cb3",
+    "id": "4af1f64a-6c31-462f-9370-1282cb53e912",
+    "sync_time": "2026-10-23T07:24:21.873884+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-c41f58fc",
+    "id": "ac2e315a-9af5-4d99-a319-34a7bdb023b0",
+    "sync_time": "2026-10-23T07:24:21.888743+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-c55fad7a",
+    "id": "31d2342b-a1bb-491c-8dc4-728aa6b8ca19",
+    "sync_time": "2026-10-23T07:27:46.881072+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-ccb4ab11",
+    "id": "c2ab9787-ebca-4682-bf10-7e4b73addb27",
+    "sync_time": "2026-10-23T07:27:46.905154+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-e81de9eb",
+    "id": "4b81e9f9-acb7-44b9-bc1d-073adf69c297",
+    "sync_time": "2026-10-23T07:27:46.919598+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-21954e6c",
+    "id": "7e994caa-b6fd-408e-9cfb-91a5feee193c",
+    "sync_time": "2026-10-23T07:27:46.932863+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-f494bc4c",
+    "id": "95cd109b-1301-4de5-8d0f-505f4fd7c05a",
+    "sync_time": "2026-10-23T07:30:52.828909+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-846c0bf2",
+    "id": "27045ffa-b742-4edc-8c39-802b19e56c03",
+    "sync_time": "2026-10-23T07:30:52.849428+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-4ac4fd47",
+    "id": "d212446e-8a31-42da-86aa-6af3e5e35dbb",
+    "sync_time": "2026-10-23T07:30:52.863804+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-32ea5499",
+    "id": "0b259bd5-01b3-4fcf-a442-e1c5b72d395f",
+    "sync_time": "2026-10-23T07:30:52.875851+00:00",
+    "_db_synced": true
+  },
+  {
+    "request_type": "evacuation",
+    "location": "ruby",
+    "numberOfPeople": "3",
+    "emergencyType": "fire",
+    "hasVulnerable": null,
+    "contactName": "sggggg",
+    "contactPhone": "4958934759",
+    "additionalInfo": "",
+    "_op_id": "EVC-mvko6lhj-3",
+    "id": "b46d516c-a4c7-4041-ba7a-66822a6ea10b",
+    "sync_time": "2026-10-23T07:50:04.612Z",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-d5ee0088",
+    "id": "e6bf17f9-745b-4b3b-82ae-2a1e47d53977",
+    "sync_time": "2026-10-23T08:26:52.834993+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-6e906d92",
+    "id": "58220cb5-f7ef-4339-b56d-8e1bff40487f",
+    "sync_time": "2026-10-23T08:26:52.857230+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-b3f215ad",
+    "id": "fa511bcc-9362-4488-92a5-a06e4d2342c0",
+    "sync_time": "2026-10-23T08:26:52.871317+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-ba7cd8c1",
+    "id": "09d9c925-ccbd-4d5a-b5b4-e82960af5cf2",
+    "sync_time": "2026-10-23T08:26:52.883406+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-cffd78e8",
+    "id": "f1d1ad52-5496-42ac-bd49-a3a32dbaa6d9",
+    "sync_time": "2026-10-23T08:36:19.052309+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-c1395773",
+    "id": "bdec8480-3a20-4fbe-aa38-15b6c9ec2b89",
+    "sync_time": "2026-10-23T08:36:19.080066+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-93eac48c",
+    "id": "f96bde03-af6f-4503-b601-151f4681d6b8",
+    "sync_time": "2026-10-23T08:36:19.094909+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-4f5c565d",
+    "id": "cc2e69c3-1519-478d-9e61-71a27ae89285",
+    "sync_time": "2026-10-23T08:36:19.107222+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-1511a658",
+    "id": "f3d202a4-5b64-4cd7-a38f-6463b3eda48b",
+    "sync_time": "2026-10-23T08:47:00.735981+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-65b5c394",
+    "id": "abd9d55b-3810-4ba4-8574-98bb32ac8cd0",
+    "sync_time": "2026-10-23T08:47:00.758353+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-d0c48be3",
+    "id": "8e8853c7-458f-4b7e-9792-48b1a7f600e3",
+    "sync_time": "2026-10-23T08:47:00.772173+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-b0eff8d2",
+    "id": "ee4dcd71-1d4b-4ed2-80f3-58891c6ea63f",
+    "sync_time": "2026-10-23T08:47:00.785263+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-0eea8b3b",
+    "id": "a54555e5-4051-41c1-8c0f-b397c38bdaf7",
+    "sync_time": "2026-10-23T08:57:21.131696+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-7ee279b7",
+    "id": "61a67694-bde1-4628-8c7b-1c13b57c5a8d",
+    "sync_time": "2026-10-23T08:57:21.153186+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-65ee26dd",
+    "id": "ea131a4e-278f-4cc8-956d-48502f70871b",
+    "sync_time": "2026-10-23T08:57:21.166894+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-4fd8ca50",
+    "id": "9588cc0f-f088-4994-af64-d4c1f7fdd7bc",
+    "sync_time": "2026-10-23T08:57:21.180174+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-4b3e4a33",
+    "id": "441d6019-e754-4b42-9999-b091ad07576f",
+    "sync_time": "2026-10-23T09:03:33.271841+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-adfa3baa",
+    "id": "e3a4e8a2-0a75-4bf4-a125-b377ce322303",
+    "sync_time": "2026-10-23T09:03:33.297390+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-340b3181",
+    "id": "4195bc11-7eca-450b-b4e6-54de579fefd1",
+    "sync_time": "2026-10-23T09:03:33.311074+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-f172ca0f",
+    "id": "fb4d2e58-a5dd-42ab-a611-2c007508958d",
+    "sync_time": "2026-10-23T09:03:33.323890+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-b0bd4a10",
+    "id": "4e96eaa7-81ea-43a7-b85d-dc74555cdf4a",
+    "sync_time": "2026-10-23T09:11:56.004701+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-9639efea",
+    "id": "5fb494ab-6320-45ec-b9f4-3bab1b16c0c6",
+    "sync_time": "2026-10-23T09:11:56.026900+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-c5d60452",
+    "id": "ba4739f1-7fb7-455d-b36c-d576ecb45af3",
+    "sync_time": "2026-10-23T09:11:56.043997+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-9dd22bb0",
+    "id": "0101790e-174a-41cb-a290-d10d7427a25e",
+    "sync_time": "2026-10-23T09:11:56.057584+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-45ca818f",
+    "id": "29f13102-8f4e-4697-a701-08f1aa48900f",
+    "sync_time": "2026-10-23T09:23:19.013732+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-0ac46bab",
+    "id": "b7e5a6a7-2c4b-48ac-9af5-d1c6338d8fea",
+    "sync_time": "2026-10-23T09:23:19.041164+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-dd889e2e",
+    "id": "f4bfa4a3-1ea7-45d1-9b88-7adec536d3a4",
+    "sync_time": "2026-10-23T09:23:19.058348+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-a97b65da",
+    "id": "d2bbe567-d5f8-4707-b481-3920e8047268",
+    "sync_time": "2026-10-23T09:23:19.075982+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-94d5cbef",
+    "id": "d041d7bf-fcc7-482b-8aac-c55bf4985189",
+    "sync_time": "2026-10-23T09:28:54.977819+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-7735a5c4",
+    "id": "90a8a8ea-1494-4b92-b2ad-50ec1d09b25d",
+    "sync_time": "2026-10-23T09:28:55.002834+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-9f09bfc1",
+    "id": "ce90d2b6-11f6-4fd5-83df-abb03297f126",
+    "sync_time": "2026-10-23T09:28:55.017731+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-7639af13",
+    "id": "2f47df50-4546-4f55-9f44-8e1a1071b293",
+    "sync_time": "2026-10-23T09:28:55.032264+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-23668d19",
+    "id": "73c0956c-750e-4e03-873b-5f69691e13b7",
+    "sync_time": "2026-10-23T09:58:54.437792+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-bd953265",
+    "id": "f2135b9b-44ee-4a3a-8be8-9b685fa5be38",
+    "sync_time": "2026-10-23T09:58:54.459517+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-97aec003",
+    "id": "5ee1edce-539a-4558-a676-fad1135ae8d9",
+    "sync_time": "2026-10-23T09:58:54.472673+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-16c24016",
+    "id": "eddffbe7-e54d-4b2e-9cd2-c089e1f62842",
+    "sync_time": "2026-10-23T09:58:54.485157+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension crack repeat upload",
+    "location_name": "Mile 14",
+    "_op_id": "test-sync-idem-29f6fa11",
+    "id": "c8b2db16-7422-4300-9a80-af9c58ec48f3",
+    "sync_time": "2026-10-23T10:11:00.039194+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Report with corrupt photo",
+    "photo_data": "invalid-non-base64-content",
+    "_op_id": "test-sync-fail-0269f391",
+    "id": "b13ae5bf-9ff3-4970-8aa9-97b05aeb4a21",
+    "sync_time": "2026-10-23T10:11:00.062677+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Tension cracks across road",
+    "location_name": "Mile 12",
+    "latitude": 27.0,
+    "longitude": 88.0,
+    "_op_id": "test-sync-733b0936",
+    "id": "798d6479-30e1-424e-a44a-42bbfa8eb099",
+    "sync_time": "2026-10-23T10:11:00.077082+00:00",
+    "_db_synced": true
+  },
+  {
+    "notes": "Rockfall photographed",
+    "photo_data": "data:image/jpeg;base64,/9j/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "_op_id": "test-sync-photo-0e78b14d",
+    "id": "913df027-e09b-4043-a686-84117190da14",
+    "sync_time": "2026-10-23T10:11:00.090028+00:00",
+    "_db_synced": true
+  }
+]

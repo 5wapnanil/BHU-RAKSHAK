@@ -1,0 +1,12 @@
+[
+  {
+    "id": "usr_1",
+    "name": "District Officer",
+    "phone_number": "+919163499989",
+    "latitude": 26.1,
+    "longitude": 92.1,
+    "sms_enabled": true,
+    "app_notifications_enabled": true,
+    "alert_radius_km": 150.0
+  }
+]

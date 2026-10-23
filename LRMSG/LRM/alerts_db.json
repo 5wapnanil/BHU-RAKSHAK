@@ -1,0 +1,3988 @@
+{
+  "696116b9-4772-4ab4-bc59-5e043bb001a7": {
+    "id": "696116b9-4772-4ab4-bc59-5e043bb001a7",
+    "location_id": "loc_test_1",
+    "location_name": "Test Area",
+    "district": "Test Dist",
+    "state": "Test State",
+    "latitude": 26.0,
+    "longitude": 92.0,
+    "severity": "CRITICAL",
+    "risk_probability": 98,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 0,
+    "soil_condition": 0.5,
+    "slope_condition": 20.0,
+    "road_status": "Monitoring active",
+    "response_priority": "IMMEDIATE",
+    "status": "ACKNOWLEDGED",
+    "created_at": "2026-09-10T06:09:34.706736+00:00",
+    "updated_at": "2026-09-10T06:09:34.710564+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T06:09:34.706736+00:00"
+      },
+      {
+        "state": "ACKNOWLEDGED",
+        "timestamp": "2026-09-11T08:58:21.589779+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "NOTIFIED",
+      "local_community": "WARNING SENT"
+    },
+    "contact_history": {
+      "test_usr_1": {
+        "last_time": 1789020574.7105644,
+        "last_sev": "CRITICAL"
+      }
+    },
+    "acknowledged_at": "2026-09-11T08:58:21.589779+00:00"
+  },
+  "67e571e9-3579-45d0-8b4b-f5b7a4460a0f": {
+    "id": "67e571e9-3579-45d0-8b4b-f5b7a4460a0f",
+    "location_id": "loc_test_2",
+    "location_name": "Test Area 2",
+    "district": "Test Dist",
+    "state": "Test State",
+    "latitude": 26.0,
+    "longitude": 92.0,
+    "severity": "HIGH",
+    "risk_probability": 85,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 0,
+    "soil_condition": 0.5,
+    "slope_condition": 20.0,
+    "road_status": "Monitoring active",
+    "response_priority": "URGENT",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T06:09:34.712756+00:00",
+    "updated_at": "2026-09-10T06:09:34.712756+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T06:09:34.712756+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    },
+    "contact_history": {
+      "test_usr_1": {
+        "last_time": 0,
+        "last_sev": "LOW"
+      }
+    }
+  },
+  "ebc5b3fa-f006-4ec3-91e1-cf64139ac57d": {
+    "id": "ebc5b3fa-f006-4ec3-91e1-cf64139ac57d",
+    "location_id": "loc_test_3",
+    "location_name": "Test Area 3",
+    "district": "Test Dist",
+    "state": "Test State",
+    "latitude": 26.0,
+    "longitude": 92.0,
+    "severity": "HIGH",
+    "risk_probability": 88,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 0,
+    "soil_condition": 0.5,
+    "slope_condition": 20.0,
+    "road_status": "Monitoring active",
+    "response_priority": "URGENT",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T06:09:34.717440+00:00",
+    "updated_at": "2026-09-10T06:09:34.717440+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T06:09:34.717440+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    },
+    "contact_history": {
+      "test_usr_1": {
+        "last_time": 0,
+        "last_sev": "LOW"
+      }
+    }
+  },
+  "b65eb9b5-7519-44e8-8662-6f5a2a5f114d": {
+    "id": "b65eb9b5-7519-44e8-8662-6f5a2a5f114d",
+    "location_id": "loc_test_4",
+    "location_name": "Test Area 4",
+    "district": "Test Dist",
+    "state": "Test State",
+    "latitude": 26.0,
+    "longitude": 92.0,
+    "severity": "CRITICAL",
+    "risk_probability": 95,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 0,
+    "soil_condition": 0.5,
+    "slope_condition": 20.0,
+    "road_status": "Monitoring active",
+    "response_priority": "IMMEDIATE",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T06:09:34.733694+00:00",
+    "updated_at": "2026-09-10T06:09:34.733694+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T06:09:34.733694+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "NOTIFIED",
+      "local_community": "WARNING SENT"
+    },
+    "contact_history": {
+      "test_usr_1": {
+        "last_time": 1789020574.7336943,
+        "last_sev": "CRITICAL"
+      }
+    }
+  },
+  "1c05d9c4-9221-4798-9359-bd8cc5ed5793": {
+    "id": "1c05d9c4-9221-4798-9359-bd8cc5ed5793",
+    "location_id": "demo_Test",
+    "location_name": "SIH 2Factor",
+    "district": "Test",
+    "state": "Test State",
+    "latitude": 26.1,
+    "longitude": 92.1,
+    "severity": "CRITICAL",
+    "risk_probability": 95,
+    "trigger": "Extreme rainfall",
+    "contributing_factors": "High rainfall + Unstable slope + High soil saturation",
+    "rainfall": 180,
+    "soil_condition": 0.9,
+    "slope_condition": 40,
+    "road_status": "Monitoring active",
+    "response_priority": "IMMEDIATE",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T06:15:08.408214+00:00",
+    "updated_at": "2026-09-10T06:15:08.408214+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T06:15:08.408214+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "NOTIFIED",
+      "local_community": "WARNING SENT"
+    },
+    "contact_history": {
+      "usr_1": {
+        "last_time": 0,
+        "last_sev": "LOW"
+      }
+    }
+  },
+  "26f9ca89-74b5-4c80-817f-9e93990bdb17": {
+    "id": "26f9ca89-74b5-4c80-817f-9e93990bdb17",
+    "location_id": "demo_Test District",
+    "location_name": "SIH 2Factor",
+    "district": "Test District",
+    "state": "Test State",
+    "latitude": 26.1,
+    "longitude": 92.1,
+    "severity": "HIGH",
+    "risk_probability": 90,
+    "trigger": "Extreme rainfall",
+    "contributing_factors": "High rainfall + Unstable slope + High soil saturation",
+    "rainfall": 120.0,
+    "soil_condition": 0.8,
+    "slope_condition": 35.0,
+    "road_status": "Monitoring active",
+    "response_priority": "URGENT",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T06:39:01.032200+00:00",
+    "updated_at": "2026-09-12T18:55:40.061709+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T06:39:01.032200+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "NOTIFIED",
+      "local_community": "WARNING SENT"
+    },
+    "contact_history": {
+      "usr_1": {
+        "last_time": 1789233083.727381,
+        "last_sev": "CRITICAL"
+      }
+    }
+  },
+  "175c40ed-6650-4a4c-a6d8-a5205defb8fb": {
+    "id": "175c40ed-6650-4a4c-a6d8-a5205defb8fb",
+    "location_id": "demo_TestDist2",
+    "location_name": "SIH 2Factor",
+    "district": "TestDist2",
+    "state": "Test State2",
+    "latitude": 26.1,
+    "longitude": 92.1,
+    "severity": "CRITICAL",
+    "risk_probability": 99,
+    "trigger": "Extreme rainfall",
+    "contributing_factors": "High rainfall + Unstable slope + High soil saturation",
+    "rainfall": 200,
+    "soil_condition": 0.95,
+    "slope_condition": 40,
+    "road_status": "Monitoring active",
+    "response_priority": "IMMEDIATE",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T06:42:19.593452+00:00",
+    "updated_at": "2026-09-10T06:42:19.593452+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T06:42:19.593452+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "NOTIFIED",
+      "local_community": "WARNING SENT"
+    },
+    "contact_history": {
+      "usr_1": {
+        "last_time": 1789022539.5934527,
+        "last_sev": "CRITICAL"
+      }
+    }
+  },
+  "f55a1b62-2d86-4f6b-8f70-2dab89d355ea": {
+    "id": "f55a1b62-2d86-4f6b-8f70-2dab89d355ea",
+    "location_id": "demo_TestDist3",
+    "location_name": "SIH Live Demo",
+    "district": "TestDist3",
+    "state": "Test State3",
+    "latitude": 28.1,
+    "longitude": 94.1,
+    "severity": "CRITICAL",
+    "risk_probability": 99,
+    "trigger": "Extreme rainfall",
+    "contributing_factors": "High rainfall + Unstable slope + High soil saturation",
+    "rainfall": 200,
+    "soil_condition": 0.95,
+    "slope_condition": 40,
+    "road_status": "Monitoring active",
+    "response_priority": "IMMEDIATE",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T06:44:53.854015+00:00",
+    "updated_at": "2026-09-10T06:44:53.854015+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T06:44:53.854015+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "NOTIFIED",
+      "local_community": "WARNING SENT"
+    }
+  },
+  "720f459b-a005-42f5-a050-c0177bfbec5d": {
+    "id": "720f459b-a005-42f5-a050-c0177bfbec5d",
+    "location_id": "demo_FinalSIHTest",
+    "location_name": "SIH Hackathon",
+    "district": "FinalSIHTest",
+    "state": "Test State",
+    "latitude": 26.1,
+    "longitude": 92.1,
+    "severity": "CRITICAL",
+    "risk_probability": 99,
+    "trigger": "Extreme rainfall",
+    "contributing_factors": "High rainfall + Unstable slope + High soil saturation",
+    "rainfall": 200,
+    "soil_condition": 0.95,
+    "slope_condition": 40,
+    "road_status": "Monitoring active",
+    "response_priority": "IMMEDIATE",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T06:47:02.408047+00:00",
+    "updated_at": "2026-09-10T06:47:02.408047+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T06:47:02.408047+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "NOTIFIED",
+      "local_community": "WARNING SENT"
+    },
+    "contact_history": {
+      "usr_1": {
+        "last_time": 1789022822.4080472,
+        "last_sev": "CRITICAL"
+      }
+    }
+  },
+  "7952fd37-5ad0-4c23-a981-ea90dbf8d30f": {
+    "id": "7952fd37-5ad0-4c23-a981-ea90dbf8d30f",
+    "location_id": "loc_27.041_88.2663",
+    "location_name": "Point (27.04, 88.27)",
+    "district": "Unknown",
+    "state": "Unknown",
+    "latitude": 27.041,
+    "longitude": 88.2663,
+    "severity": "HIGH",
+    "risk_probability": 71,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 22.7,
+    "soil_condition": 0.391,
+    "slope_condition": 20.126261873808136,
+    "road_status": "Monitoring active",
+    "response_priority": "URGENT",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:15:51.059796+00:00",
+    "updated_at": "2026-09-10T07:15:51.059796+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:15:51.059796+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "ea4af21c-dafe-45a9-8e92-db1b7dc84735": {
+    "id": "ea4af21c-dafe-45a9-8e92-db1b7dc84735",
+    "location_id": "loc_27.0668_88.2987",
+    "location_name": "Point (27.07, 88.30)",
+    "district": "Unknown",
+    "state": "Unknown",
+    "latitude": 27.0668,
+    "longitude": 88.2987,
+    "severity": "MODERATE",
+    "risk_probability": 58,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 20.5,
+    "soil_condition": 0.395,
+    "slope_condition": 15.384835328445186,
+    "road_status": "Monitoring active",
+    "response_priority": "MONITOR",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:24:16.385461+00:00",
+    "updated_at": "2026-09-10T07:24:16.385461+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:24:16.385461+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "PENDING",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "e80d5816-56e5-4e1b-b003-cf3ac008eb2e": {
+    "id": "e80d5816-56e5-4e1b-b003-cf3ac008eb2e",
+    "location_id": "custom_eval_1",
+    "location_name": "Custom Evaluation Area",
+    "district": "Simulation District",
+    "state": "Simulation State",
+    "latitude": 26.0,
+    "longitude": 92.0,
+    "severity": "MODERATE",
+    "risk_probability": 45,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 11.099999999999996,
+    "soil_condition": 0.387,
+    "slope_condition": 21.47,
+    "road_status": "Monitoring active",
+    "response_priority": "MONITOR",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:25:16.538842+00:00",
+    "updated_at": "2026-09-10T16:20:45.671273+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:25:16.538842+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "NOTIFIED",
+      "local_community": "WARNING SENT"
+    },
+    "contact_history": {
+      "usr_1": {
+        "last_time": 1789057081.326283,
+        "last_sev": "CRITICAL"
+      }
+    }
+  },
+  "7acc77f5-8d3b-496a-a60a-be9bb4e33a76": {
+    "id": "7acc77f5-8d3b-496a-a60a-be9bb4e33a76",
+    "location_id": "loc_23.491709_93.20454",
+    "location_name": "Champhai",
+    "district": "Champhai",
+    "state": "Mizoram",
+    "latitude": 23.491709,
+    "longitude": 93.20454,
+    "severity": "MODERATE",
+    "risk_probability": 59,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 25.8,
+    "soil_condition": 0.387,
+    "slope_condition": 17.93,
+    "road_status": "Monitoring active",
+    "response_priority": "MONITOR",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:17.253260+00:00",
+    "updated_at": "2026-09-10T14:50:38.338886+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:17.253260+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "4eeaa49d-30dc-4552-8150-13eff6b23ea3": {
+    "id": "4eeaa49d-30dc-4552-8150-13eff6b23ea3",
+    "location_id": "loc_28.782139_94.86048",
+    "location_name": "Upper Siang",
+    "district": "Upper Siang",
+    "state": "Arunachal Pradesh",
+    "latitude": 28.782139,
+    "longitude": 94.86048,
+    "severity": "HIGH",
+    "risk_probability": 91,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Unstable slope",
+    "rainfall": 31.4,
+    "soil_condition": 0.39399999999999996,
+    "slope_condition": 43.46,
+    "road_status": "Monitoring active",
+    "response_priority": "URGENT",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:17.267503+00:00",
+    "updated_at": "2026-09-10T07:28:17.267503+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:17.267503+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "d05a9669-4ce1-4108-b2ae-06f6a7451b91": {
+    "id": "d05a9669-4ce1-4108-b2ae-06f6a7451b91",
+    "location_id": "loc_27.392355_88.5232",
+    "location_name": "Gangtok",
+    "district": "Gangtok",
+    "state": "Sikkim",
+    "latitude": 27.392355,
+    "longitude": 88.5232,
+    "severity": "HIGH",
+    "risk_probability": 92,
+    "trigger": "Heavy rainfall",
+    "contributing_factors": "High rainfall + Unstable slope",
+    "rainfall": 51.2,
+    "soil_condition": 0.397,
+    "slope_condition": 54.3,
+    "road_status": "Monitoring active",
+    "response_priority": "URGENT",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:17.279171+00:00",
+    "updated_at": "2026-09-10T07:28:17.279171+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:17.279171+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "fa2c1893-8dbb-455d-a5f6-410bcff2b425": {
+    "id": "fa2c1893-8dbb-455d-a5f6-410bcff2b425",
+    "location_id": "loc_23.837263_91.62872",
+    "location_name": "Khowai",
+    "district": "Khowai",
+    "state": "Tripura",
+    "latitude": 23.837263,
+    "longitude": 91.62872,
+    "severity": "HIGH",
+    "risk_probability": 67,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 29.9,
+    "soil_condition": 0.408,
+    "slope_condition": 3.44,
+    "road_status": "Monitoring active",
+    "response_priority": "URGENT",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:17.280184+00:00",
+    "updated_at": "2026-09-10T14:50:38.392488+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:17.280184+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "31b1c1cd-0b5a-4c8e-be4c-50f614aefd83": {
+    "id": "31b1c1cd-0b5a-4c8e-be4c-50f614aefd83",
+    "location_id": "loc_27.554682_94.259926",
+    "location_name": "Dhemaji",
+    "district": "Dhemaji",
+    "state": "Assam",
+    "latitude": 27.554682,
+    "longitude": 94.259926,
+    "severity": "HIGH",
+    "risk_probability": 91,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Unstable slope",
+    "rainfall": 18.8,
+    "soil_condition": 0.409,
+    "slope_condition": 40.96,
+    "road_status": "Monitoring active",
+    "response_priority": "URGENT",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:17.297297+00:00",
+    "updated_at": "2026-09-10T07:28:17.297297+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:17.297297+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "d44f8e18-897b-4e01-9055-4de20423a9dc": {
+    "id": "d44f8e18-897b-4e01-9055-4de20423a9dc",
+    "location_id": "loc_25.10593_92.360245",
+    "location_name": "East Jaintia Hills",
+    "district": "East Jaintia Hills",
+    "state": "Meghalaya",
+    "latitude": 25.10593,
+    "longitude": 92.360245,
+    "severity": "MODERATE",
+    "risk_probability": 32,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 19.7,
+    "soil_condition": 0.48,
+    "slope_condition": 18.43,
+    "road_status": "Monitoring active",
+    "response_priority": "MONITOR",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:17.298299+00:00",
+    "updated_at": "2026-09-10T07:28:17.298299+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:17.298299+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "PENDING",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "914a060e-38ea-4ebe-8a35-657102e96bfd": {
+    "id": "914a060e-38ea-4ebe-8a35-657102e96bfd",
+    "location_id": "loc_25.371447_91.87656",
+    "location_name": "East Khasi Hills",
+    "district": "East Khasi Hills",
+    "state": "Meghalaya",
+    "latitude": 25.371447,
+    "longitude": 91.87656,
+    "severity": "HIGH",
+    "risk_probability": 92,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Unstable slope",
+    "rainfall": 18.0,
+    "soil_condition": 0.479,
+    "slope_condition": 35.89,
+    "road_status": "Monitoring active",
+    "response_priority": "URGENT",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:17.322197+00:00",
+    "updated_at": "2026-09-10T07:28:17.322197+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:17.322197+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    },
+    "contact_history": {
+      "usr_1": {
+        "last_time": 0,
+        "last_sev": "LOW"
+      }
+    }
+  },
+  "d6d254ce-a4c6-4fda-b8de-c44da5ed0fcc": {
+    "id": "d6d254ce-a4c6-4fda-b8de-c44da5ed0fcc",
+    "location_id": "loc_27.894518_93.43503",
+    "location_name": "Kurung Kumey",
+    "district": "Kurung Kumey",
+    "state": "Arunachal Pradesh",
+    "latitude": 27.894518,
+    "longitude": 93.43503,
+    "severity": "HIGH",
+    "risk_probability": 92,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Unstable slope",
+    "rainfall": 30.0,
+    "soil_condition": 0.384,
+    "slope_condition": 32.49,
+    "road_status": "Monitoring active",
+    "response_priority": "URGENT",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:17.324186+00:00",
+    "updated_at": "2026-09-10T07:28:17.324186+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:17.324186+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "e193f97a-4ecc-4a68-aa1f-dd05c9f6b39f": {
+    "id": "e193f97a-4ecc-4a68-aa1f-dd05c9f6b39f",
+    "location_id": "loc_25.515018_90.20299",
+    "location_name": "West Garo Hills",
+    "district": "West Garo Hills",
+    "state": "Meghalaya",
+    "latitude": 25.515018,
+    "longitude": 90.20299,
+    "severity": "MODERATE",
+    "risk_probability": 32,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 21.0,
+    "soil_condition": 0.478,
+    "slope_condition": 13.42,
+    "road_status": "Monitoring active",
+    "response_priority": "MONITOR",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:17.336975+00:00",
+    "updated_at": "2026-09-10T07:28:17.336975+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:17.336975+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "PENDING",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "691f8097-b858-46f5-916e-ec40b1b7eecc": {
+    "id": "691f8097-b858-46f5-916e-ec40b1b7eecc",
+    "location_id": "loc_27.613235_88.6573",
+    "location_name": "North Sikkim",
+    "district": "North Sikkim",
+    "state": "Sikkim",
+    "latitude": 27.613235,
+    "longitude": 88.6573,
+    "severity": "HIGH",
+    "risk_probability": 92,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Unstable slope",
+    "rainfall": 17.6,
+    "soil_condition": 0.41,
+    "slope_condition": 36.21,
+    "road_status": "Monitoring active",
+    "response_priority": "URGENT",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:17.349186+00:00",
+    "updated_at": "2026-09-10T07:28:17.349186+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:17.349186+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "0514037b-7e1f-4d02-b467-67a90bfc4a3e": {
+    "id": "0514037b-7e1f-4d02-b467-67a90bfc4a3e",
+    "location_id": "loc_23.745054_92.71425",
+    "location_name": "Aizawl",
+    "district": "Aizawl",
+    "state": "Mizoram",
+    "latitude": 23.745054,
+    "longitude": 92.71425,
+    "severity": "HIGH",
+    "risk_probability": 65,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 47.4,
+    "soil_condition": 0.39299999999999996,
+    "slope_condition": 24.9,
+    "road_status": "Monitoring active",
+    "response_priority": "URGENT",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:17.361185+00:00",
+    "updated_at": "2026-09-10T07:28:17.361185+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:17.361185+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "eef4eab3-0fbf-4354-9105-5ea481e144ac": {
+    "id": "eef4eab3-0fbf-4354-9105-5ea481e144ac",
+    "location_id": "loc_25.275152_91.36604",
+    "location_name": "West Khasi Hills",
+    "district": "West Khasi Hills",
+    "state": "Meghalaya",
+    "latitude": 25.275152,
+    "longitude": 91.36604,
+    "severity": "HIGH",
+    "risk_probability": 91,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Unstable slope",
+    "rainfall": 12.299999999999999,
+    "soil_condition": 0.478,
+    "slope_condition": 38.37,
+    "road_status": "Monitoring active",
+    "response_priority": "URGENT",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:17.374184+00:00",
+    "updated_at": "2026-09-10T07:28:17.374184+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:17.374184+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    },
+    "contact_history": {
+      "usr_1": {
+        "last_time": 0,
+        "last_sev": "LOW"
+      }
+    }
+  },
+  "b59fe5ed-8658-467b-a390-685313fcb944": {
+    "id": "b59fe5ed-8658-467b-a390-685313fcb944",
+    "location_id": "loc_27.26933_88.25037",
+    "location_name": "West Sikkim",
+    "district": "West Sikkim",
+    "state": "Sikkim",
+    "latitude": 27.26933,
+    "longitude": 88.25037,
+    "severity": "MODERATE",
+    "risk_probability": 59,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 23.6,
+    "soil_condition": 0.389,
+    "slope_condition": 4.76,
+    "road_status": "Monitoring active",
+    "response_priority": "MONITOR",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:18.936848+00:00",
+    "updated_at": "2026-09-10T07:28:18.936848+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:18.936848+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "PENDING",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "d3a110a3-383e-4018-99fd-e22a6d841d0c": {
+    "id": "d3a110a3-383e-4018-99fd-e22a6d841d0c",
+    "location_id": "loc_25.68725_91.94867",
+    "location_name": "Ri Bhoi",
+    "district": "Ri Bhoi",
+    "state": "Meghalaya",
+    "latitude": 25.68725,
+    "longitude": 91.94867,
+    "severity": "MODERATE",
+    "risk_probability": 32,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 20.4,
+    "soil_condition": 0.466,
+    "slope_condition": 12.26,
+    "road_status": "Monitoring active",
+    "response_priority": "MONITOR",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:18.959739+00:00",
+    "updated_at": "2026-09-10T07:28:18.959739+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:18.959739+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "PENDING",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "08d42ccc-b43d-4f75-b513-d73d7c7c6b9f": {
+    "id": "08d42ccc-b43d-4f75-b513-d73d7c7c6b9f",
+    "location_id": "loc_27.095932_93.828636",
+    "location_name": "Papum pare",
+    "district": "Papum pare",
+    "state": "Arunachal Pradesh",
+    "latitude": 27.095932,
+    "longitude": 93.828636,
+    "severity": "MODERATE",
+    "risk_probability": 56,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 16.6,
+    "soil_condition": 0.373,
+    "slope_condition": 13.17,
+    "road_status": "Monitoring active",
+    "response_priority": "MONITOR",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:18.984714+00:00",
+    "updated_at": "2026-09-10T14:50:38.417267+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:18.984714+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "PENDING",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "fa79c20c-6048-4e2a-9ea1-c828c271a3c4": {
+    "id": "fa79c20c-6048-4e2a-9ea1-c828c271a3c4",
+    "location_id": "loc_28.23372_94.93064",
+    "location_name": "West Siang",
+    "district": "West Siang",
+    "state": "Arunachal Pradesh",
+    "latitude": 28.23372,
+    "longitude": 94.93064,
+    "severity": "HIGH",
+    "risk_probability": 92,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Unstable slope",
+    "rainfall": 38.8,
+    "soil_condition": 0.386,
+    "slope_condition": 34.38,
+    "road_status": "Monitoring active",
+    "response_priority": "URGENT",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:18.995010+00:00",
+    "updated_at": "2026-09-10T07:28:18.995010+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:18.995010+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "17943160-88a4-4503-b778-41fd0d86565a": {
+    "id": "17943160-88a4-4503-b778-41fd0d86565a",
+    "location_id": "loc_25.894901_91.43331",
+    "location_name": "Kamrup",
+    "district": "Kamrup",
+    "state": "Assam",
+    "latitude": 25.894901,
+    "longitude": 91.43331,
+    "severity": "MODERATE",
+    "risk_probability": 32,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 19.0,
+    "soil_condition": 0.466,
+    "slope_condition": 16.72,
+    "road_status": "Monitoring active",
+    "response_priority": "MONITOR",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:18.996040+00:00",
+    "updated_at": "2026-09-10T07:28:18.996040+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:18.996040+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "PENDING",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "10414d52-a39c-4fef-a985-11174d461deb": {
+    "id": "10414d52-a39c-4fef-a985-11174d461deb",
+    "location_id": "loc_25.798326_93.79773",
+    "location_name": "Chumoukedima",
+    "district": "Chumoukedima",
+    "state": "Nagaland",
+    "latitude": 25.798326,
+    "longitude": 93.79773,
+    "severity": "MODERATE",
+    "risk_probability": 34,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Unstable slope",
+    "rainfall": 23.3,
+    "soil_condition": 0.47100000000000003,
+    "slope_condition": 25.35,
+    "road_status": "Monitoring active",
+    "response_priority": "MONITOR",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:19.040560+00:00",
+    "updated_at": "2026-09-10T07:28:19.040560+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:19.040560+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "PENDING",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "f97c776e-2df9-42ff-847e-247b9d64e8e4": {
+    "id": "f97c776e-2df9-42ff-847e-247b9d64e8e4",
+    "location_id": "loc_26.106224_95.08095",
+    "location_name": "Noklak",
+    "district": "Noklak",
+    "state": "Nagaland",
+    "latitude": 26.106224,
+    "longitude": 95.08095,
+    "severity": "HIGH",
+    "risk_probability": 75,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Unstable slope",
+    "rainfall": 22.8,
+    "soil_condition": 0.466,
+    "slope_condition": 31.06,
+    "road_status": "Monitoring active",
+    "response_priority": "URGENT",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:19.046342+00:00",
+    "updated_at": "2026-09-10T07:28:19.046342+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:19.046342+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "81114573-f8ed-4533-a4bd-e932e3520507": {
+    "id": "81114573-f8ed-4533-a4bd-e932e3520507",
+    "location_id": "loc_25.529814_93.76566",
+    "location_name": "Peren",
+    "district": "Peren",
+    "state": "Nagaland",
+    "latitude": 25.529814,
+    "longitude": 93.76566,
+    "severity": "MODERATE",
+    "risk_probability": 32,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 21.6,
+    "soil_condition": 0.457,
+    "slope_condition": 5.79,
+    "road_status": "Monitoring active",
+    "response_priority": "MONITOR",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:19.047430+00:00",
+    "updated_at": "2026-09-10T07:28:19.047430+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:19.047430+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "PENDING",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "697b9989-ed2e-43ec-894b-152e94bd0c85": {
+    "id": "697b9989-ed2e-43ec-894b-152e94bd0c85",
+    "location_id": "loc_27.299227_88.39087",
+    "location_name": "South Sikkim",
+    "district": "South Sikkim",
+    "state": "Sikkim",
+    "latitude": 27.299227,
+    "longitude": 88.39087,
+    "severity": "HIGH",
+    "risk_probability": 74,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 25.6,
+    "soil_condition": 0.413,
+    "slope_condition": 21.26,
+    "road_status": "Monitoring active",
+    "response_priority": "URGENT",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:19.074982+00:00",
+    "updated_at": "2026-09-10T07:28:19.074982+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:19.074982+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "d3979479-da8b-4a59-a180-2a6aeaf0761b": {
+    "id": "d3979479-da8b-4a59-a180-2a6aeaf0761b",
+    "location_id": "loc_27.378153_88.728195",
+    "location_name": "East Sikkim",
+    "district": "East Sikkim",
+    "state": "Sikkim",
+    "latitude": 27.378153,
+    "longitude": 88.728195,
+    "severity": "CRITICAL",
+    "risk_probability": 98,
+    "trigger": "Heavy rainfall",
+    "contributing_factors": "High rainfall",
+    "rainfall": 63.2,
+    "soil_condition": 0.429,
+    "slope_condition": 19.51,
+    "road_status": "Monitoring active",
+    "response_priority": "IMMEDIATE",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:19.077653+00:00",
+    "updated_at": "2026-09-10T07:28:19.077653+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:19.077653+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "NOTIFIED",
+      "local_community": "WARNING SENT"
+    }
+  },
+  "f351b36f-a113-4971-9991-51e77db1ea4c": {
+    "id": "f351b36f-a113-4971-9991-51e77db1ea4c",
+    "location_id": "loc_28.095266_95.28282",
+    "location_name": "Siang district",
+    "district": "Siang district",
+    "state": "Arunachal Pradesh",
+    "latitude": 28.095266,
+    "longitude": 95.28282,
+    "severity": "MODERATE",
+    "risk_probability": 34,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 25.3,
+    "soil_condition": 0.449,
+    "slope_condition": 6.92,
+    "road_status": "Monitoring active",
+    "response_priority": "MONITOR",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:19.104415+00:00",
+    "updated_at": "2026-09-10T07:28:19.104415+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:19.104415+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "PENDING",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "0635db28-9d91-4ea3-bee4-24b557d0a9bc": {
+    "id": "0635db28-9d91-4ea3-bee4-24b557d0a9bc",
+    "location_id": "loc_25.994081_94.85535",
+    "location_name": "Kiphire",
+    "district": "Kiphire",
+    "state": "Nagaland",
+    "latitude": 25.994081,
+    "longitude": 94.85535,
+    "severity": "MODERATE",
+    "risk_probability": 58,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Unstable slope",
+    "rainfall": 7.9,
+    "soil_condition": 0.42,
+    "slope_condition": 25.85,
+    "road_status": "Monitoring active",
+    "response_priority": "MONITOR",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:19.106424+00:00",
+    "updated_at": "2026-09-10T14:50:38.486835+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:19.106424+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "eb5eb51a-3def-4127-a846-083be184caf2": {
+    "id": "eb5eb51a-3def-4127-a846-083be184caf2",
+    "location_id": "loc_25.709988_94.047806",
+    "location_name": "Kohima",
+    "district": "Kohima",
+    "state": "Nagaland",
+    "latitude": 25.709988,
+    "longitude": 94.047806,
+    "severity": "MODERATE",
+    "risk_probability": 36,
+    "trigger": "Heavy rainfall",
+    "contributing_factors": "High rainfall",
+    "rainfall": 55.1,
+    "soil_condition": 0.495,
+    "slope_condition": 10.76,
+    "road_status": "Monitoring active",
+    "response_priority": "MONITOR",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:19.132413+00:00",
+    "updated_at": "2026-09-10T07:28:19.132413+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:19.132413+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "PENDING",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "3a4d698d-888c-43c3-9ca5-7a953a77ab90": {
+    "id": "3a4d698d-888c-43c3-9ca5-7a953a77ab90",
+    "location_id": "loc_28.235584_94.144356",
+    "location_name": "Upper Subansiri",
+    "district": "Upper Subansiri",
+    "state": "Arunachal Pradesh",
+    "latitude": 28.235584,
+    "longitude": 94.144356,
+    "severity": "HIGH",
+    "risk_probability": 83,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Unstable slope",
+    "rainfall": 13.1,
+    "soil_condition": 0.375,
+    "slope_condition": 34.42,
+    "road_status": "Monitoring active",
+    "response_priority": "URGENT",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:19.132413+00:00",
+    "updated_at": "2026-09-10T07:28:19.132413+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:19.132413+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "ed5761ca-60b7-47e8-847a-17a6d065ab0a": {
+    "id": "ed5761ca-60b7-47e8-847a-17a6d065ab0a",
+    "location_id": "loc_22.518534_92.889305",
+    "location_name": "Lawngtlai",
+    "district": "Lawngtlai",
+    "state": "Mizoram",
+    "latitude": 22.518534,
+    "longitude": 92.889305,
+    "severity": "HIGH",
+    "risk_probability": 94,
+    "trigger": "Heavy rainfall",
+    "contributing_factors": "High rainfall + Unstable slope",
+    "rainfall": 59.3,
+    "soil_condition": 0.425,
+    "slope_condition": 41.78,
+    "road_status": "Monitoring active",
+    "response_priority": "URGENT",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:19.163521+00:00",
+    "updated_at": "2026-09-10T07:28:19.163521+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:19.163521+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "746b6de8-a3c0-4d09-99c7-015daa94accc": {
+    "id": "746b6de8-a3c0-4d09-99c7-015daa94accc",
+    "location_id": "loc_22.880829_92.76097",
+    "location_name": "Lunglei",
+    "district": "Lunglei",
+    "state": "Mizoram",
+    "latitude": 22.880829,
+    "longitude": 92.76097,
+    "severity": "HIGH",
+    "risk_probability": 68,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 34.9,
+    "soil_condition": 0.414,
+    "slope_condition": 17.22,
+    "road_status": "Monitoring active",
+    "response_priority": "URGENT",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:19.164520+00:00",
+    "updated_at": "2026-09-10T14:50:38.543953+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:19.164520+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "PENDING",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "9c3380b8-959b-4fdd-b030-f2855084b868": {
+    "id": "9c3380b8-959b-4fdd-b030-f2855084b868",
+    "location_id": "loc_24.820486_93.550415",
+    "location_name": "Noney",
+    "district": "Noney",
+    "state": "Manipur",
+    "latitude": 24.820486,
+    "longitude": 93.550415,
+    "severity": "MODERATE",
+    "risk_probability": 41,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 13.299999999999999,
+    "soil_condition": 0.374,
+    "slope_condition": 23.93,
+    "road_status": "Monitoring active",
+    "response_priority": "MONITOR",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:19.194651+00:00",
+    "updated_at": "2026-09-10T07:28:19.194651+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:19.194651+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "PENDING",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "a78395a5-f4f5-4ffe-9dc6-c127393408a6": {
+    "id": "a78395a5-f4f5-4ffe-9dc6-c127393408a6",
+    "location_id": "loc_27.717104_94.697075",
+    "location_name": "Lower Siang",
+    "district": "Lower Siang",
+    "state": "Arunachal Pradesh",
+    "latitude": 27.717104,
+    "longitude": 94.697075,
+    "severity": "MODERATE",
+    "risk_probability": 36,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 14.6,
+    "soil_condition": 0.368,
+    "slope_condition": 20.99,
+    "road_status": "Monitoring active",
+    "response_priority": "MONITOR",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:19.196321+00:00",
+    "updated_at": "2026-09-10T07:28:19.196321+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:19.196321+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "PENDING",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "bc99ef1d-3a0b-4cff-839e-0480c50f97e3": {
+    "id": "bc99ef1d-3a0b-4cff-839e-0480c50f97e3",
+    "location_id": "loc_26.653847_94.51346",
+    "location_name": "Mokokchung",
+    "district": "Mokokchung",
+    "state": "Nagaland",
+    "latitude": 26.653847,
+    "longitude": 94.51346,
+    "severity": "MODERATE",
+    "risk_probability": 34,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 22.5,
+    "soil_condition": 0.47700000000000004,
+    "slope_condition": 7.83,
+    "road_status": "Monitoring active",
+    "response_priority": "MONITOR",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:19.251274+00:00",
+    "updated_at": "2026-09-10T07:28:19.251274+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:19.251274+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "PENDING",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "c3261230-6ac3-49a1-ae32-9532d3ba9e29": {
+    "id": "c3261230-6ac3-49a1-ae32-9532d3ba9e29",
+    "location_id": "loc_23.233976_92.91265",
+    "location_name": "Serchhip",
+    "district": "Serchhip",
+    "state": "Mizoram",
+    "latitude": 23.233976,
+    "longitude": 92.91265,
+    "severity": "HIGH",
+    "risk_probability": 93,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Unstable slope",
+    "rainfall": 29.900000000000002,
+    "soil_condition": 0.401,
+    "slope_condition": 30.62,
+    "road_status": "Monitoring active",
+    "response_priority": "URGENT",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:19.258791+00:00",
+    "updated_at": "2026-09-10T07:28:19.258791+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:19.258791+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "8657df29-0273-42bd-bf0d-4b4ad0504b09": {
+    "id": "8657df29-0273-42bd-bf0d-4b4ad0504b09",
+    "location_id": "loc_27.552114_94.25898",
+    "location_name": "Lower Subansiri",
+    "district": "Lower Subansiri",
+    "state": "Arunachal Pradesh",
+    "latitude": 27.552114,
+    "longitude": 94.25898,
+    "severity": "HIGH",
+    "risk_probability": 61,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 18.8,
+    "soil_condition": 0.409,
+    "slope_condition": 14.16,
+    "road_status": "Monitoring active",
+    "response_priority": "URGENT",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:19.258791+00:00",
+    "updated_at": "2026-09-10T07:28:19.258791+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:19.258791+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "9d5d6c15-3ea3-4fe5-8524-4b5aa186ac1e": {
+    "id": "9d5d6c15-3ea3-4fe5-8524-4b5aa186ac1e",
+    "location_id": "loc_25.109873_92.891914",
+    "location_name": "Dima Hasao",
+    "district": "Dima Hasao",
+    "state": "Assam",
+    "latitude": 25.109873,
+    "longitude": 92.891914,
+    "severity": "MODERATE",
+    "risk_probability": 31,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 11.2,
+    "soil_condition": 0.36200000000000004,
+    "slope_condition": 6.09,
+    "road_status": "Monitoring active",
+    "response_priority": "MONITOR",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:19.267163+00:00",
+    "updated_at": "2026-09-10T07:28:19.267163+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:19.267163+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "PENDING",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "88bd00f2-b17f-49e5-8af8-8e21bcb3fb08": {
+    "id": "88bd00f2-b17f-49e5-8af8-8e21bcb3fb08",
+    "location_id": "loc_27.245344_88.61161",
+    "location_name": "Pakyong",
+    "district": "Pakyong",
+    "state": "Sikkim",
+    "latitude": 27.245344,
+    "longitude": 88.61161,
+    "severity": "MODERATE",
+    "risk_probability": 59,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 20.900000000000002,
+    "soil_condition": 0.396,
+    "slope_condition": 6.09,
+    "road_status": "Monitoring active",
+    "response_priority": "MONITOR",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:19.291606+00:00",
+    "updated_at": "2026-09-10T14:50:38.545951+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:19.291606+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "810fffa0-c2d3-494d-ac58-7c6fbc762cbf": {
+    "id": "810fffa0-c2d3-494d-ac58-7c6fbc762cbf",
+    "location_id": "loc_27.282038_95.73823",
+    "location_name": "Tinsukia",
+    "district": "Tinsukia",
+    "state": "Assam",
+    "latitude": 27.282038,
+    "longitude": 95.73823,
+    "severity": "MODERATE",
+    "risk_probability": 31,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 15.700000000000001,
+    "soil_condition": 0.45899999999999996,
+    "slope_condition": 12.6,
+    "road_status": "Monitoring active",
+    "response_priority": "MONITOR",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:19.293697+00:00",
+    "updated_at": "2026-09-10T07:28:19.293697+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:19.293697+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "PENDING",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "1b7decab-7f41-42bd-8c99-b4c6820c0b9a": {
+    "id": "1b7decab-7f41-42bd-8c99-b4c6820c0b9a",
+    "location_id": "loc_24.675072_94.271324",
+    "location_name": "Ukhrul",
+    "district": "Ukhrul",
+    "state": "Manipur",
+    "latitude": 24.675072,
+    "longitude": 94.271324,
+    "severity": "HIGH",
+    "risk_probability": 86,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Unstable slope",
+    "rainfall": 12.200000000000001,
+    "soil_condition": 0.389,
+    "slope_condition": 29.2,
+    "road_status": "Monitoring active",
+    "response_priority": "URGENT",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:19.309072+00:00",
+    "updated_at": "2026-09-10T07:28:19.309072+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:19.309072+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "540fe9c6-2329-4a8e-9beb-b1e7f03f37eb": {
+    "id": "540fe9c6-2329-4a8e-9beb-b1e7f03f37eb",
+    "location_id": "loc_25.363388_91.61459",
+    "location_name": "East khasi Hills",
+    "district": "East khasi Hills",
+    "state": "Meghalaya",
+    "latitude": 25.363388,
+    "longitude": 91.61459,
+    "severity": "MODERATE",
+    "risk_probability": 33,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 18.3,
+    "soil_condition": 0.485,
+    "slope_condition": 7.65,
+    "road_status": "Monitoring active",
+    "response_priority": "MONITOR",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:19.314788+00:00",
+    "updated_at": "2026-09-10T07:28:19.314788+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:19.314788+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "PENDING",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "37d5a5d1-26f5-439d-a248-61ea5b3cd6a2": {
+    "id": "37d5a5d1-26f5-439d-a248-61ea5b3cd6a2",
+    "location_id": "loc_25.39193_91.38969",
+    "location_name": "South West Khasi Hills",
+    "district": "South West Khasi Hills",
+    "state": "Meghalaya",
+    "latitude": 25.39193,
+    "longitude": 91.38969,
+    "severity": "HIGH",
+    "risk_probability": 72,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 15.4,
+    "soil_condition": 0.48200000000000004,
+    "slope_condition": 17.04,
+    "road_status": "Monitoring active",
+    "response_priority": "URGENT",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:19.319809+00:00",
+    "updated_at": "2026-09-10T07:28:19.319809+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:19.319809+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    },
+    "contact_history": {
+      "usr_1": {
+        "last_time": 0,
+        "last_sev": "LOW"
+      }
+    }
+  },
+  "732fcf43-b392-4983-bf97-e7953a578525": {
+    "id": "732fcf43-b392-4983-bf97-e7953a578525",
+    "location_id": "loc_25.582964_94.298515",
+    "location_name": "Phek",
+    "district": "Phek",
+    "state": "Nagaland",
+    "latitude": 25.582964,
+    "longitude": 94.298515,
+    "severity": "MODERATE",
+    "risk_probability": 59,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 11.1,
+    "soil_condition": 0.47100000000000003,
+    "slope_condition": 20.99,
+    "road_status": "Monitoring active",
+    "response_priority": "MONITOR",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:19.320818+00:00",
+    "updated_at": "2026-09-10T14:50:38.630554+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:19.320818+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "0c54f40b-8ec3-4631-9f53-fd2941a7d001": {
+    "id": "0c54f40b-8ec3-4631-9f53-fd2941a7d001",
+    "location_id": "loc_24.78167_93.777695",
+    "location_name": "Imphal",
+    "district": "Imphal",
+    "state": "Manipur",
+    "latitude": 24.78167,
+    "longitude": 93.777695,
+    "severity": "MODERATE",
+    "risk_probability": 31,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 15.9,
+    "soil_condition": 0.445,
+    "slope_condition": 15.9,
+    "road_status": "Monitoring active",
+    "response_priority": "MONITOR",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:19.354240+00:00",
+    "updated_at": "2026-09-10T07:28:19.354240+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:19.354240+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "PENDING",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "06f3a98f-6210-4165-bee6-48f3c6152c50": {
+    "id": "06f3a98f-6210-4165-bee6-48f3c6152c50",
+    "location_id": "loc_25.267628_93.97409",
+    "location_name": "Senapati",
+    "district": "Senapati",
+    "state": "Manipur",
+    "latitude": 25.267628,
+    "longitude": 93.97409,
+    "severity": "HIGH",
+    "risk_probability": 64,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 15.700000000000001,
+    "soil_condition": 0.377,
+    "slope_condition": 16.8,
+    "road_status": "Monitoring active",
+    "response_priority": "URGENT",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:19.356237+00:00",
+    "updated_at": "2026-09-10T07:28:19.356237+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:19.356237+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "7bfa09e9-bfc5-4ec5-89be-9c774c33bb90": {
+    "id": "7bfa09e9-bfc5-4ec5-89be-9c774c33bb90",
+    "location_id": "loc_23.750944_92.27094",
+    "location_name": "Mamit District",
+    "district": "Mamit District",
+    "state": "Mizoram",
+    "latitude": 23.750944,
+    "longitude": 92.27094,
+    "severity": "MODERATE",
+    "risk_probability": 38,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 48.7,
+    "soil_condition": 0.418,
+    "slope_condition": 24.63,
+    "road_status": "Monitoring active",
+    "response_priority": "MONITOR",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:19.357342+00:00",
+    "updated_at": "2026-09-10T14:50:38.646547+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:19.357342+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "22be8fce-effb-44d9-8d43-8b783a7a2127": {
+    "id": "22be8fce-effb-44d9-8d43-8b783a7a2127",
+    "location_id": "loc_25.556717_90.42025",
+    "location_name": "East Garo Hills",
+    "district": "East Garo Hills",
+    "state": "Meghalaya",
+    "latitude": 25.556717,
+    "longitude": 90.42025,
+    "severity": "HIGH",
+    "risk_probability": 94,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Unstable slope",
+    "rainfall": 25.6,
+    "soil_condition": 0.425,
+    "slope_condition": 28.89,
+    "road_status": "Monitoring active",
+    "response_priority": "URGENT",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:19.498617+00:00",
+    "updated_at": "2026-09-10T07:28:19.498617+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:19.498617+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "c0aa5133-d96b-40c1-bda3-5cdbf925e909": {
+    "id": "c0aa5133-d96b-40c1-bda3-5cdbf925e909",
+    "location_id": "loc_25.162582_92.38607",
+    "location_name": "East jaintia Hills",
+    "district": "East jaintia Hills",
+    "state": "Meghalaya",
+    "latitude": 25.162582,
+    "longitude": 92.38607,
+    "severity": "MODERATE",
+    "risk_probability": 57,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 22.4,
+    "soil_condition": 0.396,
+    "slope_condition": 18.96,
+    "road_status": "Monitoring active",
+    "response_priority": "MONITOR",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:19.503617+00:00",
+    "updated_at": "2026-09-10T07:28:19.503617+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:19.503617+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "PENDING",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "ca6e9cda-f113-492e-a1c5-b1b955e8f4da": {
+    "id": "ca6e9cda-f113-492e-a1c5-b1b955e8f4da",
+    "location_id": "loc_23.878866_91.70585",
+    "location_name": "West Tripura",
+    "district": "West Tripura",
+    "state": "Tripura",
+    "latitude": 23.878866,
+    "longitude": 91.70585,
+    "severity": "HIGH",
+    "risk_probability": 62,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 25.9,
+    "soil_condition": 0.402,
+    "slope_condition": 8.16,
+    "road_status": "Monitoring active",
+    "response_priority": "URGENT",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:19.510463+00:00",
+    "updated_at": "2026-09-10T14:50:38.734491+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:19.510463+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "PENDING",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "b0d2526c-9898-4469-a4f6-f543f8ced766": {
+    "id": "b0d2526c-9898-4469-a4f6-f543f8ced766",
+    "location_id": "loc_27.141176_95.74675",
+    "location_name": "Changlang",
+    "district": "Changlang",
+    "state": "Arunachal Pradesh",
+    "latitude": 27.141176,
+    "longitude": 95.74675,
+    "severity": "MODERATE",
+    "risk_probability": 36,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 31.5,
+    "soil_condition": 0.478,
+    "slope_condition": 16.25,
+    "road_status": "Monitoring active",
+    "response_priority": "MONITOR",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:19.614079+00:00",
+    "updated_at": "2026-09-10T07:28:19.614079+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:19.614079+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "PENDING",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "b99cef3b-c39a-4682-98e3-05e9f9de3185": {
+    "id": "b99cef3b-c39a-4682-98e3-05e9f9de3185",
+    "location_id": "loc_27.121868_93.78342",
+    "location_name": "Papum Pare",
+    "district": "Papum Pare",
+    "state": "Arunachal Pradesh",
+    "latitude": 27.121868,
+    "longitude": 93.78342,
+    "severity": "MODERATE",
+    "risk_probability": 56,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 16.6,
+    "soil_condition": 0.373,
+    "slope_condition": 4.86,
+    "road_status": "Monitoring active",
+    "response_priority": "MONITOR",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:19.616074+00:00",
+    "updated_at": "2026-09-10T14:50:38.735494+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:19.616074+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "PENDING",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "03d82a6b-5e6d-449d-8b86-bcc55dda45e6": {
+    "id": "03d82a6b-5e6d-449d-8b86-bcc55dda45e6",
+    "location_id": "loc_24.787043_92.52379",
+    "location_name": "Karimganj",
+    "district": "Karimganj",
+    "state": "Assam",
+    "latitude": 24.787043,
+    "longitude": 92.52379,
+    "severity": "MODERATE",
+    "risk_probability": 34,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 25.6,
+    "soil_condition": 0.479,
+    "slope_condition": 0.95,
+    "road_status": "Monitoring active",
+    "response_priority": "MONITOR",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:19.618097+00:00",
+    "updated_at": "2026-09-10T07:28:19.618097+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:19.618097+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "PENDING",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "c609fccc-a255-484a-ade3-ad737a30cc37": {
+    "id": "c609fccc-a255-484a-ade3-ad737a30cc37",
+    "location_id": "loc_28.226542_94.8832",
+    "location_name": "Siang District",
+    "district": "Siang District",
+    "state": "Arunachal Pradesh",
+    "latitude": 28.226542,
+    "longitude": 94.8832,
+    "severity": "HIGH",
+    "risk_probability": 64,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 38.8,
+    "soil_condition": 0.386,
+    "slope_condition": 22.77,
+    "road_status": "Monitoring active",
+    "response_priority": "URGENT",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:19.694310+00:00",
+    "updated_at": "2026-09-10T07:28:19.694310+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:19.694310+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "aa2b7369-d5fe-4ccf-b28f-809d3f525458": {
+    "id": "aa2b7369-d5fe-4ccf-b28f-809d3f525458",
+    "location_id": "loc_27.886843_96.37484",
+    "location_name": "Lohit",
+    "district": "Lohit",
+    "state": "Arunachal Pradesh",
+    "latitude": 27.886843,
+    "longitude": 96.37484,
+    "severity": "HIGH",
+    "risk_probability": 91,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Unstable slope",
+    "rainfall": 18.1,
+    "soil_condition": 0.466,
+    "slope_condition": 37.4,
+    "road_status": "Monitoring active",
+    "response_priority": "URGENT",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:19.702311+00:00",
+    "updated_at": "2026-09-10T07:28:19.702311+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:19.702311+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "e8bb44da-bbdc-4f33-8b86-536e841cbafd": {
+    "id": "e8bb44da-bbdc-4f33-8b86-536e841cbafd",
+    "location_id": "loc_28.06798_96.56551",
+    "location_name": "Anjaw",
+    "district": "Anjaw",
+    "state": "Arunachal Pradesh",
+    "latitude": 28.06798,
+    "longitude": 96.56551,
+    "severity": "HIGH",
+    "risk_probability": 71,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Unstable slope",
+    "rainfall": 6.1000000000000005,
+    "soil_condition": 0.348,
+    "slope_condition": 43.0,
+    "road_status": "Monitoring active",
+    "response_priority": "URGENT",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:19.702311+00:00",
+    "updated_at": "2026-09-10T14:50:38.809591+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:19.702311+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "9058bd25-e753-44a0-bdfc-49abba2ea91e": {
+    "id": "9058bd25-e753-44a0-bdfc-49abba2ea91e",
+    "location_id": "loc_26.01202_94.52143",
+    "location_name": "Zunheboto",
+    "district": "Zunheboto",
+    "state": "Nagaland",
+    "latitude": 26.01202,
+    "longitude": 94.52143,
+    "severity": "MODERATE",
+    "risk_probability": 43,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 9.2,
+    "soil_condition": 0.444,
+    "slope_condition": 8.98,
+    "road_status": "Monitoring active",
+    "response_priority": "MONITOR",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:19.725329+00:00",
+    "updated_at": "2026-09-10T14:50:38.833493+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:19.725329+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "PENDING",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "851edff1-d9c6-415f-bbf0-78a622f19012": {
+    "id": "851edff1-d9c6-415f-bbf0-78a622f19012",
+    "location_id": "loc_27.30978_92.95874",
+    "location_name": "East Kameng",
+    "district": "East Kameng",
+    "state": "Arunachal Pradesh",
+    "latitude": 27.30978,
+    "longitude": 92.95874,
+    "severity": "HIGH",
+    "risk_probability": 74,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Unstable slope",
+    "rainfall": 10.4,
+    "soil_condition": 0.363,
+    "slope_condition": 33.26,
+    "road_status": "Monitoring active",
+    "response_priority": "URGENT",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:19.735434+00:00",
+    "updated_at": "2026-09-10T07:28:19.735434+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:19.735434+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "4337c4b6-61f9-4a37-9be5-29b71a6f1bb4": {
+    "id": "4337c4b6-61f9-4a37-9be5-29b71a6f1bb4",
+    "location_id": "loc_26.223057_94.80035",
+    "location_name": "Tuensang",
+    "district": "Tuensang",
+    "state": "Nagaland",
+    "latitude": 26.223057,
+    "longitude": 94.80035,
+    "severity": "MODERATE",
+    "risk_probability": 50,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Unstable slope",
+    "rainfall": 9.7,
+    "soil_condition": 0.441,
+    "slope_condition": 25.24,
+    "road_status": "Monitoring active",
+    "response_priority": "MONITOR",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:19.753976+00:00",
+    "updated_at": "2026-09-10T14:50:38.894304+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:19.753976+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "7b1bbbee-bb62-4a26-abcf-3bfa5a303510": {
+    "id": "7b1bbbee-bb62-4a26-abcf-3bfa5a303510",
+    "location_id": "loc_26.090935_94.74677",
+    "location_name": "Shamator",
+    "district": "Shamator",
+    "state": "Nagaland",
+    "latitude": 26.090935,
+    "longitude": 94.74677,
+    "severity": "MODERATE",
+    "risk_probability": 58,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 12.7,
+    "soil_condition": 0.43799999999999994,
+    "slope_condition": 11.8,
+    "road_status": "Monitoring active",
+    "response_priority": "MONITOR",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:19.803704+00:00",
+    "updated_at": "2026-09-10T14:50:38.904300+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:19.803704+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "6f6a4189-c566-43fb-8333-1643326b5648": {
+    "id": "6f6a4189-c566-43fb-8333-1643326b5648",
+    "location_id": "loc_28.697523_94.31614",
+    "location_name": "Shi Yomi",
+    "district": "Shi Yomi",
+    "state": "Arunachal Pradesh",
+    "latitude": 28.697523,
+    "longitude": 94.31614,
+    "severity": "HIGH",
+    "risk_probability": 83,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Unstable slope",
+    "rainfall": 10.2,
+    "soil_condition": 0.38,
+    "slope_condition": 29.8,
+    "road_status": "Monitoring active",
+    "response_priority": "URGENT",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:19.806644+00:00",
+    "updated_at": "2026-09-10T14:50:38.965297+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:19.806644+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "12e5a9b1-0203-47b3-942a-aa557470c33e": {
+    "id": "12e5a9b1-0203-47b3-942a-aa557470c33e",
+    "location_id": "loc_27.72775_93.63616",
+    "location_name": "Kra Daadi",
+    "district": "Kra Daadi",
+    "state": "Arunachal Pradesh",
+    "latitude": 27.72775,
+    "longitude": 93.63616,
+    "severity": "HIGH",
+    "risk_probability": 92,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Unstable slope",
+    "rainfall": 28.1,
+    "soil_condition": 0.39399999999999996,
+    "slope_condition": 37.24,
+    "road_status": "Monitoring active",
+    "response_priority": "URGENT",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:19.858194+00:00",
+    "updated_at": "2026-09-10T07:28:19.858194+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:19.858194+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "0eb617ed-a2ae-4dca-abc4-9b3bf47a22ad": {
+    "id": "0eb617ed-a2ae-4dca-abc4-9b3bf47a22ad",
+    "location_id": "loc_26.107403_94.25558",
+    "location_name": "Wokha",
+    "district": "Wokha",
+    "state": "Nagaland",
+    "latitude": 26.107403,
+    "longitude": 94.25558,
+    "severity": "HIGH",
+    "risk_probability": 74,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 27.8,
+    "soil_condition": 0.462,
+    "slope_condition": 13.42,
+    "road_status": "Monitoring active",
+    "response_priority": "URGENT",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:19.860117+00:00",
+    "updated_at": "2026-09-10T07:28:19.860117+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:19.860117+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "fbaeff5d-6ea8-46a1-ab63-b2da5ccef858": {
+    "id": "fbaeff5d-6ea8-46a1-ab63-b2da5ccef858",
+    "location_id": "loc_27.821491_88.5491",
+    "location_name": "Mangan",
+    "district": "Mangan",
+    "state": "Sikkim",
+    "latitude": 27.821491,
+    "longitude": 88.5491,
+    "severity": "HIGH",
+    "risk_probability": 85,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Unstable slope",
+    "rainfall": 4.0,
+    "soil_condition": 0.38299999999999995,
+    "slope_condition": 37.01,
+    "road_status": "Monitoring active",
+    "response_priority": "URGENT",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:19.877127+00:00",
+    "updated_at": "2026-09-10T07:28:19.877127+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:19.877127+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "4399b95c-c0ee-441c-a93c-2b1003168147": {
+    "id": "4399b95c-c0ee-441c-a93c-2b1003168147",
+    "location_id": "loc_24.981306_93.49901",
+    "location_name": "Tamenglong",
+    "district": "Tamenglong",
+    "state": "Manipur",
+    "latitude": 24.981306,
+    "longitude": 93.49901,
+    "severity": "MODERATE",
+    "risk_probability": 57,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 19.8,
+    "soil_condition": 0.377,
+    "slope_condition": 12.36,
+    "road_status": "Monitoring active",
+    "response_priority": "MONITOR",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:19.997956+00:00",
+    "updated_at": "2026-09-10T14:50:39.014958+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:19.997956+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "7f3e9fff-643f-47fc-9fe7-2e10e48e8944": {
+    "id": "7f3e9fff-643f-47fc-9fe7-2e10e48e8944",
+    "location_id": "loc_24.776396_93.79057",
+    "location_name": "Imphal East",
+    "district": "Imphal East",
+    "state": "Manipur",
+    "latitude": 24.776396,
+    "longitude": 93.79057,
+    "severity": "MODERATE",
+    "risk_probability": 31,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 15.9,
+    "soil_condition": 0.445,
+    "slope_condition": 5.79,
+    "road_status": "Monitoring active",
+    "response_priority": "MONITOR",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:19.999957+00:00",
+    "updated_at": "2026-09-10T07:28:19.999957+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:19.999957+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "PENDING",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "1bb93228-6d96-4047-b1d6-4ee93fb34530": {
+    "id": "1bb93228-6d96-4047-b1d6-4ee93fb34530",
+    "location_id": "loc_24.750957_93.138794",
+    "location_name": "Jiribam",
+    "district": "Jiribam",
+    "state": "Manipur",
+    "latitude": 24.750957,
+    "longitude": 93.138794,
+    "severity": "MODERATE",
+    "risk_probability": 47,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 22.4,
+    "soil_condition": 0.377,
+    "slope_condition": 3.44,
+    "road_status": "Monitoring active",
+    "response_priority": "MONITOR",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:19.999957+00:00",
+    "updated_at": "2026-09-10T14:50:39.024151+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:19.999957+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "PENDING",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "17de5c99-0811-48a1-8eeb-ac80851174a5": {
+    "id": "17de5c99-0811-48a1-8eeb-ac80851174a5",
+    "location_id": "loc_24.756475_93.42788",
+    "location_name": "Churachandpur",
+    "district": "Churachandpur",
+    "state": "Manipur",
+    "latitude": 24.756475,
+    "longitude": 93.42788,
+    "severity": "HIGH",
+    "risk_probability": 92,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Unstable slope",
+    "rainfall": 27.6,
+    "soil_condition": 0.38799999999999996,
+    "slope_condition": 41.37,
+    "road_status": "Monitoring active",
+    "response_priority": "URGENT",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:20.124540+00:00",
+    "updated_at": "2026-09-10T07:28:20.124540+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:20.124540+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "5bc05741-26fe-4d10-af57-b4cee5769591": {
+    "id": "5bc05741-26fe-4d10-af57-b4cee5769591",
+    "location_id": "loc_23.167875_91.51687",
+    "location_name": "South Tripura",
+    "district": "South Tripura",
+    "state": "Tripura",
+    "latitude": 23.167875,
+    "longitude": 91.51687,
+    "severity": "MODERATE",
+    "risk_probability": 34,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 22.1,
+    "soil_condition": 0.488,
+    "slope_condition": 3.02,
+    "road_status": "Monitoring active",
+    "response_priority": "MONITOR",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:20.125538+00:00",
+    "updated_at": "2026-09-10T07:28:20.125538+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:20.125538+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "PENDING",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "7c5d863d-f9d5-4439-8a77-6e0e2cc6cea4": {
+    "id": "7c5d863d-f9d5-4439-8a77-6e0e2cc6cea4",
+    "location_id": "loc_24.10965_91.908104",
+    "location_name": "Dhalai",
+    "district": "Dhalai",
+    "state": "Tripura",
+    "latitude": 24.10965,
+    "longitude": 91.908104,
+    "severity": "MODERATE",
+    "risk_probability": 37,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 45.0,
+    "soil_condition": 0.415,
+    "slope_condition": 6.38,
+    "road_status": "Monitoring active",
+    "response_priority": "MONITOR",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:20.146540+00:00",
+    "updated_at": "2026-09-10T14:50:39.098050+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:20.146540+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "91d86203-b297-4d0b-b9c0-ca39f0960096": {
+    "id": "91d86203-b297-4d0b-b9c0-ca39f0960096",
+    "location_id": "loc_23.994354_92.643936",
+    "location_name": "Kolasib",
+    "district": "Kolasib",
+    "state": "Mizoram",
+    "latitude": 23.994354,
+    "longitude": 92.643936,
+    "severity": "MODERATE",
+    "risk_probability": 37,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 48.9,
+    "soil_condition": 0.41200000000000003,
+    "slope_condition": 7.42,
+    "road_status": "Monitoring active",
+    "response_priority": "MONITOR",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:20.155639+00:00",
+    "updated_at": "2026-09-10T14:50:39.112052+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:20.155639+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "0f3d54db-a157-44de-a398-ce2fcfdd9146": {
+    "id": "0f3d54db-a157-44de-a398-ce2fcfdd9146",
+    "location_id": "loc_27.611052_91.85765",
+    "location_name": "Tawang",
+    "district": "Tawang",
+    "state": "Arunachal Pradesh",
+    "latitude": 27.611052,
+    "longitude": 91.85765,
+    "severity": "CRITICAL",
+    "risk_probability": 96,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Unstable slope",
+    "rainfall": 14.8,
+    "soil_condition": 0.392,
+    "slope_condition": 26.92,
+    "road_status": "Monitoring active",
+    "response_priority": "IMMEDIATE",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:20.156541+00:00",
+    "updated_at": "2026-09-10T07:28:20.156541+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:20.156541+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "NOTIFIED",
+      "local_community": "WARNING SENT"
+    }
+  },
+  "bfefb206-a968-488b-8c3c-4a2b54fe1f8e": {
+    "id": "bfefb206-a968-488b-8c3c-4a2b54fe1f8e",
+    "location_id": "loc_27.176046_88.09037",
+    "location_name": "Soreng",
+    "district": "Soreng",
+    "state": "Sikkim",
+    "latitude": 27.176046,
+    "longitude": 88.09037,
+    "severity": "HIGH",
+    "risk_probability": 92,
+    "trigger": "Heavy rainfall",
+    "contributing_factors": "High rainfall + Unstable slope",
+    "rainfall": 63.9,
+    "soil_condition": 0.39299999999999996,
+    "slope_condition": 35.12,
+    "road_status": "Monitoring active",
+    "response_priority": "URGENT",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:20.166543+00:00",
+    "updated_at": "2026-09-10T07:28:20.166543+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:20.166543+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "1aef0554-ddbc-42d0-82d9-4c0b62094f84": {
+    "id": "1aef0554-ddbc-42d0-82d9-4c0b62094f84",
+    "location_id": "loc_28.788328_95.90903",
+    "location_name": "Dibang Valley",
+    "district": "Dibang Valley",
+    "state": "Arunachal Pradesh",
+    "latitude": 28.788328,
+    "longitude": 95.90903,
+    "severity": "HIGH",
+    "risk_probability": 72,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Unstable slope",
+    "rainfall": 7.5,
+    "soil_condition": 0.386,
+    "slope_condition": 32.03,
+    "road_status": "Monitoring active",
+    "response_priority": "URGENT",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:20.168540+00:00",
+    "updated_at": "2026-09-10T07:28:20.168540+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:20.168540+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "1663bbf4-6f91-4477-8251-5e5fbc2a8ba6": {
+    "id": "1663bbf4-6f91-4477-8251-5e5fbc2a8ba6",
+    "location_id": "loc_24.76901_93.31356",
+    "location_name": "Tamenglong district",
+    "district": "Tamenglong district",
+    "state": "Manipur",
+    "latitude": 24.76901,
+    "longitude": 93.31356,
+    "severity": "HIGH",
+    "risk_probability": 92,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Unstable slope",
+    "rainfall": 27.6,
+    "soil_condition": 0.389,
+    "slope_condition": 37.79,
+    "road_status": "Monitoring active",
+    "response_priority": "URGENT",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:20.171537+00:00",
+    "updated_at": "2026-09-10T07:28:20.171537+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:20.171537+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "ddf28df4-3297-410f-a851-59c6bd3e039b": {
+    "id": "ddf28df4-3297-410f-a851-59c6bd3e039b",
+    "location_id": "loc_24.72_92.5",
+    "location_name": "Sribhumi",
+    "district": "Sribhumi",
+    "state": "Assam",
+    "latitude": 24.72,
+    "longitude": 92.5,
+    "severity": "MODERATE",
+    "risk_probability": 36,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 32.7,
+    "soil_condition": 0.47700000000000004,
+    "slope_condition": 0.95,
+    "road_status": "Monitoring active",
+    "response_priority": "MONITOR",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:20.177537+00:00",
+    "updated_at": "2026-09-10T07:28:20.177537+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:20.177537+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "PENDING",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "317e6702-2970-4eb0-83b4-b4fd846ed63a": {
+    "id": "317e6702-2970-4eb0-83b4-b4fd846ed63a",
+    "location_id": "loc_25.7981_93.79755",
+    "location_name": "Dimapur",
+    "district": "Dimapur",
+    "state": "Nagaland",
+    "latitude": 25.7981,
+    "longitude": 93.79755,
+    "severity": "MODERATE",
+    "risk_probability": 34,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 23.3,
+    "soil_condition": 0.47100000000000003,
+    "slope_condition": 22.62,
+    "road_status": "Monitoring active",
+    "response_priority": "MONITOR",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:20.198540+00:00",
+    "updated_at": "2026-09-10T07:28:20.198540+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:20.198540+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "PENDING",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "7438f9fa-d012-4ad9-a26d-b254a6cb176a": {
+    "id": "7438f9fa-d012-4ad9-a26d-b254a6cb176a",
+    "location_id": "loc_25.588413_91.475624",
+    "location_name": "Eastern West Khasi Hills",
+    "district": "Eastern West Khasi Hills",
+    "state": "Meghalaya",
+    "latitude": 25.588413,
+    "longitude": 91.475624,
+    "severity": "MODERATE",
+    "risk_probability": 56,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 10.4,
+    "soil_condition": 0.456,
+    "slope_condition": 9.51,
+    "road_status": "Monitoring active",
+    "response_priority": "MONITOR",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:20.199545+00:00",
+    "updated_at": "2026-09-10T07:28:20.199545+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:20.199545+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "PENDING",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "e3a7cb1e-21f8-4795-89e9-8395a1fd801a": {
+    "id": "e3a7cb1e-21f8-4795-89e9-8395a1fd801a",
+    "location_id": "loc_24.295452_92.03338",
+    "location_name": "Unakoti",
+    "district": "Unakoti",
+    "state": "Tripura",
+    "latitude": 24.295452,
+    "longitude": 92.03338,
+    "severity": "MODERATE",
+    "risk_probability": 38,
+    "trigger": "Heavy rainfall",
+    "contributing_factors": "High rainfall",
+    "rainfall": 51.9,
+    "soil_condition": 0.41600000000000004,
+    "slope_condition": 3.44,
+    "road_status": "Monitoring active",
+    "response_priority": "MONITOR",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:20.216605+00:00",
+    "updated_at": "2026-09-10T14:50:39.170664+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:20.216605+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "3e7f0dbe-e64a-4b60-bf6a-a5df3bd1aaa9": {
+    "id": "3e7f0dbe-e64a-4b60-bf6a-a5df3bd1aaa9",
+    "location_id": "loc_27.649593_93.87385",
+    "location_name": "Keyi Panyor",
+    "district": "Keyi Panyor",
+    "state": "Arunachal Pradesh",
+    "latitude": 27.649593,
+    "longitude": 93.87385,
+    "severity": "HIGH",
+    "risk_probability": 85,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Unstable slope",
+    "rainfall": 13.4,
+    "soil_condition": 0.391,
+    "slope_condition": 28.67,
+    "road_status": "Monitoring active",
+    "response_priority": "URGENT",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:20.223552+00:00",
+    "updated_at": "2026-09-10T14:50:39.242723+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:20.223552+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "701bbc27-348a-4ad3-ae74-32f298f8570a": {
+    "id": "701bbc27-348a-4ad3-ae74-32f298f8570a",
+    "location_id": "loc_24.68874_92.64441",
+    "location_name": "Hailakandi",
+    "district": "Hailakandi",
+    "state": "Assam",
+    "latitude": 24.68874,
+    "longitude": 92.64441,
+    "severity": "MODERATE",
+    "risk_probability": 36,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 31.9,
+    "soil_condition": 0.475,
+    "slope_condition": 7.42,
+    "road_status": "Monitoring active",
+    "response_priority": "MONITOR",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:20.240524+00:00",
+    "updated_at": "2026-09-10T07:28:20.240524+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:20.240524+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "PENDING",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "ea1991b4-7d4c-4a62-b7d5-81fbbec8572e": {
+    "id": "ea1991b4-7d4c-4a62-b7d5-81fbbec8572e",
+    "location_id": "loc_27.798374_94.0765",
+    "location_name": "Kamle",
+    "district": "Kamle",
+    "state": "Arunachal Pradesh",
+    "latitude": 27.798374,
+    "longitude": 94.0765,
+    "severity": "MODERATE",
+    "risk_probability": 46,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 13.1,
+    "soil_condition": 0.386,
+    "slope_condition": 22.99,
+    "road_status": "Monitoring active",
+    "response_priority": "MONITOR",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:20.263247+00:00",
+    "updated_at": "2026-09-10T07:28:20.263247+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:20.263247+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "PENDING",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "13f26156-7ae5-4319-a241-5eb3bdb1978b": {
+    "id": "13f26156-7ae5-4319-a241-5eb3bdb1978b",
+    "location_id": "loc_24.284264_94.280716",
+    "location_name": "Tengnoupal",
+    "district": "Tengnoupal",
+    "state": "Manipur",
+    "latitude": 24.284264,
+    "longitude": 94.280716,
+    "severity": "MODERATE",
+    "risk_probability": 34,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 22.7,
+    "soil_condition": 0.489,
+    "slope_condition": 15.85,
+    "road_status": "Monitoring active",
+    "response_priority": "MONITOR",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:20.266146+00:00",
+    "updated_at": "2026-09-10T07:28:20.266146+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:20.266146+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "PENDING",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "a25b4fc1-0f98-41ff-b7e7-e98c02032d22": {
+    "id": "a25b4fc1-0f98-41ff-b7e7-e98c02032d22",
+    "location_id": "loc_23.881626_93.21151",
+    "location_name": "Saitual",
+    "district": "Saitual",
+    "state": "Mizoram",
+    "latitude": 23.881626,
+    "longitude": 93.21151,
+    "severity": "MODERATE",
+    "risk_probability": 59,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 20.7,
+    "soil_condition": 0.396,
+    "slope_condition": 15.85,
+    "road_status": "Monitoring active",
+    "response_priority": "MONITOR",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:20.270146+00:00",
+    "updated_at": "2026-09-10T14:50:39.245726+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:20.270146+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "a94a8be6-7093-40de-ad83-9f9e7a389f64": {
+    "id": "a94a8be6-7093-40de-ad83-9f9e7a389f64",
+    "location_id": "loc_26.543888_94.840965",
+    "location_name": "Longleng",
+    "district": "Longleng",
+    "state": "Nagaland",
+    "latitude": 26.543888,
+    "longitude": 94.840965,
+    "severity": "MODERATE",
+    "risk_probability": 31,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 18.5,
+    "soil_condition": 0.46,
+    "slope_condition": 10.56,
+    "road_status": "Monitoring active",
+    "response_priority": "MONITOR",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:20.296208+00:00",
+    "updated_at": "2026-09-10T07:28:20.296208+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:20.296208+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "PENDING",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "8a177c42-a324-419a-919d-174d3af635f2": {
+    "id": "8a177c42-a324-419a-919d-174d3af635f2",
+    "location_id": "loc_25.8431_93.91629",
+    "location_name": "Niuland",
+    "district": "Niuland",
+    "state": "Nagaland",
+    "latitude": 25.8431,
+    "longitude": 93.91629,
+    "severity": "MODERATE",
+    "risk_probability": 33,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 25.9,
+    "soil_condition": 0.491,
+    "slope_condition": 11.46,
+    "road_status": "Monitoring active",
+    "response_priority": "MONITOR",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:20.303157+00:00",
+    "updated_at": "2026-09-10T07:28:20.303157+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:20.303157+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "PENDING",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "88e7e122-bcc6-405a-92d7-924243846616": {
+    "id": "88e7e122-bcc6-405a-92d7-924243846616",
+    "location_id": "loc_25.81746_93.1089",
+    "location_name": "Hojai",
+    "district": "Hojai",
+    "state": "Assam",
+    "latitude": 25.81746,
+    "longitude": 93.1089,
+    "severity": "MODERATE",
+    "risk_probability": 34,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 16.4,
+    "soil_condition": 0.425,
+    "slope_condition": 10.05,
+    "road_status": "Monitoring active",
+    "response_priority": "MONITOR",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:20.304215+00:00",
+    "updated_at": "2026-09-10T14:50:39.330487+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:20.304215+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    },
+    "contact_history": {
+      "usr_1": {
+        "last_time": 0,
+        "last_sev": "LOW"
+      }
+    }
+  },
+  "c5c14b75-864f-42ab-ba7e-2586f9978706": {
+    "id": "c5c14b75-864f-42ab-ba7e-2586f9978706",
+    "location_id": "loc_23.82251_92.49366",
+    "location_name": "Mamit",
+    "district": "Mamit",
+    "state": "Mizoram",
+    "latitude": 23.82251,
+    "longitude": 92.49366,
+    "severity": "MODERATE",
+    "risk_probability": 37,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 37.0,
+    "soil_condition": 0.41600000000000004,
+    "slope_condition": 14.62,
+    "road_status": "Monitoring active",
+    "response_priority": "MONITOR",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:20.308181+00:00",
+    "updated_at": "2026-09-10T14:50:39.363393+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:20.308181+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "6b9d7c98-c487-453a-ae5f-8359c559b4c7": {
+    "id": "6b9d7c98-c487-453a-ae5f-8359c559b4c7",
+    "location_id": "loc_27.313698_88.18995",
+    "location_name": "Gyalshing",
+    "district": "Gyalshing",
+    "state": "Sikkim",
+    "latitude": 27.313698,
+    "longitude": 88.18995,
+    "severity": "HIGH",
+    "risk_probability": 92,
+    "trigger": "Heavy rainfall",
+    "contributing_factors": "High rainfall + Unstable slope",
+    "rainfall": 66.8,
+    "soil_condition": 0.395,
+    "slope_condition": 40.84,
+    "road_status": "Monitoring active",
+    "response_priority": "URGENT",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:20.400197+00:00",
+    "updated_at": "2026-09-10T07:28:20.400197+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:20.400197+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "9f7cd8ec-6d90-462e-9351-5d6912e2f504": {
+    "id": "9f7cd8ec-6d90-462e-9351-5d6912e2f504",
+    "location_id": "loc_27.174353_88.45204",
+    "location_name": "Namchi",
+    "district": "Namchi",
+    "state": "Sikkim",
+    "latitude": 27.174353,
+    "longitude": 88.45204,
+    "severity": "HIGH",
+    "risk_probability": 74,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Unstable slope",
+    "rainfall": 23.1,
+    "soil_condition": 0.415,
+    "slope_condition": 28.59,
+    "road_status": "Monitoring active",
+    "response_priority": "URGENT",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:20.410211+00:00",
+    "updated_at": "2026-09-10T14:50:39.375488+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:20.410211+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "PENDING",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "c798ed36-c1e4-4293-b21b-8e59c9bc7920": {
+    "id": "c798ed36-c1e4-4293-b21b-8e59c9bc7920",
+    "location_id": "loc_28.556696_94.20784",
+    "location_name": "Shi-Yomi",
+    "district": "Shi-Yomi",
+    "state": "Arunachal Pradesh",
+    "latitude": 28.556696,
+    "longitude": 94.20784,
+    "severity": "HIGH",
+    "risk_probability": 88,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Unstable slope",
+    "rainfall": 19.9,
+    "soil_condition": 0.387,
+    "slope_condition": 53.64,
+    "road_status": "Monitoring active",
+    "response_priority": "URGENT",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:20.411208+00:00",
+    "updated_at": "2026-09-10T07:28:20.411208+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:20.411208+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "0672d28d-65ee-4ac6-a9d5-99b5cc05fcf7": {
+    "id": "0672d28d-65ee-4ac6-a9d5-99b5cc05fcf7",
+    "location_id": "loc_26.887486_95.579865",
+    "location_name": "Tirap",
+    "district": "Tirap",
+    "state": "Arunachal Pradesh",
+    "latitude": 26.887486,
+    "longitude": 95.579865,
+    "severity": "MODERATE",
+    "risk_probability": 32,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 22.6,
+    "soil_condition": 0.46799999999999997,
+    "slope_condition": 22.68,
+    "road_status": "Monitoring active",
+    "response_priority": "MONITOR",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:20.465347+00:00",
+    "updated_at": "2026-09-10T07:28:20.465347+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:20.465347+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "PENDING",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "e122043e-f607-4c81-aead-9da209b5c499": {
+    "id": "e122043e-f607-4c81-aead-9da209b5c499",
+    "location_id": "loc_26.456066_94.99089",
+    "location_name": "Mon",
+    "district": "Mon",
+    "state": "Nagaland",
+    "latitude": 26.456066,
+    "longitude": 94.99089,
+    "severity": "MODERATE",
+    "risk_probability": 60,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Unstable slope",
+    "rainfall": 18.6,
+    "soil_condition": 0.392,
+    "slope_condition": 26.36,
+    "road_status": "Monitoring active",
+    "response_priority": "MONITOR",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:20.469348+00:00",
+    "updated_at": "2026-09-10T14:50:39.450597+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:20.469348+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "791a3046-4877-4918-af70-179cbe2f9ddd": {
+    "id": "791a3046-4877-4918-af70-179cbe2f9ddd",
+    "location_id": "loc_25.8273_93.09166",
+    "location_name": "Nagaon",
+    "district": "Nagaon",
+    "state": "Assam",
+    "latitude": 25.8273,
+    "longitude": 93.09166,
+    "severity": "MODERATE",
+    "risk_probability": 34,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 15.8,
+    "soil_condition": 0.418,
+    "slope_condition": 2.7,
+    "road_status": "Monitoring active",
+    "response_priority": "MONITOR",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:28:20.472363+00:00",
+    "updated_at": "2026-09-10T07:28:20.472363+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:28:20.472363+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "PENDING",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "782f4dba-d376-4c7b-a839-55b196393edf": {
+    "id": "782f4dba-d376-4c7b-a839-55b196393edf",
+    "location_id": "demo_SIH_3476",
+    "location_name": "SIH Live Demo",
+    "district": "SIH_3476",
+    "state": "Assam",
+    "latitude": 26.1,
+    "longitude": 92.1,
+    "severity": "CRITICAL",
+    "risk_probability": 95,
+    "trigger": "Extreme rainfall",
+    "contributing_factors": "High rainfall + Unstable slope + High soil saturation",
+    "rainfall": 180,
+    "soil_condition": 0.9,
+    "slope_condition": 40,
+    "road_status": "Monitoring active",
+    "response_priority": "IMMEDIATE",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:29:44.586371+00:00",
+    "updated_at": "2026-09-10T07:29:44.586371+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:29:44.586371+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "NOTIFIED",
+      "local_community": "WARNING SENT"
+    },
+    "contact_history": {
+      "usr_1": {
+        "last_time": 1789025384.5879686,
+        "last_sev": "CRITICAL"
+      }
+    }
+  },
+  "1edf7fa1-2c88-4c8a-a310-e707a3d8583a": {
+    "id": "1edf7fa1-2c88-4c8a-a310-e707a3d8583a",
+    "location_id": "demo_SIH_2545",
+    "location_name": "SIH Live Demo",
+    "district": "SIH_2545",
+    "state": "Assam",
+    "latitude": 26.1,
+    "longitude": 92.1,
+    "severity": "CRITICAL",
+    "risk_probability": 95,
+    "trigger": "Extreme rainfall",
+    "contributing_factors": "High rainfall + Unstable slope + High soil saturation",
+    "rainfall": 180,
+    "soil_condition": 0.9,
+    "slope_condition": 40,
+    "road_status": "Monitoring active",
+    "response_priority": "IMMEDIATE",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:29:46.781088+00:00",
+    "updated_at": "2026-09-10T07:29:46.781088+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:29:46.781088+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "NOTIFIED",
+      "local_community": "WARNING SENT"
+    },
+    "contact_history": {
+      "usr_1": {
+        "last_time": 1789025386.782067,
+        "last_sev": "CRITICAL"
+      }
+    }
+  },
+  "3563c642-5579-4c10-861e-f0474c21537a": {
+    "id": "3563c642-5579-4c10-861e-f0474c21537a",
+    "location_id": "demo_SIH_9455",
+    "location_name": "SIH Live Demo",
+    "district": "SIH_9455",
+    "state": "Assam",
+    "latitude": 26.1,
+    "longitude": 92.1,
+    "severity": "CRITICAL",
+    "risk_probability": 95,
+    "trigger": "Extreme rainfall",
+    "contributing_factors": "High rainfall + Unstable slope + High soil saturation",
+    "rainfall": 180,
+    "soil_condition": 0.9,
+    "slope_condition": 40,
+    "road_status": "Monitoring active",
+    "response_priority": "IMMEDIATE",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:31:50.132553+00:00",
+    "updated_at": "2026-09-10T07:31:50.132553+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:31:50.132553+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "NOTIFIED",
+      "local_community": "WARNING SENT"
+    },
+    "contact_history": {
+      "usr_1": {
+        "last_time": 1789025510.1325538,
+        "last_sev": "CRITICAL"
+      }
+    }
+  },
+  "36ef8da4-57d1-490b-91b2-fa61b336e666": {
+    "id": "36ef8da4-57d1-490b-91b2-fa61b336e666",
+    "location_id": "demo_SIH_2541",
+    "location_name": "SIH Live Demo",
+    "district": "SIH_2541",
+    "state": "Assam",
+    "latitude": 26.1,
+    "longitude": 92.1,
+    "severity": "CRITICAL",
+    "risk_probability": 95,
+    "trigger": "Extreme rainfall",
+    "contributing_factors": "High rainfall + Unstable slope + High soil saturation",
+    "rainfall": 180,
+    "soil_condition": 0.9,
+    "slope_condition": 40,
+    "road_status": "Monitoring active",
+    "response_priority": "IMMEDIATE",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:31:55.549073+00:00",
+    "updated_at": "2026-09-10T07:31:55.549073+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:31:55.549073+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "NOTIFIED",
+      "local_community": "WARNING SENT"
+    },
+    "contact_history": {
+      "usr_1": {
+        "last_time": 1789025515.5490735,
+        "last_sev": "CRITICAL"
+      }
+    }
+  },
+  "a9d15a8f-fc7a-467b-bcd2-3d60e43c7985": {
+    "id": "a9d15a8f-fc7a-467b-bcd2-3d60e43c7985",
+    "location_id": "demo_SIH_6270",
+    "location_name": "SIH Live Demo",
+    "district": "SIH_6270",
+    "state": "Assam",
+    "latitude": 26.1,
+    "longitude": 92.1,
+    "severity": "CRITICAL",
+    "risk_probability": 95,
+    "trigger": "Extreme rainfall",
+    "contributing_factors": "High rainfall + Unstable slope + High soil saturation",
+    "rainfall": 180,
+    "soil_condition": 0.9,
+    "slope_condition": 40,
+    "road_status": "Monitoring active",
+    "response_priority": "IMMEDIATE",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:31:56.035977+00:00",
+    "updated_at": "2026-09-10T07:31:56.035977+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:31:56.035977+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "NOTIFIED",
+      "local_community": "WARNING SENT"
+    },
+    "contact_history": {
+      "usr_1": {
+        "last_time": 1789025516.0359771,
+        "last_sev": "CRITICAL"
+      }
+    }
+  },
+  "96e89e6f-8602-426d-8495-bbf8785faf9b": {
+    "id": "96e89e6f-8602-426d-8495-bbf8785faf9b",
+    "location_id": "demo_SIH_9521",
+    "location_name": "SIH Live Demo",
+    "district": "SIH_9521",
+    "state": "Assam",
+    "latitude": 26.1,
+    "longitude": 92.1,
+    "severity": "CRITICAL",
+    "risk_probability": 95,
+    "trigger": "Extreme rainfall",
+    "contributing_factors": "High rainfall + Unstable slope + High soil saturation",
+    "rainfall": 180,
+    "soil_condition": 0.9,
+    "slope_condition": 40,
+    "road_status": "Monitoring active",
+    "response_priority": "IMMEDIATE",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T07:32:03.290189+00:00",
+    "updated_at": "2026-09-10T07:32:03.290189+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T07:32:03.290189+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "NOTIFIED",
+      "local_community": "WARNING SENT"
+    },
+    "contact_history": {
+      "usr_1": {
+        "last_time": 1789025523.2901895,
+        "last_sev": "CRITICAL"
+      }
+    }
+  },
+  "1c26aaa5-6eeb-4902-ae37-f43618e51874": {
+    "id": "1c26aaa5-6eeb-4902-ae37-f43618e51874",
+    "location_id": "loc_25.205927_92.02089",
+    "location_name": "West Jaintia Hills",
+    "district": "West Jaintia Hills",
+    "state": "Meghalaya",
+    "latitude": 25.205927,
+    "longitude": 92.02089,
+    "severity": "MODERATE",
+    "risk_probability": 33,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 18.8,
+    "soil_condition": 0.501,
+    "slope_condition": 20.81,
+    "road_status": "Monitoring active",
+    "response_priority": "MONITOR",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T14:50:38.415031+00:00",
+    "updated_at": "2026-09-10T14:50:38.415031+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T14:50:38.415031+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "PENDING",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "1ee50639-3748-4327-ae1d-c28dd13eb393": {
+    "id": "1ee50639-3748-4327-ae1d-c28dd13eb393",
+    "location_id": "demo_Tawang",
+    "location_name": "Tawang Monastery Road",
+    "district": "Tawang",
+    "state": "Arunachal Pradesh",
+    "latitude": 27.58,
+    "longitude": 91.86,
+    "severity": "HIGH",
+    "risk_probability": 88,
+    "trigger": "Extreme rainfall",
+    "contributing_factors": "High rainfall + Unstable slope + High soil saturation",
+    "rainfall": 150,
+    "soil_condition": 0.85,
+    "slope_condition": 45,
+    "road_status": "Monitoring active",
+    "response_priority": "URGENT",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T14:54:27.303827+00:00",
+    "updated_at": "2026-09-10T14:54:27.303827+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T14:54:27.303827+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "580bb95a-74b4-4754-94e3-06d871844dd6": {
+    "id": "580bb95a-74b4-4754-94e3-06d871844dd6",
+    "location_id": "loc_27.049_88.2663",
+    "location_name": "Point (27.05, 88.27)",
+    "district": "Unknown",
+    "state": "Unknown",
+    "latitude": 27.049,
+    "longitude": 88.2663,
+    "severity": "HIGH",
+    "risk_probability": 64,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 20.2,
+    "soil_condition": 0.396,
+    "slope_condition": 6.044546207540864,
+    "road_status": "Monitoring active",
+    "response_priority": "URGENT",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T15:18:17.674145+00:00",
+    "updated_at": "2026-09-10T15:18:17.674145+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T15:18:17.674145+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "e9698286-fe15-43d8-b002-24e88e91dacc": {
+    "id": "e9698286-fe15-43d8-b002-24e88e91dacc",
+    "location_id": "loc_27.0499_88.2688",
+    "location_name": "Point (27.05, 88.27)",
+    "district": "Unknown",
+    "state": "Unknown",
+    "latitude": 27.0499,
+    "longitude": 88.2688,
+    "severity": "HIGH",
+    "risk_probability": 64,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Unstable slope",
+    "rainfall": 20.2,
+    "soil_condition": 0.396,
+    "slope_condition": 25.587052693946827,
+    "road_status": "Monitoring active",
+    "response_priority": "URGENT",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T15:55:38.790021+00:00",
+    "updated_at": "2026-09-10T15:55:38.790021+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T15:55:38.790021+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "7668c4f9-2b1a-437d-9d73-b99324ce5e26": {
+    "id": "7668c4f9-2b1a-437d-9d73-b99324ce5e26",
+    "location_id": "loc_27.0499_89.9999",
+    "location_name": "Point (27.05, 90.00)",
+    "district": "Unknown",
+    "state": "Unknown",
+    "latitude": 27.0499,
+    "longitude": 89.9999,
+    "severity": "HIGH",
+    "risk_probability": 64,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Unstable slope",
+    "rainfall": 14.5,
+    "soil_condition": 0.404,
+    "slope_condition": 29.96773630702412,
+    "road_status": "Monitoring active",
+    "response_priority": "URGENT",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T15:56:14.111478+00:00",
+    "updated_at": "2026-09-10T15:56:14.111478+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T15:56:14.111478+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "72cd75a0-c36a-4522-9bea-90417429b951": {
+    "id": "72cd75a0-c36a-4522-9bea-90417429b951",
+    "location_id": "loc_27.8888_89.9999",
+    "location_name": "Point (27.89, 90.00)",
+    "district": "Unknown",
+    "state": "Unknown",
+    "latitude": 27.8888,
+    "longitude": 89.9999,
+    "severity": "CRITICAL",
+    "risk_probability": 96,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Unstable slope",
+    "rainfall": 14.6,
+    "soil_condition": 0.394,
+    "slope_condition": 33.83552492283178,
+    "road_status": "Monitoring active",
+    "response_priority": "IMMEDIATE",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T15:56:42.811767+00:00",
+    "updated_at": "2026-09-10T15:56:42.811767+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T15:56:42.811767+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "NOTIFIED",
+      "local_community": "WARNING SENT"
+    }
+  },
+  "ea3167a0-09c2-42e1-838e-9149dac342de": {
+    "id": "ea3167a0-09c2-42e1-838e-9149dac342de",
+    "location_id": "loc_27.8888_89.1111",
+    "location_name": "Point (27.89, 89.11)",
+    "district": "Unknown",
+    "state": "Unknown",
+    "latitude": 27.8888,
+    "longitude": 89.1111,
+    "severity": "HIGH",
+    "risk_probability": 62,
+    "trigger": "High risk conditions detected",
+    "contributing_factors": "Elevated risk parameters",
+    "rainfall": 8.6,
+    "soil_condition": 0.369,
+    "slope_condition": 9.513310104446537,
+    "road_status": "Monitoring active",
+    "response_priority": "URGENT",
+    "status": "ACTIVE",
+    "created_at": "2026-09-10T15:58:09.027598+00:00",
+    "updated_at": "2026-09-10T15:58:09.027598+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-10T15:58:09.027598+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    }
+  },
+  "80f4c3ee-e901-49ab-a45c-65ea55385f81": {
+    "id": "80f4c3ee-e901-49ab-a45c-65ea55385f81",
+    "location_id": "demo_Re-test District",
+    "location_name": "Phase C Re-test",
+    "district": "Re-test District",
+    "state": "Assam",
+    "latitude": 27.5,
+    "longitude": 94.0,
+    "severity": "CRITICAL",
+    "risk_probability": 95,
+    "trigger": "Extreme rainfall",
+    "contributing_factors": "High rainfall + Unstable slope + High soil saturation",
+    "rainfall": 120.0,
+    "soil_condition": 0.8,
+    "slope_condition": 35.0,
+    "road_status": "Monitoring active",
+    "response_priority": "IMMEDIATE",
+    "status": "ACTIVE",
+    "created_at": "2026-09-12T17:12:13.886190+00:00",
+    "updated_at": "2026-09-12T17:12:13.886190+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-12T17:12:13.886190+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "NOTIFIED",
+      "local_community": "WARNING SENT"
+    }
+  },
+  "a08b68b4-5bc9-403d-bb4f-61111284a977": {
+    "id": "a08b68b4-5bc9-403d-bb4f-61111284a977",
+    "location_id": "demo_Dibrugarh",
+    "location_name": "E8 Area",
+    "district": "Dibrugarh",
+    "state": "Assam",
+    "latitude": 27.0,
+    "longitude": 93.0,
+    "severity": "HIGH",
+    "risk_probability": 90,
+    "trigger": "Extreme rainfall",
+    "contributing_factors": "High rainfall + Unstable slope + High soil saturation",
+    "rainfall": 120.0,
+    "soil_condition": 0.8,
+    "slope_condition": 35.0,
+    "road_status": "Monitoring active",
+    "response_priority": "URGENT",
+    "status": "ACTIVE",
+    "created_at": "2026-09-12T18:28:16.449801+00:00",
+    "updated_at": "2026-09-12T18:28:16.449801+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-12T18:28:16.449801+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    },
+    "contact_history": {
+      "usr_1": {
+        "last_time": 1789237696.4498012,
+        "last_sev": "HIGH"
+      }
+    }
+  },
+  "3b34954d-f685-4b87-bf49-f4eb3a9e2019": {
+    "id": "3b34954d-f685-4b87-bf49-f4eb3a9e2019",
+    "title": "DEBUG-E2",
+    "location_id": "demo_Debug District",
+    "location_name": "Debug Location",
+    "district": "Debug District",
+    "state": "Debug State",
+    "latitude": 27.0,
+    "longitude": 93.0,
+    "severity": "HIGH",
+    "risk_probability": 90,
+    "trigger": "Extreme rainfall",
+    "contributing_factors": "High rainfall + Unstable slope + High soil saturation",
+    "rainfall": 120.0,
+    "soil_condition": 0.8,
+    "slope_condition": 35.0,
+    "road_status": "Monitoring active",
+    "response_priority": "URGENT",
+    "status": "ACTIVE",
+    "created_at": "2026-09-12T18:56:09.583097+00:00",
+    "updated_at": "2026-09-12T18:56:09.583097+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-12T18:56:09.583097+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    },
+    "contact_history": {
+      "usr_1": {
+        "last_time": 1789239369.583098,
+        "last_sev": "HIGH"
+      }
+    }
+  },
+  "70fa28a5-b586-4ec0-af66-3f52989c1847": {
+    "id": "70fa28a5-b586-4ec0-af66-3f52989c1847",
+    "title": "E-FIX Lifecycle Alert",
+    "location_id": "demo_E-FIX District",
+    "location_name": "E-FIX Location",
+    "district": "E-FIX District",
+    "state": "E-FIX State",
+    "latitude": 27.0,
+    "longitude": 93.0,
+    "severity": "HIGH",
+    "risk_probability": 90,
+    "trigger": "Extreme rainfall",
+    "contributing_factors": "High rainfall + Unstable slope + High soil saturation",
+    "rainfall": 120.0,
+    "soil_condition": 0.8,
+    "slope_condition": 35.0,
+    "road_status": "Monitoring active",
+    "response_priority": "URGENT",
+    "status": "ACTIVE",
+    "created_at": "2026-09-12T18:57:55.066872+00:00",
+    "updated_at": "2026-09-12T18:57:55.066872+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-12T18:57:55.066872+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    },
+    "contact_history": {
+      "usr_1": {
+        "last_time": 1789239475.0668728,
+        "last_sev": "HIGH"
+      }
+    }
+  },
+  "f749a825-0c8b-4a0d-98f8-209f28ae899b": {
+    "id": "f749a825-0c8b-4a0d-98f8-209f28ae899b",
+    "title": "F7 Alert 1789240744",
+    "location_id": "demo_F7 District 1789240744",
+    "location_name": "F7 Location 1789240744",
+    "district": "F7 District 1789240744",
+    "state": "Assam",
+    "latitude": 27.0,
+    "longitude": 93.0,
+    "severity": "HIGH",
+    "risk_probability": 90,
+    "trigger": "Extreme rainfall",
+    "contributing_factors": "High rainfall + Unstable slope + High soil saturation",
+    "rainfall": 120.0,
+    "soil_condition": 0.8,
+    "slope_condition": 35.0,
+    "road_status": "Monitoring active",
+    "response_priority": "URGENT",
+    "status": "ACTIVE",
+    "created_at": "2026-09-12T19:19:04.600729+00:00",
+    "updated_at": "2026-09-12T19:19:04.600729+00:00",
+    "lifecycle": [
+      {
+        "state": "GENERATED",
+        "timestamp": "2026-09-12T19:19:04.600729+00:00"
+      }
+    ],
+    "notifications": {
+      "district_admin": "NOTIFIED",
+      "disaster_management": "PENDING",
+      "local_community": "PENDING"
+    },
+    "contact_history": {
+      "usr_1": {
+        "last_time": 1789240744.60073,
+        "last_sev": "HIGH"
+      }
+    }
+  }
+}

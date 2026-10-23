@@ -1,0 +1,2 @@
+rows_used,positive_rows,negative_rows,observed_positive_rate,probabilities_in_0_1,calibrated_probabilities_in_0_1,calibration_monotonic,raw_060_calibrated_equivalent
+853,308,545,0.36107854630715125,True,True,True,0.469580995731389

@@ -1,0 +1,946 @@
+[
+  {
+    "location": {
+      "name": "Chandmari, Gangtok",
+      "latitude": 27.338483,
+      "longitude": 88.623217,
+      "known_landslide": true
+    },
+    "timestamp_utc": "2026-09-06T11:00:00+00:00",
+    "environment": {
+      "rzsm_1": 0.417,
+      "rzsm_2": 0.42,
+      "rzsm_3": 0.417,
+      "current_rainfall_3d": 31.9,
+      "previous_rainfall_3d": 22.2
+    },
+    "temporal_audit": {
+      "D_minus_1_surface": 0.392,
+      "D_minus_2_surface": 0.388,
+      "D_minus_3_surface": 0.405,
+      "previous_rainfall": 22.2
+    },
+    "features": {
+      "rzsm_1": 0.417,
+      "rzsm_2": 0.42,
+      "rzsm_3": 0.417,
+      "cumulative_rainfall_3d_mm": 31.9,
+      "rzsm_mean": 0.418,
+      "rzsm_range": 0.0030000000000000027,
+      "rzsm_surface_deep_diff": 0.0,
+      "rain_rzsm_interaction": 13.3342,
+      "previous_rzsm": 0.392,
+      "previous_rzsm_2": 0.388,
+      "previous_rzsm_3": 0.405,
+      "previous_rainfall": 22.2
+    },
+    "feature_integrity": {
+      "rzsm_1": {
+        "value": 0.417,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "rzsm_2": {
+        "value": 0.42,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "rzsm_3": {
+        "value": 0.417,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "cumulative_rainfall_3d_mm": {
+        "value": 31.9,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "rzsm_mean": {
+        "value": 0.418,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "rzsm_range": {
+        "value": 0.0030000000000000027,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "rzsm_surface_deep_diff": {
+        "value": 0.0,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "rain_rzsm_interaction": {
+        "value": 13.3342,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "previous_rzsm": {
+        "value": 0.392,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "previous_rzsm_2": {
+        "value": 0.388,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "previous_rzsm_3": {
+        "value": 0.405,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "previous_rainfall": {
+        "value": 22.2,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      }
+    },
+    "terrain": {
+      "source": "OpenTopoData (SRTM30m)",
+      "elevation_m": 1782.0,
+      "slope_deg": 18.645314573366168
+    },
+    "soil": {
+      "source": "ISRIC SoilGrids",
+      "source_url": "https://rest.isric.org/soilgrids/v2.0/classification/query",
+      "soil_type_wrb": "Luvisols"
+    },
+    "model": {
+      "xgb_probability": 0.9673696756362915,
+      "xgb_logit": 3.389338662431087,
+      "xgb_prediction": 1,
+      "ahc_cluster": 6,
+      "ahc_susceptibility": 5.0,
+      "ahc_category": "LOW",
+      "final_probability": 0.8267637320810334,
+      "final_prediction": 1
+    }
+  },
+  {
+    "location": {
+      "name": "Indira Bye Pass, Gangtok",
+      "latitude": 27.328889,
+      "longitude": 88.607778,
+      "known_landslide": true
+    },
+    "timestamp_utc": "2026-09-06T11:00:00+00:00",
+    "environment": {
+      "rzsm_1": 0.434,
+      "rzsm_2": 0.42,
+      "rzsm_3": 0.417,
+      "current_rainfall_3d": 30.4,
+      "previous_rainfall_3d": 17.8
+    },
+    "temporal_audit": {
+      "D_minus_1_surface": 0.403,
+      "D_minus_2_surface": 0.373,
+      "D_minus_3_surface": 0.406,
+      "previous_rainfall": 17.8
+    },
+    "features": {
+      "rzsm_1": 0.434,
+      "rzsm_2": 0.42,
+      "rzsm_3": 0.417,
+      "cumulative_rainfall_3d_mm": 30.4,
+      "rzsm_mean": 0.42366666666666664,
+      "rzsm_range": 0.017000000000000015,
+      "rzsm_surface_deep_diff": 0.017000000000000015,
+      "rain_rzsm_interaction": 12.879466666666666,
+      "previous_rzsm": 0.403,
+      "previous_rzsm_2": 0.373,
+      "previous_rzsm_3": 0.406,
+      "previous_rainfall": 17.8
+    },
+    "feature_integrity": {
+      "rzsm_1": {
+        "value": 0.434,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "rzsm_2": {
+        "value": 0.42,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "rzsm_3": {
+        "value": 0.417,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "cumulative_rainfall_3d_mm": {
+        "value": 30.4,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "rzsm_mean": {
+        "value": 0.42366666666666664,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "rzsm_range": {
+        "value": 0.017000000000000015,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "rzsm_surface_deep_diff": {
+        "value": 0.017000000000000015,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "rain_rzsm_interaction": {
+        "value": 12.879466666666666,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "previous_rzsm": {
+        "value": 0.403,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "previous_rzsm_2": {
+        "value": 0.373,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "previous_rzsm_3": {
+        "value": 0.406,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "previous_rainfall": {
+        "value": 17.8,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      }
+    },
+    "terrain": {
+      "source": "OpenTopoData (SRTM30m)",
+      "elevation_m": 1445.0,
+      "slope_deg": 30.802424270914027
+    },
+    "soil": {
+      "source": "ISRIC SoilGrids",
+      "source_url": "https://rest.isric.org/soilgrids/v2.0/classification/query",
+      "soil_type_wrb": "Luvisols"
+    },
+    "model": {
+      "xgb_probability": 0.9697004556655884,
+      "xgb_logit": 3.4658545412800783,
+      "xgb_prediction": 1,
+      "ahc_cluster": 3,
+      "ahc_susceptibility": 32.63888888888889,
+      "ahc_category": "HIGH",
+      "final_probability": 0.9512364750762102,
+      "final_prediction": 1
+    }
+  },
+  {
+    "location": {
+      "name": "Darjeeling",
+      "latitude": 27.041,
+      "longitude": 88.2663,
+      "known_landslide": true
+    },
+    "timestamp_utc": "2026-09-06T11:00:00+00:00",
+    "environment": {
+      "rzsm_1": 0.414,
+      "rzsm_2": 0.413,
+      "rzsm_3": 0.395,
+      "current_rainfall_3d": 34.4,
+      "previous_rainfall_3d": 21.6
+    },
+    "temporal_audit": {
+      "D_minus_1_surface": 0.4,
+      "D_minus_2_surface": 0.397,
+      "D_minus_3_surface": 0.395,
+      "previous_rainfall": 21.6
+    },
+    "features": {
+      "rzsm_1": 0.414,
+      "rzsm_2": 0.413,
+      "rzsm_3": 0.395,
+      "cumulative_rainfall_3d_mm": 34.4,
+      "rzsm_mean": 0.4073333333333333,
+      "rzsm_range": 0.01899999999999996,
+      "rzsm_surface_deep_diff": 0.01899999999999996,
+      "rain_rzsm_interaction": 14.012266666666665,
+      "previous_rzsm": 0.4,
+      "previous_rzsm_2": 0.397,
+      "previous_rzsm_3": 0.395,
+      "previous_rainfall": 21.6
+    },
+    "feature_integrity": {
+      "rzsm_1": {
+        "value": 0.414,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "rzsm_2": {
+        "value": 0.413,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "rzsm_3": {
+        "value": 0.395,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "cumulative_rainfall_3d_mm": {
+        "value": 34.4,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "rzsm_mean": {
+        "value": 0.4073333333333333,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "rzsm_range": {
+        "value": 0.01899999999999996,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "rzsm_surface_deep_diff": {
+        "value": 0.01899999999999996,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "rain_rzsm_interaction": {
+        "value": 14.012266666666665,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "previous_rzsm": {
+        "value": 0.4,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "previous_rzsm_2": {
+        "value": 0.397,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "previous_rzsm_3": {
+        "value": 0.395,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "previous_rainfall": {
+        "value": 21.6,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      }
+    },
+    "terrain": {
+      "source": "OpenTopoData (SRTM30m)",
+      "elevation_m": 2123.0,
+      "slope_deg": 20.126261873808136
+    },
+    "soil": {
+      "source": "ISRIC SoilGrids",
+      "source_url": "https://rest.isric.org/soilgrids/v2.0/classification/query",
+      "soil_type_wrb": "Luvisols"
+    },
+    "model": {
+      "xgb_probability": 0.9428468346595764,
+      "xgb_logit": 2.8031690707214874,
+      "xgb_prediction": 1,
+      "ahc_cluster": 6,
+      "ahc_susceptibility": 5.0,
+      "ahc_category": "LOW",
+      "final_probability": 0.8050786819250053,
+      "final_prediction": 1
+    }
+  },
+  {
+    "location": {
+      "name": "Gangtok Control",
+      "latitude": 27.3314,
+      "longitude": 88.6138,
+      "known_landslide": false
+    },
+    "timestamp_utc": "2026-09-06T11:00:00+00:00",
+    "environment": {
+      "rzsm_1": 0.417,
+      "rzsm_2": 0.42,
+      "rzsm_3": 0.417,
+      "current_rainfall_3d": 31.9,
+      "previous_rainfall_3d": 22.2
+    },
+    "temporal_audit": {
+      "D_minus_1_surface": 0.392,
+      "D_minus_2_surface": 0.388,
+      "D_minus_3_surface": 0.405,
+      "previous_rainfall": 22.2
+    },
+    "features": {
+      "rzsm_1": 0.417,
+      "rzsm_2": 0.42,
+      "rzsm_3": 0.417,
+      "cumulative_rainfall_3d_mm": 31.9,
+      "rzsm_mean": 0.418,
+      "rzsm_range": 0.0030000000000000027,
+      "rzsm_surface_deep_diff": 0.0,
+      "rain_rzsm_interaction": 13.3342,
+      "previous_rzsm": 0.392,
+      "previous_rzsm_2": 0.388,
+      "previous_rzsm_3": 0.405,
+      "previous_rainfall": 22.2
+    },
+    "feature_integrity": {
+      "rzsm_1": {
+        "value": 0.417,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "rzsm_2": {
+        "value": 0.42,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "rzsm_3": {
+        "value": 0.417,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "cumulative_rainfall_3d_mm": {
+        "value": 31.9,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "rzsm_mean": {
+        "value": 0.418,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "rzsm_range": {
+        "value": 0.0030000000000000027,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "rzsm_surface_deep_diff": {
+        "value": 0.0,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "rain_rzsm_interaction": {
+        "value": 13.3342,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "previous_rzsm": {
+        "value": 0.392,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "previous_rzsm_2": {
+        "value": 0.388,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "previous_rzsm_3": {
+        "value": 0.405,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "previous_rainfall": {
+        "value": 22.2,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      }
+    },
+    "terrain": {
+      "source": "OpenTopoData (SRTM30m)",
+      "elevation_m": 1647.0,
+      "slope_deg": 8.724368787219777
+    },
+    "soil": {
+      "source": "ISRIC SoilGrids",
+      "source_url": "https://rest.isric.org/soilgrids/v2.0/classification/query",
+      "soil_type_wrb": "Luvisols"
+    },
+    "model": {
+      "xgb_probability": 0.9673696756362915,
+      "xgb_logit": 3.389338662431087,
+      "xgb_prediction": 1,
+      "ahc_cluster": 6,
+      "ahc_susceptibility": 5.0,
+      "ahc_category": "LOW",
+      "final_probability": 0.8267637320810334,
+      "final_prediction": 1
+    }
+  },
+  {
+    "location": {
+      "name": "Darjeeling Control",
+      "latitude": 27.05,
+      "longitude": 88.25,
+      "known_landslide": false
+    },
+    "timestamp_utc": "2026-09-06T11:00:00+00:00",
+    "environment": {
+      "rzsm_1": 0.414,
+      "rzsm_2": 0.413,
+      "rzsm_3": 0.395,
+      "current_rainfall_3d": 34.4,
+      "previous_rainfall_3d": 21.6
+    },
+    "temporal_audit": {
+      "D_minus_1_surface": 0.4,
+      "D_minus_2_surface": 0.397,
+      "D_minus_3_surface": 0.395,
+      "previous_rainfall": 21.6
+    },
+    "features": {
+      "rzsm_1": 0.414,
+      "rzsm_2": 0.413,
+      "rzsm_3": 0.395,
+      "cumulative_rainfall_3d_mm": 34.4,
+      "rzsm_mean": 0.4073333333333333,
+      "rzsm_range": 0.01899999999999996,
+      "rzsm_surface_deep_diff": 0.01899999999999996,
+      "rain_rzsm_interaction": 14.012266666666665,
+      "previous_rzsm": 0.4,
+      "previous_rzsm_2": 0.397,
+      "previous_rzsm_3": 0.395,
+      "previous_rainfall": 21.6
+    },
+    "feature_integrity": {
+      "rzsm_1": {
+        "value": 0.414,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "rzsm_2": {
+        "value": 0.413,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "rzsm_3": {
+        "value": 0.395,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "cumulative_rainfall_3d_mm": {
+        "value": 34.4,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "rzsm_mean": {
+        "value": 0.4073333333333333,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "rzsm_range": {
+        "value": 0.01899999999999996,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "rzsm_surface_deep_diff": {
+        "value": 0.01899999999999996,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "rain_rzsm_interaction": {
+        "value": 14.012266666666665,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "previous_rzsm": {
+        "value": 0.4,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "previous_rzsm_2": {
+        "value": 0.397,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "previous_rzsm_3": {
+        "value": 0.395,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "previous_rainfall": {
+        "value": 21.6,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      }
+    },
+    "terrain": {
+      "source": "OpenTopoData (SRTM30m)",
+      "elevation_m": 1726.0,
+      "slope_deg": 29.307515872658037
+    },
+    "soil": {
+      "source": "ISRIC SoilGrids",
+      "source_url": "https://rest.isric.org/soilgrids/v2.0/classification/query",
+      "soil_type_wrb": "Luvisols"
+    },
+    "model": {
+      "xgb_probability": 0.9428468346595764,
+      "xgb_logit": 2.8031690707214874,
+      "xgb_prediction": 1,
+      "ahc_cluster": 6,
+      "ahc_susceptibility": 5.0,
+      "ahc_category": "LOW",
+      "final_probability": 0.8050786819250053,
+      "final_prediction": 1
+    }
+  },
+  {
+    "location": {
+      "name": "Siliguri Control",
+      "latitude": 26.7271,
+      "longitude": 88.3953,
+      "known_landslide": false
+    },
+    "timestamp_utc": "2026-09-06T11:00:00+00:00",
+    "environment": {
+      "rzsm_1": 0.423,
+      "rzsm_2": 0.413,
+      "rzsm_3": 0.401,
+      "current_rainfall_3d": 36.6,
+      "previous_rainfall_3d": 17.2
+    },
+    "temporal_audit": {
+      "D_minus_1_surface": 0.409,
+      "D_minus_2_surface": 0.421,
+      "D_minus_3_surface": 0.361,
+      "previous_rainfall": 17.2
+    },
+    "features": {
+      "rzsm_1": 0.423,
+      "rzsm_2": 0.413,
+      "rzsm_3": 0.401,
+      "cumulative_rainfall_3d_mm": 36.6,
+      "rzsm_mean": 0.4123333333333334,
+      "rzsm_range": 0.021999999999999964,
+      "rzsm_surface_deep_diff": 0.021999999999999964,
+      "rain_rzsm_interaction": 15.091400000000002,
+      "previous_rzsm": 0.409,
+      "previous_rzsm_2": 0.421,
+      "previous_rzsm_3": 0.361,
+      "previous_rainfall": 17.2
+    },
+    "feature_integrity": {
+      "rzsm_1": {
+        "value": 0.423,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "rzsm_2": {
+        "value": 0.413,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "rzsm_3": {
+        "value": 0.401,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "cumulative_rainfall_3d_mm": {
+        "value": 36.6,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "rzsm_mean": {
+        "value": 0.4123333333333334,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "rzsm_range": {
+        "value": 0.021999999999999964,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "rzsm_surface_deep_diff": {
+        "value": 0.021999999999999964,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "rain_rzsm_interaction": {
+        "value": 15.091400000000002,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "previous_rzsm": {
+        "value": 0.409,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "previous_rzsm_2": {
+        "value": 0.421,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "previous_rzsm_3": {
+        "value": 0.361,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "previous_rainfall": {
+        "value": 17.2,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      }
+    },
+    "terrain": {
+      "source": "OpenTopoData (SRTM30m)",
+      "elevation_m": 125.0,
+      "slope_deg": 1.0670304109824145
+    },
+    "soil": {
+      "source": "ISRIC SoilGrids",
+      "source_url": "https://rest.isric.org/soilgrids/v2.0/classification/query",
+      "soil_type_wrb": "Vertisols"
+    },
+    "model": {
+      "xgb_probability": 0.9688522815704346,
+      "xgb_logit": 3.437371158156011,
+      "xgb_prediction": 1,
+      "ahc_cluster": 4,
+      "ahc_susceptibility": 9.813084112149532,
+      "ahc_category": "LOW",
+      "final_probability": 0.7681508568792859,
+      "final_prediction": 1
+    }
+  },
+  {
+    "location": {
+      "name": "Shillong",
+      "latitude": 25.5788,
+      "longitude": 91.8933,
+      "known_landslide": false
+    },
+    "timestamp_utc": "2026-09-06T11:00:00+00:00",
+    "environment": {
+      "rzsm_1": 0.467,
+      "rzsm_2": 0.472,
+      "rzsm_3": 0.5,
+      "current_rainfall_3d": 6.9,
+      "previous_rainfall_3d": 20.0
+    },
+    "temporal_audit": {
+      "D_minus_1_surface": 0.487,
+      "D_minus_2_surface": 0.474,
+      "D_minus_3_surface": 0.501,
+      "previous_rainfall": 20.0
+    },
+    "features": {
+      "rzsm_1": 0.467,
+      "rzsm_2": 0.472,
+      "rzsm_3": 0.5,
+      "cumulative_rainfall_3d_mm": 6.9,
+      "rzsm_mean": 0.4796666666666667,
+      "rzsm_range": 0.032999999999999974,
+      "rzsm_surface_deep_diff": -0.032999999999999974,
+      "rain_rzsm_interaction": 3.3097000000000003,
+      "previous_rzsm": 0.487,
+      "previous_rzsm_2": 0.474,
+      "previous_rzsm_3": 0.501,
+      "previous_rainfall": 20.0
+    },
+    "feature_integrity": {
+      "rzsm_1": {
+        "value": 0.467,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "rzsm_2": {
+        "value": 0.472,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "rzsm_3": {
+        "value": 0.5,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "cumulative_rainfall_3d_mm": {
+        "value": 6.9,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "rzsm_mean": {
+        "value": 0.4796666666666667,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "rzsm_range": {
+        "value": 0.032999999999999974,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "rzsm_surface_deep_diff": {
+        "value": -0.032999999999999974,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "rain_rzsm_interaction": {
+        "value": 3.3097000000000003,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "previous_rzsm": {
+        "value": 0.487,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "previous_rzsm_2": {
+        "value": 0.474,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "previous_rzsm_3": {
+        "value": 0.501,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "previous_rainfall": {
+        "value": 20.0,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      }
+    },
+    "terrain": {
+      "source": "OpenTopoData (SRTM30m)",
+      "elevation_m": 1433.0,
+      "slope_deg": 7.079044309854172
+    },
+    "soil": {
+      "source": "ISRIC SoilGrids",
+      "source_url": "https://rest.isric.org/soilgrids/v2.0/classification/query",
+      "soil_type_wrb": "Luvisols"
+    },
+    "model": {
+      "xgb_probability": 0.603485107421875,
+      "xgb_logit": 0.4200077627531182,
+      "xgb_prediction": 1,
+      "ahc_cluster": 6,
+      "ahc_susceptibility": 5.0,
+      "ahc_category": "LOW",
+      "final_probability": 0.35856679945934067,
+      "final_prediction": 0
+    }
+  },
+  {
+    "location": {
+      "name": "Guwahati",
+      "latitude": 26.1445,
+      "longitude": 91.7362,
+      "known_landslide": false
+    },
+    "timestamp_utc": "2026-09-06T11:00:00+00:00",
+    "environment": {
+      "rzsm_1": 0.456,
+      "rzsm_2": 0.479,
+      "rzsm_3": 0.482,
+      "current_rainfall_3d": 30.0,
+      "previous_rainfall_3d": 33.0
+    },
+    "temporal_audit": {
+      "D_minus_1_surface": 0.482,
+      "D_minus_2_surface": 0.493,
+      "D_minus_3_surface": 0.472,
+      "previous_rainfall": 33.0
+    },
+    "features": {
+      "rzsm_1": 0.456,
+      "rzsm_2": 0.479,
+      "rzsm_3": 0.482,
+      "cumulative_rainfall_3d_mm": 30.0,
+      "rzsm_mean": 0.4723333333333333,
+      "rzsm_range": 0.025999999999999968,
+      "rzsm_surface_deep_diff": -0.025999999999999968,
+      "rain_rzsm_interaction": 14.17,
+      "previous_rzsm": 0.482,
+      "previous_rzsm_2": 0.493,
+      "previous_rzsm_3": 0.472,
+      "previous_rainfall": 33.0
+    },
+    "feature_integrity": {
+      "rzsm_1": {
+        "value": 0.456,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "rzsm_2": {
+        "value": 0.479,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "rzsm_3": {
+        "value": 0.482,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "cumulative_rainfall_3d_mm": {
+        "value": 30.0,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "rzsm_mean": {
+        "value": 0.4723333333333333,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "rzsm_range": {
+        "value": 0.025999999999999968,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "rzsm_surface_deep_diff": {
+        "value": -0.025999999999999968,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "rain_rzsm_interaction": {
+        "value": 14.17,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "previous_rzsm": {
+        "value": 0.482,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "previous_rzsm_2": {
+        "value": 0.493,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "previous_rzsm_3": {
+        "value": 0.472,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      },
+      "previous_rainfall": {
+        "value": 33.0,
+        "finite": true,
+        "training_status": "NO_TRAINING_REFERENCE"
+      }
+    },
+    "terrain": {
+      "source": "OpenTopoData (SRTM30m)",
+      "elevation_m": 50.0,
+      "slope_deg": 2.1809741622719954
+    },
+    "soil": {
+      "source": "ISRIC SoilGrids",
+      "source_url": "https://rest.isric.org/soilgrids/v2.0/classification/query",
+      "soil_type_wrb": "Vertisols"
+    },
+    "model": {
+      "xgb_probability": 0.9641914367675781,
+      "xgb_logit": 3.2931027995133544,
+      "xgb_prediction": 1,
+      "ahc_cluster": 2,
+      "ahc_susceptibility": 0.0,
+      "ahc_category": "LOW",
+      "final_probability": 0.4871709050820795,
+      "final_prediction": 0
+    }
+  }
+]

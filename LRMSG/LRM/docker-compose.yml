@@ -1,0 +1,31 @@
+# LRM SG — PostgreSQL + PostGIS for local development
+# STEP 7H: Database infrastructure
+#
+# Usage:
+#   docker compose up -d
+#   docker compose down
+#   docker compose exec db psql -U lrm -d lrm_db
+#
+# Prerequisites: Docker + Docker Compose installed
+
+services:
+  db:
+    image: postgis/postgis:16-3.4
+    container_name: lrm_postgres
+    restart: unless-stopped
+    ports:
+      - "${DB_PORT:-5432}:5432"
+    environment:
+      POSTGRES_DB: ${DB_NAME:-lrm_db}
+      POSTGRES_USER: ${DB_USER:-lrm}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-lrm_password}
+    volumes:
+      - lrm_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-lrm} -d ${DB_NAME:-lrm_db}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  lrm_pgdata:

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>PahaarPulse — Gemma Local Vision Inference Specification</title>
+<style>
+  @page {
+    size: A4;
+    margin: 20mm 15mm 20mm 15mm;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #1a202c;
+    line-height: 1.5;
+    font-size: 10.5pt;
+    margin: 0;
+    padding: 0;
+  }
+  h1 {
+    font-size: 20pt;
+    color: #0f172a;
+    border-bottom: 2px solid #2563eb;
+    padding-bottom: 6px;
+    margin-top: 0;
+    margin-bottom: 4px;
+  }
+  h2 {
+    font-size: 13pt;
+    color: #1e3a8a;
+    border-bottom: 1px solid #cbd5e1;
+    padding-bottom: 4px;
+    margin-top: 18pt;
+    margin-bottom: 8pt;
+    page-break-after: avoid;
+  }
+  h3 {
+    font-size: 11pt;
+    color: #334155;
+    margin-top: 12pt;
+    margin-bottom: 4pt;
+    page-break-after: avoid;
+  }
+  p {
+    margin-top: 0;
+    margin-bottom: 8pt;
+  }
+  .subtitle {
+    font-size: 11pt;
+    color: #64748b;
+    font-weight: 500;
+    margin-bottom: 14pt;
+  }
+  .badge {
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 8.5pt;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .badge-success { background: #dcfce7; color: #166534; }
+  .badge-info { background: #dbeafe; color: #1e40af; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 6pt;
+    margin-bottom: 12pt;
+    font-size: 9.5pt;
+    page-break-inside: avoid;
+  }
+  th, td {
+    border: 1px solid #cbd5e1;
+    padding: 6px 8px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background-color: #f1f5f9;
+    font-weight: 600;
+    color: #0f172a;
+  }
+  tr:nth-child(even) {
+    background-color: #f8fafc;
+  }
+  pre, code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+  pre {
+    background-color: #0f172a;
+    color: #f8fafc;
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-size: 8.5pt;
+    overflow-x: auto;
+    margin-top: 4pt;
+    margin-bottom: 10pt;
+    page-break-inside: avoid;
+    line-height: 1.4;
+  }
+  p code, li code, td code {
+    background-color: #f1f5f9;
+    color: #0f172a;
+    padding: 1px 4px;
+    border-radius: 3px;
+    font-size: 9pt;
+  }
+  .callout {
+    border-left: 4px solid #2563eb;
+    background-color: #eff6ff;
+    padding: 8px 12px;
+    margin-top: 6pt;
+    margin-bottom: 10pt;
+    border-radius: 0 4px 4px 0;
+    font-size: 9.5pt;
+  }
+  .callout-warning {
+    border-left-color: #d97706;
+    background-color: #fffbeb;
+  }
+  ul, ol {
+    margin-top: 0;
+    margin-bottom: 8pt;
+    padding-left: 20px;
+  }
+  li {
+    margin-bottom: 3pt;
+  }
+</style>
+</head>
+<body>
+
+<h1>PahaarPulse — Gemma Local Vision Inference</h1>
+<div class="subtitle">Technical Architecture, Open-Weight Model Selection, Implementation Record, and Verification Report &bull; October 2026</div>
+
+<div class="callout">
+  <strong>Executive Summary:</strong> Extends the PahaarPulse Landslide Risk Management system with an on-premises open-weight Vision-Language Model (VLM) provider using <strong>Google Gemma 3 4B (<code>gemma3:4b</code>)</strong> via the Ollama runtime. The solution guarantees complete offline operational capability during disasters while preserving the existing hosted provider (<code>gemini-3.5-flash</code>), Pydantic schemas, database records, and safety guardrails.
+</div>
+
+<h2>1. System Architecture & Component Interaction</h2>
+<p>The AI hazard screening subsystem functions as an observational triage assistant. It ingests ground field report photographs and notes from web and mobile applications, evaluates visible geotechnical features, and records structured indicators atomically in PostgreSQL.</p>
+
+<pre>
+   +---------------------------------------------+
+   |   Field Report Sources (Web / Mobile App)   |
+   +---------------------------------------------+
+                          |
+                          v
+         +----------------------------------+
+         |    FastAPI REST Endpoints        |
+         |  /api/field-reports [POST / GET] |
+         |  /api/field-reports/{id}/analyze |
+         +----------------------------------+
+                          |
+                          v
+           +------------------------------+
+           |     GemmaAnalysisService     |
+           |  (Orchestration & Atomicity) |
+           +------------------------------+
+                          |
+           +--------------+---------------+
+           |                              |
+           v                              v
++----------------------+       +----------------------+
+| GoogleGenAIGemma     |       |  OllamaGemmaProvider |
+| Provider (Hosted)    |       |  (Local Vision VLM)  |
+| - gemini-3.5-flash   |       |  - gemma3:4b         |
++----------------------+       +----------------------+
+           |                              |
+           +--------------+---------------+
+                          |
+                          v
+         +----------------------------------+
+         |    Pydantic Schema Validation    |
+         |       (GemmaHazardOutput)        |
+         +----------------------------------+
+                          |
+                          v
+         +----------------------------------+
+         | PostgreSQL Atomic Persistence    |
+         | (field_reports database table)   |
+         +----------------------------------+
+</pre>
+
+<h2>2. Open-Weight Vision Model Selection</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Model Identifier</th>
+      <th>Publisher</th>
+      <th>Params</th>
+      <th>VRAM Req.</th>
+      <th>License</th>
+      <th>Assessment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong><code>gemma3:4b</code></strong></td>
+      <td>Google DeepMind</td>
+      <td>4 Billion</td>
+      <td>~3.8 GB</td>
+      <td>Gemma Terms of Use</td>
+      <td><span class="badge badge-success">Selected Primary</span> Direct Gemma family member; native SigLIP vision tokens; runs with 4+ GB VRAM headroom on RTX 4060.</td>
+    </tr>
+    <tr>
+      <td><strong><code>llama3.2-vision:11b</code></strong></td>
+      <td>Meta AI</td>
+      <td>11 Billion</td>
+      <td>~8.8 GB</td>
+      <td>Llama 3.2 Community</td>
+      <td>High quality, but requires partial CPU offload on 8 GB cards, causing higher latency.</td>
+    </tr>
+    <tr>
+      <td><strong><code>moondream:1.8b</code></strong></td>
+      <td>Vikhyat</td>
+      <td>1.8 Billion</td>
+      <td>~2.2 GB</td>
+      <td>Apache 2.0</td>
+      <td>Ultra-lightweight; weaker geotechnical nuance and JSON compliance.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>3. Evidence-Grounded Geotechnical Screening Rules</h2>
+<p>The system prompt enforces strict geotechnical screening boundaries:</p>
+<ul>
+  <li><strong>Separation of Evidence:</strong> Features in <code>detected_hazards</code> must be directly visible in the attached photograph. Written observer notes are treated as unverified claims and must not be reported as physical visual confirmation.</li>
+  <li><strong>Indeterminate State:</strong> If image quality, lighting, perspective, distance, or vegetation obscures the slope, the model defaults to <code>indeterminate</code>. Uncertain reports are never defaulted to <code>low</code>.</li>
+  <li><strong>No Safety Clearances:</strong> The model is strictly prohibited from declaring an area "safe" or "cleared" for human occupancy. Output is observational triage only.</li>
+  <li><strong>Uncalibrated Confidence:</strong> Confidence scores are explicitly labeled as model self-assessment, not empirical statistical probabilities.</li>
+</ul>
+
+<h2>4. Implementation and Resilience Engineering</h2>
+<ul>
+  <li><strong>Unified JSON Extraction:</strong> <code>parse_gemma_json</code> reliably handles empty responses, whitespace, and markdown code fences (<code>```json ... ```</code>).</li>
+  <li><strong>Ollama Runtime Error Differentiation:</strong> Missing models (HTTP 404) generate clear <code>ollama pull gemma3:4b</code> guidance; concurrency limits (HTTP 429) and server overloads (HTTP 503) map to typed exceptions without crashing.</li>
+  <li><strong>Fallback Provider Pipeline:</strong> Optional secondary failover via <code>FallbackGemmaProvider</code> activates only if <code>GEMMA_ENABLE_FALLBACK=true</code>, recording model provenance in the summary footer.</li>
+  <li><strong>Coordinator Security Guard & Centralized Auth:</strong> Centralized <code>verify_coordinator_authorization</code> in <code>backend.app.api.deps</code> enforces fail-closed authorization across 18 coordinator endpoints (16 mutation routes including volunteers, assignments, relief resources, shelters, alerts, field report reviews, and 2 audit read endpoints).</li>
+  <li><strong>Server-Only Next.js BFF Proxy:</strong> Eliminates all browser-exposed coordinator secrets (zero <code>NEXT_PUBLIC_</code> coordinator keys). Reviews and re-analysis flow through server-side route handlers with origin/CSRF validation and server-only credential resolution.</li>
+</ul>
+
+<h2>5. Automated Test & Verification Results</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Test Suite</th>
+      <th>Scope</th>
+      <th>Tests</th>
+      <th>Duration</th>
+      <th>Verdict</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Backend Full Suite</strong></td>
+      <td>Field reports, sync, SMS, shelters, local VLM, fallback, eval, coordinator guards, audit history</td>
+      <td>152 / 152 Passed</td>
+      <td>2.59s</td>
+      <td><span class="badge badge-success">100% Pass</span></td>
+    </tr>
+    <tr>
+      <td><strong>API Authorization & Security Suite</strong></td>
+      <td>18 coordinator endpoints (16 mutations + 2 audit reads), timing defense, production fail-closed</td>
+      <td>25 / 25 Passed</td>
+      <td>0.45s</td>
+      <td><span class="badge badge-success">100% Pass</span></td>
+    </tr>
+    <tr>
+      <td><strong>Local Vision & Security</strong></td>
+      <td>Image bytes, prompt separation, constant-time auth, fail-closed</td>
+      <td>15 / 15 Passed</td>
+      <td>0.26s</td>
+      <td><span class="badge badge-success">100% Pass</span></td>
+    </tr>
+    <tr>
+      <td><strong>VLM Evaluation Harness & Provenance Guard</strong></td>
+      <td>CSV parsing, metrics, confusion matrix, Cohen's Kappa, Wilson CIs, leakage guards, modality/license rejection</td>
+      <td>22 / 22 Passed</td>
+      <td>0.025s</td>
+      <td><span class="badge badge-success">100% Pass</span></td>
+    </tr>
+    <tr>
+      <td><strong>Mobile Test Suite</strong></td>
+      <td>Sync queue, offline retention, entity mapping</td>
+      <td>17 / 17 Passed</td>
+      <td>7.03ms</td>
+      <td><span class="badge badge-success">100% Pass</span></td>
+    </tr>
+    <tr>
+      <td><strong>Next.js Production Build & Static Typing</strong></td>
+      <td>Next.js 16 App Router build + TypeScript in web and mobile apps</td>
+      <td>0 Errors / Clean Build</td>
+      <td>—</td>
+      <td><span class="badge badge-success">Production Ready</span></td>
+    </tr>
+    <tr>
+      <td><strong>Real Hosted VLM Inference</strong></td>
+      <td>Hosted Google GenAI (gemini-3.5-flash) E2E smoke test</td>
+      <td>Verified Live</td>
+      <td>10.56s</td>
+      <td><span class="badge badge-success">100% Pass</span></td>
+    </tr>
+    <tr>
+      <td><strong>Real Local Gemma 3 VLM</strong></td>
+      <td>Ollama gemma3:4b on NVIDIA RTX 4060 (3,821 MiB VRAM)</td>
+      <td>Verified Live</td>
+      <td>2.98s (warm)</td>
+      <td><span class="badge badge-success">100% Pass</span></td>
+    </tr>
+    <tr>
+      <td><strong>Database Integrity</strong></td>
+      <td>PostgreSQL operational tables (alerts, reports, shelters)</td>
+      <td>11 Tables Verified</td>
+      <td>—</td>
+      <td><span class="badge badge-success">Zero Data Loss</span></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>6. Scientific Validation Phase 1: Defensible Field-Photo Benchmark</h2>
+<p>To establish a reproducible, evidence-based validation pipeline, Phase 1 defines strict geotechnical boundaries, an expert annotation protocol, and an 18-column manifest:</p>
+<ul>
+  <li><strong>Target Task Triad:</strong> Evaluates <strong>Target 1</strong> (observable physical indicators: tension cracks, road blockage, etc.) and <strong>Target 2</strong> (visual triage priority: low, moderate, high, critical, indeterminate). <strong>Target 3</strong> (future failure probability) is explicitly excluded as it requires borehole lithology, slope angle/DEM, and pore pressure.</li>
+  <li><strong>Dual-Expert Protocol:</strong> Requires independent blinded review by two geotechnical specialists with Cohen's Kappa threshold (&kappa; &ge; 0.70) to qualify datasets. Disagreements must be adjudicated by a senior geotechnical engineer.</li>
+  <li><strong>Data Leakage Guards & Hashing:</strong> Every photograph is fingerprinted with a cryptographic SHA-256 byte digest. Cross-split collisions between train, dev, and test sets are rejected with <code>DataLeakageError</code>.</li>
+  <li><strong>Scientific Uncertainty Metrics:</strong> Evaluator computes Wilson score 95% confidence intervals on accuracy, Cohen's Kappa inter-annotator agreement, multi-label indicator F1, and quality-stratified performance.</li>
+</ul>
+
+<h2>7. Candidate Dataset Compatibility & Provenance Register</h2>
+<p>External candidate datasets were audited against licensing, modality, and annotation compatibility. In accordance with engineering ethics and legal compliance, incompatible datasets are blocked at runtime:</p>
+<table>
+  <thead>
+    <tr>
+      <th>Dataset ID</th>
+      <th>Source & Citation</th>
+      <th>Modality</th>
+      <th>Annotation Format</th>
+      <th>License Status</th>
+      <th>Suitability Assessment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>HLAD</strong></td>
+      <td>Zenodo <code>10.5281/zenodo.22811448</code> (~4k images)</td>
+      <td>Optical/UAV RGB (Himalayas)</td>
+      <td>Bounding boxes & pixel masks</td>
+      <td><span class="badge" style="background:#fee2e2;color:#991b1b;">BLANK / UNVERIFIED</span></td>
+      <td><strong>BLOCKED:</strong> License missing on Zenodo; spatial masks cannot be silently coerced to categorical hazard triage.</td>
+    </tr>
+    <tr>
+      <td><strong>Landslide4Sense</strong></td>
+      <td>IEEE GRSS / HPS Data Fusion</td>
+      <td>14-band multispectral satellite rasters</td>
+      <td>Binary segmentation masks (0/1)</td>
+      <td>Academic / Non-Commercial</td>
+      <td><strong>BLOCKED:</strong> Incompatible remote-sensing raster modality; binary segmentation is orthogonal to VLM photo screening.</td>
+    </tr>
+    <tr>
+      <td><strong>PahaarPulse-Benchmark</strong></td>
+      <td>Internal operational field repo</td>
+      <td>Oblique RGB field photos (.jpg, .png)</td>
+      <td>5-tier hazard triage + 8 indicators</td>
+      <td><span class="badge badge-info">Internal / Apache-2.0</span></td>
+      <td><strong>TARGET SCHEMA:</strong> Fully compatible schema; blocked on pending independent expert review.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="callout">
+  <strong>Strict Rejection Barriers:</strong> <code>backend/app/services/vlm_evaluation.py</code> enforces typed exceptions: <code>UnverifiedLicenseError</code>, <code>UnsupportedModalityError</code>, and <code>MismatchedAnnotationSchemaError</code>. Datasets lacking verified licenses or compatible formats are rejected immediately with descriptive diagnostic guidance.
+</div>
+
+<h2>8. Configuration and Operational Commands</h2>
+<pre>
+# 1. To run local vision inference with Ollama:
+winget install Ollama.Ollama
+ollama pull gemma3:4b
+
+# 2. Configure in backend/.env:
+GEMMA_PROVIDER=ollama
+OLLAMA_BASE_URL=http://localhost:11434
+OLLAMA_MODEL=gemma3:4b
+OLLAMA_TIMEOUT=60.0
+
+# 3. Start unified backend server:
+python -m uvicorn backend.app.main:app --host 0.0.0.0 --port 8000 --reload
+</pre>
+
+<div class="callout callout-warning">
+  <strong>Limitations & Ethical Grounding:</strong> AI screenings are preliminary triage observations. They do NOT replace professional on-site geotechnical engineering inspections or establish structural clearance for human re-entry.
+</div>
+
+</body>
+</html>

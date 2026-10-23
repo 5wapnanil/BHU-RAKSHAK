@@ -1,0 +1,52 @@
+{
+  "datasets": [
+    {
+      "dataset_id": "HLAD",
+      "name": "Himalayan Landslide Detection Dataset",
+      "source_url": "https://zenodo.org/records/22811448",
+      "doi": "10.5281/zenodo.22811448",
+      "citation": "Ghimire, P. et al. (2024). Himalayan Landslide Detection Dataset (HLAD). Zenodo. https://doi.org/10.5281/zenodo.22811448",
+      "modality": "high_resolution_optical_drone",
+      "supported_formats": [".jpg", ".png"],
+      "annotation_type": "bounding_box_and_scar_mask",
+      "license_status": "unverified_blank",
+      "license_verified": false,
+      "geographic_coverage": "Himalayan Region",
+      "compatible_with_gemma_field_vlm": false,
+      "admission_decision": "REJECTED_BLOCKED",
+      "suitability_limitations": "Blank license on Zenodo legally precludes downloading or redistribution without explicit permission. Annotations are bounding boxes and scar masks rather than categorical geotechnical hazard severity and lack ground-level road/infrastructure context."
+    },
+    {
+      "dataset_id": "Landslide4Sense",
+      "name": "Landslide4Sense Multispectral Satellite Benchmark",
+      "source_url": "https://huggingface.co/datasets/ibm-nasa-geospatial/Landslide4sense",
+      "doi": "10.1109/MGRS.2022.3168877",
+      "citation": "Ghorbanzadeh, O. et al. (2022). Landslide4Sense: Reference Benchmark Data and Deep Learning Models for Landslide Detection. IEEE Geoscience and Remote Sensing Magazine.",
+      "modality": "14_band_multispectral_satellite",
+      "supported_formats": [".tif", ".tiff", ".npy", ".h5"],
+      "annotation_type": "pixel_binary_segmentation_mask",
+      "license_status": "academic_competition_only",
+      "license_verified": true,
+      "geographic_coverage": "Global Mountainous Regions",
+      "compatible_with_gemma_field_vlm": false,
+      "admission_decision": "REJECTED_BLOCKED",
+      "suitability_limitations": "Incompatible 14-band remote sensing modality (Sentinel-2, ALOS DEM). Binary pixel masks are for spatial segmentation, not geotechnical triage. Belongs to macro-scale satellite GIS pipeline, not conversational RGB vision model."
+    },
+    {
+      "dataset_id": "PahaarPulse-Field-Benchmark",
+      "name": "PahaarPulse Ground Field Report Benchmark",
+      "source_url": "internal://evaluation/field_photo_benchmark_template.csv",
+      "doi": null,
+      "citation": "PahaarPulse Geotechnical AI Research Group (2026). Ground-Level Field Photograph Hazard Screening Benchmark Protocol. PahaarPulse Specification.",
+      "modality": "ground_field_photograph_rgb",
+      "supported_formats": [".jpg", ".jpeg", ".png", ".webp"],
+      "annotation_type": "categorical_hazard_triage_plus_indicators",
+      "license_status": "internal_project_license_cc_by_4_0",
+      "license_verified": true,
+      "geographic_coverage": "Indian Himalayan Region (Uttarakhand, Sikkim, Himachal Pradesh)",
+      "compatible_with_gemma_field_vlm": true,
+      "admission_decision": "APPROVED_TARGET_SCHEMA",
+      "suitability_limitations": "Target architecture schema. Requires independent dual-expert geotechnical adjudication prior to computing benchmark scorecards."
+    }
+  ]
+}

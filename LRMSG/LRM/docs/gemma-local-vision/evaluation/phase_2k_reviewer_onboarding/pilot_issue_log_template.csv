@@ -1,0 +1,2 @@
+issue_id,pilot_batch_id,annotation_id,issue_type,description,reported_by_reviewer_id,report_timestamp,adjudication_impact,protocol_amendment_required,resolution_notes,resolution_status
+ISSUE_PLACEHOLDER_01,[PILOT_XX],[ANN_XXX],[TAXONOMY_BOUNDARY_AMBIGUITY/OPTICAL_DEFECT/SCALE_UNCERTAINTY/CONFLICT_OF_INTEREST],[ENTER_DESCRIPTION],[ENTER_REVIEWER_ID],[YYYY-MM-DDTHH:MM:SSZ],PENDING_ASSESSMENT,PENDING_ASSESSMENT,[ENTER_RESOLUTION_NOTES],OPEN

@@ -1,0 +1,155 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PahaarPulse Backboard RAG Integration Map",
+  "generated_at": "2026-10-23T13:51:00Z",
+  "audit_version": "1.0.0",
+  "observed_facts": {
+    "repository_root": "C:/Users/Swapnanil/Desktop/app2/LRMSG/LRM",
+    "mobile_root": "C:/Users/Swapnanil/Desktop/app2/landslide-app",
+    "backend": {
+      "framework": "FastAPI",
+      "framework_version": "0.115+ (inferred from requirements.txt: fastapi, uvicorn, pydantic)",
+      "language": "Python",
+      "python_runtime": "3.12",
+      "entry_point": "backend/app/main.py",
+      "startup_procedure": "@app.on_event('startup') attaching DB session factory to alert_engine",
+      "router_registration_pattern": "app.include_router(router, prefix='/api/...', tags=['...']) in backend/app/main.py",
+      "existing_routers": [
+        {"path": "/health", "module": "backend.app.api.endpoints.health"},
+        {"path": "/prediction", "module": "backend.app.api.endpoints.prediction"},
+        {"path": "/environmental-data", "module": "backend.app.api.endpoints.environment"},
+        {"path": "/analytics", "module": "backend.app.api.analytics"},
+        {"path": "/api/gis", "module": "backend.app.api.endpoints.gis"},
+        {"path": "/api/alerts", "module": "backend.app.api.endpoints.alerts"},
+        {"path": "/api/risk-zones", "module": "backend.app.api.endpoints.risk_zones"},
+        {"path": "/api/sync", "module": "backend.app.api.endpoints.sync"},
+        {"path": "/api", "module": "backend.app.api.endpoints.coordination"},
+        {"path": "/api/field-reports", "module": "backend.app.api.endpoints.field_reports"}
+      ],
+      "static_mounts": [
+        {"mount_path": "/uploads", "target_dir": "backend/uploads"}
+      ],
+      "database": {
+        "engine": "PostgreSQL 16 with PostGIS 3.4",
+        "orm": "SQLAlchemy >=2.0,<3",
+        "driver": "psycopg2-binary >=2.9,<3",
+        "session_lifecycle": "FastAPI get_db dependency yielding SessionLocal and closing in finally block",
+        "migrations": "Alembic >=1.14,<2 (7 migrations present in backend/alembic/versions)",
+        "models": [
+          "Alert", "Assignment", "AuditHistory", "EmergencyRequest", "FieldReport",
+          "Incident", "ReliefResource", "RiskObservation", "Shelter", "User", "VolunteerProfile"
+        ]
+      },
+      "authentication_and_authorization": {
+        "end_user_authentication": null,
+        "session_management": null,
+        "token_verification": null,
+        "coordinator_authentication": "Shared static COORDINATOR_API_KEY verified via secrets.compare_digest in backend/app/api/deps.py; fails closed with HTTP 503 in production if unset",
+        "public_endpoints": "Fully anonymous / unauthenticated (emergency requests, field reports, alerts, GIS)"
+      },
+      "ai_ml_architecture": {
+        "numerical_ml": "XGBoost classifier in xgb_calibration.py and backend/app/services/spatial_analysis.py",
+        "multimodal_vision": "GemmaAnalysisService in backend/app/services/gemma_analysis_service.py using GoogleGenAIProvider or OllamaProvider via backend/app/services/gemma_providers.py",
+        "document_processing_libraries": null
+      },
+      "dependency_manifests": ["backend/requirements.txt"]
+    },
+    "frontend_web": {
+      "framework": "Next.js",
+      "version": "16.3.4",
+      "react_version": "19.2.8",
+      "language": "TypeScript 5",
+      "router_architecture": "Next.js App Router (100% in frontend/src/app; no pages directory)",
+      "api_client": "apiFetch<T> in frontend/src/lib/api.ts with dynamic host resolution via getApiBaseUrl()",
+      "bff_proxy_route_handlers": [
+        "frontend/src/app/api/field-reports/[id]/analyze/route.ts",
+        "frontend/src/app/api/field-reports/[id]/review/route.ts",
+        "frontend/src/app/api/live-risk-predictions/route.ts"
+      ],
+      "chat_or_assistant_components": null,
+      "available_domain_corpus": "6 structured educational/scientific articles in frontend/src/data/articles.ts",
+      "ui_styling": "Tailwind CSS v4 with Lucide React icons, Framer Motion, and custom CSS variables"
+    },
+    "mobile_app": {
+      "framework": "React Native with Expo",
+      "expo_version": "~52.0.0 (inferred from package.json)",
+      "react_native_version": "0.76.7",
+      "language": "TypeScript",
+      "api_client": "apiClient in landslide-app/src/services/api/client.ts targeting API_CONFIG in apiConfig.ts",
+      "chat_or_assistant_screens": null,
+      "safety_knowledge_screens": ["landslide-app/src/screens/LandslideSafetyGuideScreen.tsx"],
+      "authentication_status": "Simulated/mock UI in landslide-app/src/screens/ProfileLoginScreen.tsx with no backend API integration"
+    },
+    "test_suites": {
+      "backend_test_suite": {
+        "runner": "python -m unittest discover -s backend/tests -p 'test_*.py'",
+        "test_count": 273,
+        "status": "PASSING (273/273 tests pass in 1.7s)"
+      },
+      "mobile_test_suite": {
+        "runner": "node landslide-app/src/__tests__/run-mobile-tests.mjs",
+        "test_count": 17,
+        "status": "PASSING (17/17 tests pass in 12ms)"
+      }
+    }
+  },
+  "proposed_recommendations": {
+    "backboard_client_configuration": {
+      "target_file": "backend/app/core/config.py (or backend/app/services/backboard/config.py)",
+      "environment_variables": [
+        {"name": "BACKBOARD_API_KEY", "secret": true, "scope": "backend_only"},
+        {"name": "BACKBOARD_BASE_URL", "secret": false, "default": "https://api.backboard.io"},
+        {"name": "BACKBOARD_ASSISTANT_ID", "secret": false, "scope": "backend_only"},
+        {"name": "BACKBOARD_TIMEOUT_SECONDS", "secret": false, "default": 30}
+      ],
+      "rationale": "Follows the pattern established in backend/app/database/config.py and gemma_providers.py, loading secrets safely from backend/.env without exposing them to client bundles."
+    },
+    "rag_service_location": {
+      "target_file": "backend/app/services/backboard_service.py",
+      "protocol_interface": "BackboardProvider protocol in backend/app/services/backboard/providers.py with MockBackboardProvider for offline unit tests",
+      "rationale": "Mirrors the existing GemmaAnalysisService and AnalysisProvider abstraction in backend/app/services/gemma_analysis_service.py and gemma_providers.py, enabling deterministic testing without live API keys."
+    },
+    "api_endpoint_registration": {
+      "target_endpoint_file": "backend/app/api/endpoints/assistant.py",
+      "router_prefix": "/api/assistant",
+      "tags": ["assistant"],
+      "registration_location": "backend/app/main.py",
+      "endpoints": [
+        {"method": "POST", "path": "/api/assistant/query", "summary": "Submit a question to the Backboard RAG assistant"},
+        {"method": "GET", "path": "/api/assistant/threads/{thread_id}", "summary": "Retrieve chat thread history"},
+        {"method": "POST", "path": "/api/assistant/threads", "summary": "Initialize a new conversation thread"}
+      ],
+      "rationale": "Maintains strict consistency with existing routers (/api/alerts, /api/field-reports) registered in backend/app/main.py."
+    },
+    "conversation_thread_association": {
+      "short_term_approach": "Client-generated UUIDv4 session ID passed in X-Session-ID header, mapped to Backboard thread ID in an in-memory TTL cache or Redis instance. Suitable for anonymous public educational Q&A.",
+      "long_term_approach": "Alembic migration creating a chat_threads table (id UUID, user_id UUID FK users.id, backboard_thread_id TEXT, created_at TIMESTAMP) combined with introducing genuine user authentication.",
+      "risk_note": "Without user authentication, conversation threads cannot be cryptographically bound to specific human users."
+    },
+    "frontend_request_routing": {
+      "web_frontend_path": "frontend/src/lib/assistant.ts calling apiFetch('/api/assistant/query') via frontend/src/lib/api.ts",
+      "optional_bff_proxy": "frontend/src/app/api/assistant/query/route.ts following the pattern of frontend/src/app/api/field-reports/[id]/review/route.ts for server-side rate-limiting and origin validation",
+      "mobile_path": "landslide-app/src/services/api/assistantApi.ts using apiClient with endpoint registered in API_CONFIG"
+    },
+    "response_normalization_and_citations": {
+      "pydantic_schema": "backend/app/api/schemas/assistant.py",
+      "schema_fields": {
+        "message_id": "UUID",
+        "thread_id": "str",
+        "reply_text": "str (sanitized markdown)",
+        "sources": "List of { title: str, source_type: str, url_or_slug: Optional[str], snippet: str, score: Optional[float] }",
+        "disclaimer": "Mandatory geotechnical advisory notice"
+      },
+      "rationale": "Strict Pydantic response models ensure consistent frontend rendering and prevent raw LLM hallucinations from breaking client UI."
+    },
+    "rate_limits_timeouts_and_errors": {
+      "timeout_location": "httpx.AsyncClient(timeout=30.0) inside BackboardService",
+      "rate_limit_location": "FastAPI route dependency or slowapi middleware on /api/assistant/query (e.g. 10 requests/minute per IP/session)",
+      "error_hierarchy": "BackboardTimeoutError, BackboardRateLimitError, BackboardAPIError, caught in endpoint to return HTTP 504/429/502 with fallback static safety advice"
+    },
+    "pipeline_separation": {
+      "isolation_boundary": "Numerical ML risk prediction (XGBoost/GIS in /prediction) and visual hazard screening (Gemma/VLM in /api/field-reports) must remain strictly independent of Backboard RAG (/api/assistant).",
+      "rationale": "Prevents LLM text hallucinations from corrupting quantitative geospatial risk calculations or certified geotechnical workflows."
+    }
+  }
+}

@@ -1,0 +1,2 @@
+log_id,timestamp,annotation_id,changed_field,old_value,new_value,author_id,change_reason
+LOG_0001,2026-10-23T05:48:56Z,ALL,package_initialization,NONE,PHASE_2I_INITIALIZED_PENDING_REVIEW,DATA_SAFETY_ENGINEER,Phase 2I blinded annotation package initialization across 102 cleared candidates. All human labels strictly pending.

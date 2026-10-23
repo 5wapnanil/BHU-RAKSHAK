@@ -1,0 +1,16 @@
+image_id,image_path,source,expert_ground_truth_hazard,visible_indicators,image_quality,model_predicted_hazard,model_predicted_hazards,model_confidence,reviewer_name,reviewer_notes,adjudication_status
+# SCHEMA SPECIFICATION AND VALID VALUES:
+# image_id: Unique identifier for the evaluation image (e.g., EVAL_IMG_001)
+# image_path: Relative or absolute filesystem path to image file (JPEG, PNG, WebP)
+# source: Geological survey, field inspection, or regional monitoring agency
+# expert_ground_truth_hazard: Exactly one of: low | moderate | high | critical | indeterminate
+# visible_indicators: Semicolon-delimited indicators (tension_cracks;slope_displacement;road_blockage;rockfall_debris;structural_damage;toe_erosion;mudflow;water_seepage)
+# image_quality: Exactly one of: excellent | adequate | degraded | obscured
+# model_predicted_hazard: Populated by evaluate_vlm.py
+# model_predicted_hazards: Populated by evaluate_vlm.py
+# model_confidence: Populated by evaluate_vlm.py (uncalibrated model score 0.0-1.0)
+# reviewer_name: Name or ID of qualified geotechnical engineer
+# reviewer_notes: Technical commentary and physical justifications
+# adjudication_status: Exactly one of: pending | adjudicated | disputed
+EVAL_IMG_TEMPLATE_001,eval_images/sample_stable_slope.jpg,Geotechnical Survey Unit,,,"adequate",,,,Dr. Expert Geologist,Pending independent dual review,pending
+EVAL_IMG_TEMPLATE_002,eval_images/sample_rockfall_road.jpg,Highway Operations Division,,,"adequate",,,,Dr. Expert Geologist,Pending independent dual review,pending

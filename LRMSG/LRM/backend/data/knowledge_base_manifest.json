@@ -1,0 +1,332 @@
+{
+  "manifest_version": "1.0",
+  "generated_at": "2026-10-23T14:47:00Z",
+  "description": "PahaarPulse Knowledge-Base Manifest for Backboard RAG Assistant",
+  "knowledge_base_directory": "knowledge_base",
+  "documents": [
+    {
+      "id": "DOC-001",
+      "filename": "01_why_do_landslides_happen.md",
+      "title": "Why Do Landslides Happen? Understanding the Signals Before Failure",
+      "slug": "why-do-landslides-happen",
+      "summary": "Overview of physical mechanisms, slope equilibrium, rainfall infiltration, and environmental indicators driving landslides.",
+      "category": "LANDSLIDE SCIENCE",
+      "author": "LRM Research Team",
+      "published_at": "2026-08-15",
+      "source_path": "frontend/src/data/articles.ts",
+      "approval_status": "APPROVED",
+      "approved_for_ingestion": true,
+      "content_sha256": "c874935e569322dbfb7b0d30dc02b9c5afb50fb6eadfd1a19c847d5d0de40138",
+      "size_bytes": 2804,
+      "format": ".md",
+      "mime_type": "text/markdown",
+      "provenance": "internal verified",
+      "license": "Proprietary / Internal Research & Educational",
+      "use_cases": [
+        "Foundational slope stability queries",
+        "Pore-water pressure and shear strength explanations",
+        "Physical warning indicators education"
+      ],
+      "domain_tags": [
+        "landslide_science",
+        "geotechnical",
+        "slope_stability",
+        "pore_pressure",
+        "triggers"
+      ]
+    },
+    {
+      "id": "DOC-002",
+      "filename": "02_how_gis_turns_terrain_data_into_risk_maps.md",
+      "title": "How GIS Turns Terrain Data into Landslide Risk Maps",
+      "slug": "gis-terrain-data-risk-maps",
+      "summary": "Detailed explanation of GIS layers (DEM, slope, aspect, curvature, drainage) and multi-criteria overlay modeling for hazard maps.",
+      "category": "GIS & REMOTE SENSING",
+      "author": "LRM Research Team",
+      "published_at": "2026-08-20",
+      "source_path": "frontend/src/data/articles.ts",
+      "approval_status": "APPROVED",
+      "approved_for_ingestion": true,
+      "content_sha256": "e8f7d96936175a2f7e08f9ad8ca2b630826453ba48c7e4f6e09d670ad7598e43",
+      "size_bytes": 2603,
+      "format": ".md",
+      "mime_type": "text/markdown",
+      "provenance": "internal verified",
+      "license": "Proprietary / Internal Research & Educational",
+      "use_cases": [
+        "GIS mapping methodologies",
+        "Digital Elevation Model and slope derivative queries",
+        "Spatial risk overlay principles"
+      ],
+      "domain_tags": [
+        "gis",
+        "spatial_analysis",
+        "dem",
+        "terrain",
+        "susceptibility_mapping"
+      ]
+    },
+    {
+      "id": "DOC-003",
+      "filename": "03_how_machine_learning_predicts_landslide_risk.md",
+      "title": "How Machine Learning Predicts Landslide Risk: From Data to Probability",
+      "slug": "machine-learning-landslide-prediction",
+      "summary": "Architecture of predictive models, XGBoost probability estimation, clustering, and PahaarPulse's three-layer machine learning pipeline.",
+      "category": "ARTIFICIAL INTELLIGENCE",
+      "author": "LRM Research Team",
+      "published_at": "2026-08-25",
+      "source_path": "frontend/src/data/articles.ts",
+      "approval_status": "APPROVED",
+      "approved_for_ingestion": true,
+      "content_sha256": "9cbdf24a9b3ce64cb5aff214c734e28b5db35847b9a9177aae98be19f25401bb",
+      "size_bytes": 3614,
+      "format": ".md",
+      "mime_type": "text/markdown",
+      "provenance": "internal verified",
+      "license": "Proprietary / Internal Research & Educational",
+      "use_cases": [
+        "ML landslide risk prediction",
+        "Three-layer pipeline architecture questions",
+        "Feature engineering and classification thresholds"
+      ],
+      "domain_tags": [
+        "machine_learning",
+        "xgboost",
+        "clustering",
+        "probability",
+        "pahaarpulse_architecture"
+      ]
+    },
+    {
+      "id": "DOC-004",
+      "filename": "04_why_rainfall_and_soil_moisture_matter.md",
+      "title": "Why Rainfall and Soil Moisture Matter for Landslide Risk",
+      "slug": "rainfall-soil-moisture-landslide-risk",
+      "summary": "Role of short-duration intensity vs. long-duration accumulation, subsurface soil saturation, and multi-variable sensor monitoring.",
+      "category": "ENVIRONMENTAL MONITORING",
+      "author": "LRM Research Team",
+      "published_at": "2026-09-01",
+      "source_path": "frontend/src/data/articles.ts",
+      "approval_status": "APPROVED",
+      "approved_for_ingestion": true,
+      "content_sha256": "b0d4ee03c05dc2e471a2e290169900ddf29c78240c48aedfa99b41938da64819",
+      "size_bytes": 2936,
+      "format": ".md",
+      "mime_type": "text/markdown",
+      "provenance": "internal verified",
+      "license": "Proprietary / Internal Research & Educational",
+      "use_cases": [
+        "Precipitation thresholds and pore-water pressure",
+        "Soil moisture depth profiling",
+        "Multi-variable sensor telemetry context"
+      ],
+      "domain_tags": [
+        "environmental_monitoring",
+        "rainfall",
+        "soil_moisture",
+        "hydrology",
+        "saturation"
+      ]
+    },
+    {
+      "id": "DOC-005",
+      "filename": "05_watching_landscape_from_space.md",
+      "title": "Watching the Landscape from Space: Satellites and Landslide Monitoring",
+      "slug": "satellite-landslide-monitoring",
+      "summary": "Remote sensing applications, optical multispectral vegetation monitoring (NDVI), SAR deformation tracking, and satellite limitations.",
+      "category": "SATELLITE MONITORING",
+      "author": "LRM Research Team",
+      "published_at": "2026-09-03",
+      "source_path": "frontend/src/data/articles.ts",
+      "approval_status": "APPROVED",
+      "approved_for_ingestion": true,
+      "content_sha256": "86fd86f7dcec78b327b1c5cadac3ef5266bcd6a164011c4ddc28b50b31d753db",
+      "size_bytes": 3066,
+      "format": ".md",
+      "mime_type": "text/markdown",
+      "provenance": "internal verified",
+      "license": "Proprietary / Internal Research & Educational",
+      "use_cases": [
+        "Remote sensing and Earth observation methods",
+        "Vegetation change detection (NDVI)",
+        "SAR ground displacement detection"
+      ],
+      "domain_tags": [
+        "satellite_monitoring",
+        "remote_sensing",
+        "sar",
+        "ndvi",
+        "change_detection"
+      ]
+    },
+    {
+      "id": "DOC-006",
+      "filename": "06_from_risk_maps_to_early_warning.md",
+      "title": "From Risk Maps to Early Warning: What Happens After Prediction?",
+      "slug": "risk-maps-to-early-warning",
+      "summary": "Distinction between susceptibility, hazard, and risk; transition from static maps to dynamic threshold alerts and disaster mitigation.",
+      "category": "EARLY WARNING",
+      "author": "LRM Research Team",
+      "published_at": "2026-09-05",
+      "source_path": "frontend/src/data/articles.ts",
+      "approval_status": "APPROVED",
+      "approved_for_ingestion": true,
+      "content_sha256": "34785ac849712c26b8a96cbaa14dff6fa11ae4e2679df5611ac8ce2f09a04197",
+      "size_bytes": 3447,
+      "format": ".md",
+      "mime_type": "text/markdown",
+      "provenance": "internal verified",
+      "license": "Proprietary / Internal Research & Educational",
+      "use_cases": [
+        "Terminology differences (susceptibility vs hazard vs risk)",
+        "Early warning thresholds and alert workflows",
+        "Actionable disaster response planning"
+      ],
+      "domain_tags": [
+        "early_warning",
+        "risk_management",
+        "thresholds",
+        "disaster_preparedness",
+        "alert_systems"
+      ]
+    },
+    {
+      "id": "DOC-007",
+      "filename": null,
+      "title": "NDMA National Landslide Risk Management Strategy Guidelines",
+      "slug": "ndma-landslide-strategy",
+      "summary": "Official statutory guidelines for landslide risk governance, zoning, mitigation, and response in India.",
+      "category": "OFFICIAL GUIDELINES",
+      "author": "National Disaster Management Authority (NDMA), Government of India",
+      "published_at": null,
+      "source_path": "external:ndma.gov.in",
+      "approval_status": "PENDING_REVIEW",
+      "approved_for_ingestion": false,
+      "content_sha256": null,
+      "size_bytes": null,
+      "format": ".pdf",
+      "mime_type": "application/pdf",
+      "provenance": "official public authority (external)",
+      "license": "Government Open Data / Public Sector Guidance (Pending Formal Verification)",
+      "use_cases": [
+        "Official national statutory protocols",
+        "State and district level disaster management compliance"
+      ],
+      "domain_tags": [
+        "ndma",
+        "official_policy",
+        "governance",
+        "statutory_guidelines"
+      ],
+      "review_notes": "Pending acquisition and hash verification of official PDF release from NDMA portal. Content has not been fabricated."
+    },
+    {
+      "id": "DOC-008",
+      "filename": null,
+      "title": "GSI Standard Operating Procedure for Landslide Susceptibility Mapping",
+      "slug": "gsi-sop-landslide-mapping",
+      "summary": "Geological Survey of India national landslide inventory and macro-scale susceptibility zoning methodology.",
+      "category": "GEOLOGICAL MAPPING",
+      "author": "Geological Survey of India (GSI)",
+      "published_at": null,
+      "source_path": "external:gsi.gov.in",
+      "approval_status": "PENDING_REVIEW",
+      "approved_for_ingestion": false,
+      "content_sha256": null,
+      "size_bytes": null,
+      "format": ".pdf",
+      "mime_type": "application/pdf",
+      "provenance": "official public authority (external)",
+      "license": "Official Government Publication (Pending Verification)",
+      "use_cases": [
+        "National inventory methodology",
+        "Geological survey mapping standards"
+      ],
+      "domain_tags": [
+        "gsi",
+        "geology",
+        "susceptibility_zoning"
+      ],
+      "review_notes": "Awaiting official repository inclusion and licensing terms confirmation."
+    },
+    {
+      "id": "DOC-009",
+      "filename": null,
+      "title": "Community Landslide Preparedness and Evacuation Handbook",
+      "slug": "community-evacuation-handbook",
+      "summary": "District-level community guidelines for pre-monsoon preparedness, emergency kit assembly, and village warning sirens.",
+      "category": "COMMUNITY SAFETY",
+      "author": "State Disaster Management Authority (SDMA)",
+      "published_at": null,
+      "source_path": "external:sdma",
+      "approval_status": "PENDING_REVIEW",
+      "approved_for_ingestion": false,
+      "content_sha256": null,
+      "size_bytes": null,
+      "format": ".pdf",
+      "mime_type": "application/pdf",
+      "provenance": "official public authority (external)",
+      "license": "Public Disaster Preparedness Materials (Pending Review)",
+      "use_cases": [
+        "Village evacuation procedures",
+        "Local emergency warning signal interpretation"
+      ],
+      "domain_tags": [
+        "community_preparedness",
+        "evacuation",
+        "safety"
+      ],
+      "review_notes": "Candidate identified during Phase 1 audit; pending formal intake."
+    },
+    {
+      "id": "DOC-010",
+      "filename": "sensor_readings.csv",
+      "title": "Raw Telemetry & Soil Sensor Timeseries Dump",
+      "slug": "raw-sensor-telemetry",
+      "summary": "Raw numeric timeseries sensor readings from field piezometers, rain gauges, and moisture probes.",
+      "category": "RAW TELEMETRY",
+      "author": "Field IoT Deployment",
+      "published_at": null,
+      "source_path": "backend/data/raw/sensor_readings.csv",
+      "approval_status": "REJECTED",
+      "approved_for_ingestion": false,
+      "content_sha256": null,
+      "size_bytes": null,
+      "format": ".csv",
+      "mime_type": "text/csv",
+      "provenance": "internal sensor dump",
+      "license": "Internal Operational Data",
+      "use_cases": [],
+      "domain_tags": [
+        "telemetry",
+        "sensor_data"
+      ],
+      "review_notes": "REJECTED: High-frequency numeric timeseries tabular data is unsuitable for semantic RAG document indexing. Query via analytical SQL/APIs instead."
+    },
+    {
+      "id": "DOC-011",
+      "filename": "weather_scrape.log",
+      "title": "Automated Weather Ingestion Worker Execution Logs",
+      "slug": "weather-ingestion-logs",
+      "summary": "Debug and operational log traces from weather scraping and cron workers.",
+      "category": "OPERATIONAL LOGS",
+      "author": "Automated Worker",
+      "published_at": null,
+      "source_path": "backend/logs/weather_scrape.log",
+      "approval_status": "REJECTED",
+      "approved_for_ingestion": false,
+      "content_sha256": null,
+      "size_bytes": null,
+      "format": ".log",
+      "mime_type": "text/plain",
+      "provenance": "internal system logs",
+      "license": "Internal Operational Data",
+      "use_cases": [],
+      "domain_tags": [
+        "logs",
+        "operational"
+      ],
+      "review_notes": "REJECTED: Ephemeral operational log data containing noisy system traces is unsuitable for knowledge retrieval."
+    }
+  ]
+}

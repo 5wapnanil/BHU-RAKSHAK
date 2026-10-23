@@ -1,0 +1,31 @@
+# PAHAARPULSE FIELD-PHOTO BENCHMARK MANIFEST AND ANNOTATION TEMPLATE
+# Version: 1.0.0
+# Description: Standardized dataset manifest for evaluating vision-language models on ground-level Himalayan landslide screening.
+# 
+# COLUMN SPECIFICATIONS:
+# 1.  image_id: Unique identifier (Format: FPB_<REGION>_<YYYYMMDD>_<HASH8>, e.g., FPB_UK_20260714_8A3F12C9) [MANDATORY]
+# 2.  image_sha256: 64-char hexadecimal SHA-256 hash of raw image file bytes [MANDATORY]
+# 3.  image_path_or_controlled_reference: Relative filesystem path to image (.jpg, .jpeg, .png, .webp) [MANDATORY]
+# 4.  source: Sponsoring organization, disaster agency, or field campaign [MANDATORY]
+# 5.  license_or_permission_reference: Explicit license status or permission ID (e.g., CC-BY-4.0, OGL-India, Field-Consent-2026-UK) [MANDATORY]
+# 6.  capture_date: ISO 8601 Date of photograph acquisition (YYYY-MM-DD)
+# 7.  region: State/District geographic context (e.g., Uttarakhand/Chamoli, Sikkim/Gangtok)
+# 8.  image_quality: Exactly one of: excellent | adequate | degraded | obscured [MANDATORY]
+# 9.  observable_indicators: Semicolon-delimited list of observed physical features:
+#     Allowed: tension_cracks;slope_displacement;road_blockage;rockfall_debris;structural_damage;toe_erosion;mudflow;water_seepage;stable_vegetation
+# 10. annotator_1_id: Pseudonymous identifier for first qualified reviewer (e.g., ANN_GEO_01)
+# 11. annotator_1_label: Exactly one of: low | moderate | high | critical | indeterminate
+# 12. annotator_2_id: Pseudonymous identifier for second qualified reviewer (e.g., ANN_GEO_02)
+# 13. annotator_2_label: Exactly one of: low | moderate | high | critical | indeterminate
+# 14. adjudicated_label: Consensus or senior adjudicated label: low | moderate | high | critical | indeterminate
+# 15. adjudication_status: Exactly one of: pending | adjudicated | disputed | excluded [MANDATORY]
+# 16. exclusion_reason: Reason if excluded (e.g., non_slope_scene | severe_privacy_violation | duplicate_artifact | synthetic_or_tampered | obscured_view | none)
+# 17. split: Evaluation allocation: train | dev | test [MANDATORY - All images from same site/event must share the same split]
+# 18. notes: Geotechnical commentary, physical justifications, or adjudication rationales
+#
+image_id,image_sha256,image_path_or_controlled_reference,source,license_or_permission_reference,capture_date,region,image_quality,observable_indicators,annotator_1_id,annotator_1_label,annotator_2_id,annotator_2_label,adjudicated_label,adjudication_status,exclusion_reason,split,notes
+FPB_TEMPLATE_001,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,benchmark_images/FPB_TEMPLATE_001.jpg,Uttarakhand SDMA,Field-Consent-2026-UK,2026-07-15,Uttarakhand/Chamoli,adequate,tension_cracks;slope_displacement,ANN_GEO_01,high,ANN_GEO_02,high,high,adjudicated,none,test,Active scarp observed above highway corridor with visible displacement
+FPB_TEMPLATE_002,d41d8cd98f00b204e9800998ecf8427e00000000000000000000000000000000,benchmark_images/FPB_TEMPLATE_002.jpg,Border Roads Organisation,CC-BY-4.0,2026-08-02,Sikkim/East,excellent,road_blockage;rockfall_debris,ANN_GEO_01,critical,ANN_GEO_02,critical,critical,adjudicated,none,test,Total carriageway obstruction by fresh angular quartz-schist boulders
+FPB_TEMPLATE_003,7110eda4d09e062aa5e4a390b0a572ac0d2c0220ac73a566406e22f3e8f85b88,benchmark_images/FPB_TEMPLATE_003.jpg,National Highways Authority,OGL-India,2026-06-20,Himachal/Mandi,adequate,stable_vegetation,ANN_GEO_01,low,ANN_GEO_02,low,low,adjudicated,none,test,Engineered gabion retaining wall with established root turfing; zero cracks
+FPB_TEMPLATE_004,18ac3e7343f016890c510e93f935261169d01249b0d5a9b223a29557dd799336,benchmark_images/FPB_TEMPLATE_004.jpg,Geological Field Campaign,Field-Consent-2026-GEO,2026-08-10,Uttarakhand/Rudraprayag,obscured,,ANN_GEO_01,indeterminate,ANN_GEO_02,indeterminate,indeterminate,adjudicated,none,test,Heavy cloud and monsoon mist obscures upper crown and toe; insufficient visibility
+FPB_TEMPLATE_005,b94d27b9934d3e08a52e52d7da7dabfac484efe37a5380ee9088f7ace2efcde9,benchmark_images/FPB_TEMPLATE_005.jpg,Survey Unit,Pending-Verification,2026-09-01,Uttarakhand/Tehri,adequate,tension_cracks,ANN_GEO_01,moderate,ANN_GEO_02,,,pending,none,dev,Pending independent second annotator review and license verification
