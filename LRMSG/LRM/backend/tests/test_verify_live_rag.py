@@ -96,6 +96,13 @@ class TestVerifyLiveRAG(unittest.IsolatedAsyncioTestCase):
         # First query failed status -> immediately halted, exactly 1 query dispatched
         self.assertEqual(len(provider.queries_dispatched), 1)
 
+    async def test_successful_diagnose_queries_verified(self):
+        provider = MockTestProvider(retrieved_files=["03_how_machine_learning_predicts_landslide_risk.md"])
+        code = await run_rag_verification(live_flag=True, diagnose=True, provider=provider, config=self.valid_cfg)
+        self.assertEqual(code, 0)
+        self.assertEqual(len(provider.queries_dispatched), 2)
+        self.assertTrue(all(m == "off" for m in provider.memory_flags))
+
     async def test_halts_if_thread_creation_fails(self):
         provider = MockTestProvider()
         provider.create_thread = AsyncMock(side_effect=BackboardTimeoutError("Connection timed out after 10.0s"))

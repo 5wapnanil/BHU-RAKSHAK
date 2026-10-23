@@ -4,7 +4,7 @@ NON-NEGOTIABLE SAFETY CONSTRAINTS:
 1. Strict opt-in required: Exits immediately unless '--live' flag is explicitly passed.
 2. Never executed during normal unit tests.
 3. Requires valid BACKBOARD_API_KEY and BACKBOARD_ASSISTANT_ID.
-4. Performs a bounded set of exactly 3 knowledge queries on a single disposable thread.
+4. Performs a bounded set of knowledge queries on a single disposable thread.
 5. Strictly enforces memory="off".
 6. Does NOT retry any failed or timed-out request. If a request fails, halts immediately.
 7. Redacts all credentials, thread IDs, and private identifiers from console output.
@@ -16,7 +16,7 @@ import asyncio
 from pathlib import Path
 import sys
 import time
-from typing import Dict, List, Optional
+from typing import Any, Dict, List, Optional
 
 # Ensure repository root is on sys.path
 _repo_root = Path(__file__).resolve().parents[2]
@@ -33,7 +33,7 @@ from backend.app.services.backboard.providers import (
 )
 
 
-QUERIES: List[Dict[str, str]] = [
+QUERIES: List[Dict[str, Any]] = [
     {
         "id": "Q1",
         "topic": "Landslide mechanisms & pore-water pressure (DOC-001/DOC-004)",
@@ -54,9 +54,26 @@ QUERIES: List[Dict[str, str]] = [
     },
 ]
 
+# Targeted diagnostic probe (bounded at exactly 2 queries) explicitly directing the model to reference its documents
+DIAGNOSTIC_QUERIES: List[Dict[str, Any]] = [
+    {
+        "id": "D1",
+        "topic": "Explicit Corpus Probe: 3-Layer ML Architecture (DOC-003)",
+        "query": "According to the uploaded PahaarPulse knowledge base documents, what specific three-layer predictive pipeline is used for machine learning landslide risk assessment?",
+        "expected_docs": ["03_how_machine_learning_predicts_landslide_risk.md"],
+    },
+    {
+        "id": "D2",
+        "topic": "Explicit Corpus Probe: Hydrological Trigger Mechanisms (DOC-004)",
+        "query": "Consult the ingested knowledge base: How do intense short-duration rainfall and prolonged antecedent precipitation differ in destabilizing slope equilibrium?",
+        "expected_docs": ["04_why_rainfall_and_soil_moisture_matter.md"],
+    },
+]
+
 
 async def run_rag_verification(
     live_flag: bool,
+    diagnose: bool = False,
     provider: Optional[BackboardProvider] = None,
     config: Optional[BackboardSettings] = None,
 ) -> int:
@@ -64,17 +81,20 @@ async def run_rag_verification(
 
     Args:
         live_flag: Must be True to proceed (passed via '--live').
+        diagnose: If True, executes the bounded 2-query diagnostic probe directing the model to consult corpus.
         provider: Optional dependency-injected BackboardProvider for deterministic testing.
         config: Optional dependency-injected BackboardSettings.
 
     Returns:
-        0 on complete success (all 3 queries complete and retrieve documents).
+        0 on complete success (all queries complete and retrieve documents).
         1 on failure, timeout, or missing configuration.
     """
     cfg = config or BackboardSettings()
+    active_queries = DIAGNOSTIC_QUERIES if diagnose else QUERIES
 
+    mode_label = "DIAGNOSTIC PROBE (2 TARGETED QUERIES)" if diagnose else "STANDARD RETRIEVAL (3 QUERIES)"
     print("=" * 72)
-    print("PAHAARPULSE / BHU-RAKSHAK - LIVE RAG RETRIEVAL VERIFICATION")
+    print(f"PAHAARPULSE / BHU-RAKSHAK - LIVE RAG VERIFICATION [{mode_label}]")
     print("=" * 72)
     print(f"Target Base URL:     {cfg.base_url}")
     print(f"Target Assistant ID: {redact_secret(cfg.assistant_id)}")
@@ -82,13 +102,13 @@ async def run_rag_verification(
     print(f"Effective Timeout:   {cfg.timeout_seconds:.1f}s")
     print(f"Configured Provider: {cfg.provider}")
     print(f"Memory Mode:         off (strictly enforced)")
-    print(f"Bounded Query Count: {len(QUERIES)}")
+    print(f"Bounded Query Count: {len(active_queries)}")
     print(f"Retry Policy:        NO RETRIES (halts immediately on first failure)")
     print("-" * 72)
 
     if not live_flag:
         print("[DRY RUN COMPLETE] Specify '--live' to execute live verification queries.")
-        print("Expected cost: <= $0.002 USD (disposable thread, 3 non-streaming queries).")
+        print(f"Expected cost: <= $0.002 USD (disposable thread, {len(active_queries)} non-streaming queries).")
         return 0
 
     if not cfg.is_configured:
@@ -113,7 +133,7 @@ async def run_rag_verification(
     results = []
     overall_success = True
 
-    for item in QUERIES:
+    for item in active_queries:
         qid = item["id"]
         qtext = item["query"]
         topic = item["topic"]
@@ -143,8 +163,16 @@ async def run_rag_verification(
             retrieved_count = output.retrieved_files_count
             preview = output.content.strip().replace("\n", " ")[:160]
 
+            tool_calls = output.raw_response.get("tool_calls") or []
+            cost = output.raw_response.get("cost_usd")
+            total_tok = output.raw_response.get("total_tokens")
+
             print(f"    HTTP Transport:      PASSED (HTTP 200, {elapsed_sec:.2f}s)")
             print(f"    Completion Status:   {output.status} (is_successful={status_ok})")
+            if tool_calls:
+                print(f"    Tool Calls Detected: {len(tool_calls)} call(s)")
+            if cost is not None or total_tok is not None:
+                print(f"    Usage Metrics:       Tokens={total_tok or 'N/A'}, Cost=${cost if cost is not None else 'N/A'}")
             print(f"    Retrieved Documents: {retrieved_count} document(s) reported by Backboard")
             for rf in retrieved_files:
                 print(f"      * {rf}")
@@ -217,7 +245,7 @@ async def run_rag_verification(
         print(f"[{r['id']}] {r['topic'][:32]:<32} | {status_str} | {r['elapsed_sec']:5.1f}s | {rag_str}{err_str}")
 
     print("=" * 72)
-    if overall_success and len(results) == len(QUERIES):
+    if overall_success and len(results) == len(active_queries):
         all_retrieved = all(r["retrieved_count"] > 0 for r in results)
         if all_retrieved:
             print("[PASS] All queries completed successfully with verified corpus document retrieval.")
@@ -237,8 +265,13 @@ def main() -> None:
         action="store_true",
         help="Execute live requests against Backboard.io (incurs provider token cost).",
     )
+    parser.add_argument(
+        "--diagnose",
+        action="store_true",
+        help="Execute targeted 2-query diagnostic probe directing model to consult uploaded corpus.",
+    )
     args = parser.parse_args()
-    code = asyncio.run(run_rag_verification(live_flag=args.live))
+    code = asyncio.run(run_rag_verification(live_flag=args.live, diagnose=args.diagnose))
     sys.exit(code)
 
 
