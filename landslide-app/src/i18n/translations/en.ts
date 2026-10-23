@@ -82,6 +82,9 @@ export const en = {
     safetyGuideTitle: 'Landslide Safety Guide',
     safetyGuideSubtitle:
       'Essential safety steps before, during and after a landslide.',
+    assistantTitle: 'BhuRakshak AI Assistant',
+    assistantSubtitle:
+      'Ask about landslide mechanisms, rainfall triggers, and risk maps.',
     shareLocationTitle: 'Share Location',
     shareLocationSubtitle: 'Send your current location',
     shelterTitle: 'Nearby Safe Shelters',

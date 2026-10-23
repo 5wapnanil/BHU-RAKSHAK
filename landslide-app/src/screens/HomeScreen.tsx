@@ -179,6 +179,28 @@ export function HomeScreen({ navigation }: HomeScreenProps) {
         </TouchableOpacity>
 
         <TouchableOpacity
+          style={styles.safetyGuideCard}
+          activeOpacity={0.7}
+          onPress={() => navigation.navigate('Assistant')}
+        >
+          <View style={[styles.safetyGuideIconWrap, { backgroundColor: '#FFF0ED' }]}>
+            <Ionicons name="sparkles" size={22} color={colors.primary} />
+          </View>
+          <View style={styles.safetyGuideContent}>
+            <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6 }}>
+              <Text style={styles.safetyGuideTitle}>{t('home.assistantTitle')}</Text>
+              <View style={styles.fieldReportTag}>
+                <Text style={styles.fieldReportTagText}>AI INTEL</Text>
+              </View>
+            </View>
+            <Text style={styles.safetyGuideSubtitle}>
+              {t('home.assistantSubtitle')}
+            </Text>
+          </View>
+          <Ionicons name="chevron-forward" size={18} color={colors.textLight} />
+        </TouchableOpacity>
+
+        <TouchableOpacity
           style={styles.shareLocationCard}
           activeOpacity={0.7}
           onPress={shareLocation}

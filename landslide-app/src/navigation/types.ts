@@ -13,6 +13,7 @@ export type HomeStackParamList = {
   LandslideSafetyGuide: undefined;
   PostDisasterCheckIn: undefined;
   FieldReport: undefined;
+  Assistant: undefined;
 };
 
 export type OperationsStackParamList = {

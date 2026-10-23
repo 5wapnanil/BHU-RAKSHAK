@@ -13,6 +13,7 @@ export { LandslideSafetyGuideScreen } from './LandslideSafetyGuideScreen';
 export { ContactScreen } from './ContactScreen';
 export { PostDisasterCheckInScreen } from './PostDisasterCheckInScreen';
 export { FieldReportScreen } from './FieldReportScreen';
+export { AssistantScreen } from './AssistantScreen';
 export {
   OperationsScreen,
   AssignmentsScreen,

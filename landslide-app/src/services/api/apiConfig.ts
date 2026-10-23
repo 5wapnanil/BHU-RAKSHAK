@@ -51,5 +51,9 @@ export const API_CONFIG = {
     reliefResources: '/api/relief-resources',
     shelters: '/api/shelters',
     fieldReports: '/api/field-reports',
+    assistant: {
+      threads: '/api/assistant/threads',
+      query: '/api/assistant/query',
+    },
   },
 };

@@ -19,6 +19,7 @@ import { ContactScreen } from '../screens/ContactScreen';
 import { LandslideSafetyGuideScreen } from '../screens/LandslideSafetyGuideScreen';
 import { PostDisasterCheckInScreen } from '../screens/PostDisasterCheckInScreen';
 import { FieldReportScreen } from '../screens/FieldReportScreen';
+import { AssistantScreen } from '../screens/AssistantScreen';
 import {
   OperationsScreen,
   AssignmentsScreen,
@@ -51,6 +52,7 @@ function HomeStackNavigator({ initialRouteName }: { initialRouteName?: keyof Hom
       <HomeStack.Screen name="LandslideSafetyGuide" component={LandslideSafetyGuideScreen} />
       <HomeStack.Screen name="PostDisasterCheckIn" component={PostDisasterCheckInScreen} />
       <HomeStack.Screen name="FieldReport" component={FieldReportScreen} />
+      <HomeStack.Screen name="Assistant" component={AssistantScreen} />
     </HomeStack.Navigator>
   );
 }

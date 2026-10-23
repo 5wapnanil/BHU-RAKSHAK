@@ -84,6 +84,9 @@ export const hi: Translations = {
     safetyGuideTitle: 'भूस्खलन सुरक्षा मार्गदर्शिका',
     safetyGuideSubtitle:
       'भूस्खलन से पहले, दौरान और बाद के आवश्यक सुरक्षा कदम।',
+    assistantTitle: 'भू-रक्षक एआई सहायक',
+    assistantSubtitle:
+      'भूस्खलन तंत्र, वर्षा ट्रिगर और जोखिम मानचित्रों के बारे में पूछें।',
     shareLocationTitle: 'स्थान साझा करें',
     shareLocationSubtitle: 'अपना वर्तमान स्थान भेजें',
     shelterTitle: 'नज़दीकी सुरक्षित आश्रयस्थल',
