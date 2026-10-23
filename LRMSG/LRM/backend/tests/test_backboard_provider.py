@@ -192,7 +192,7 @@ class TestBackboardSettings(unittest.TestCase):
             self.assertEqual(cfg.api_key, "")
             self.assertEqual(cfg.base_url, "https://app.backboard.io/api")
             self.assertEqual(cfg.assistant_id, "")
-            self.assertEqual(cfg.timeout_seconds, 30.0)
+            self.assertEqual(cfg.timeout_seconds, 60.0)
             self.assertEqual(cfg.provider, "mock")
             self.assertEqual(cfg.session_expiry_hours, 24)
             self.assertFalse(cfg.is_configured)
@@ -213,8 +213,13 @@ class TestBackboardSettings(unittest.TestCase):
 
     def test_robust_numeric_parsing(self):
         cfg = BackboardSettings(timeout_seconds="invalid", session_expiry_hours="not_a_number")
-        self.assertEqual(cfg.timeout_seconds, 30.0)
+        self.assertEqual(cfg.timeout_seconds, 60.0)
         self.assertEqual(cfg.session_expiry_hours, 24)
+
+    def test_timeout_env_variable_override(self):
+        with patch.dict("os.environ", {"BACKBOARD_TIMEOUT_SECONDS": "45.0"}, clear=False):
+            cfg = BackboardSettings()
+            self.assertEqual(cfg.timeout_seconds, 45.0)
 
     def test_uppercase_property_aliases(self):
         cfg = BackboardSettings(
@@ -618,13 +623,18 @@ class TestLiveBackboardProviderOffline(unittest.IsolatedAsyncioTestCase):
 
     async def test_connection_timeout(self):
         def handler(request: httpx.Request) -> httpx.Response:
-            raise httpx.ConnectTimeout("Connection timed out after 15s")
+            raise httpx.ConnectTimeout("Connection timed out after 10s")
 
         client = httpx.AsyncClient(transport=httpx.MockTransport(handler))
         provider = LiveBackboardProvider(config=self.cfg, http_client=client)
 
-        with self.assertRaises(BackboardTimeoutError):
+        with self.assertRaises(BackboardTimeoutError) as ctx:
             await provider.send_message("th-1", "Query")
+        self.assertIn("connection timed out", str(ctx.exception).lower())
+
+        with self.assertRaises(BackboardTimeoutError) as ctx:
+            await provider.create_thread()
+        self.assertIn("connection timed out", str(ctx.exception).lower())
 
     async def test_read_timeout(self):
         def handler(request: httpx.Request) -> httpx.Response:
@@ -633,8 +643,13 @@ class TestLiveBackboardProviderOffline(unittest.IsolatedAsyncioTestCase):
         client = httpx.AsyncClient(transport=httpx.MockTransport(handler))
         provider = LiveBackboardProvider(config=self.cfg, http_client=client)
 
-        with self.assertRaises(BackboardTimeoutError):
+        with self.assertRaises(BackboardTimeoutError) as ctx:
             await provider.send_message("th-1", "Query")
+        self.assertIn("waiting for upstream response", str(ctx.exception).lower())
+
+        with self.assertRaises(BackboardTimeoutError) as ctx:
+            await provider.create_thread()
+        self.assertIn("waiting for upstream response", str(ctx.exception).lower())
 
     async def test_connection_refused(self):
         def handler(request: httpx.Request) -> httpx.Response:
