@@ -48,12 +48,12 @@ class BackboardSettings:
         raw_timeout = (
             timeout_seconds
             if timeout_seconds is not None
-            else os.environ.get("BACKBOARD_TIMEOUT_SECONDS", "30.0")
+            else os.environ.get("BACKBOARD_TIMEOUT_SECONDS", "60.0")
         )
         try:
             self.timeout_seconds: float = float(raw_timeout)
         except (ValueError, TypeError):
-            self.timeout_seconds = 30.0
+            self.timeout_seconds = 60.0
 
         self.provider: str = (
             provider

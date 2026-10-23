@@ -367,7 +367,15 @@ class LiveBackboardProvider:
             else:
                 async with httpx.AsyncClient(timeout=timeout_obj) as client:
                     res = await client.post(url, headers=headers, json=body)
-        except (httpx.ConnectTimeout, httpx.ReadTimeout, httpx.TimeoutException) as e:
+        except httpx.ConnectTimeout as e:
+            raise BackboardTimeoutError(
+                f"Backboard thread creation connection timed out after 10.0s."
+            ) from e
+        except httpx.ReadTimeout as e:
+            raise BackboardTimeoutError(
+                f"Backboard thread creation timed out waiting for upstream response after {self.timeout}s."
+            ) from e
+        except httpx.TimeoutException as e:
             raise BackboardTimeoutError(
                 f"Backboard thread creation timed out after {self.timeout}s."
             ) from e
@@ -465,7 +473,15 @@ class LiveBackboardProvider:
             else:
                 async with httpx.AsyncClient(timeout=timeout_obj) as client:
                     res = await client.post(url, headers=headers, json=body)
-        except (httpx.ConnectTimeout, httpx.ReadTimeout, httpx.TimeoutException) as e:
+        except httpx.ConnectTimeout as e:
+            raise BackboardTimeoutError(
+                f"Backboard connection timed out after 10.0s."
+            ) from e
+        except httpx.ReadTimeout as e:
+            raise BackboardTimeoutError(
+                f"Backboard message query timed out waiting for upstream response after {self.timeout}s."
+            ) from e
+        except httpx.TimeoutException as e:
             raise BackboardTimeoutError(
                 f"Backboard message query timed out after {self.timeout}s."
             ) from e
