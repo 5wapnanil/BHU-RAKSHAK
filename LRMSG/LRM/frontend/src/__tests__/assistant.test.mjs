@@ -209,14 +209,8 @@ describe("Frontend AI Assistant Client Module", () => {
   });
 
   it("verifies client bundle contains zero hardcoded Backboard API keys or signing secrets", () => {
-    const assistantLibPath = path.resolve(
-      process.cwd(),
-      "LRMSG/LRM/frontend/src/lib/assistant.ts"
-    );
-    const assistantPagePath = path.resolve(
-      process.cwd(),
-      "LRMSG/LRM/frontend/src/app/assistant/page.tsx"
-    );
+    const assistantLibPath = new URL("../lib/assistant.ts", import.meta.url);
+    const assistantPagePath = new URL("../app/assistant/page.tsx", import.meta.url);
 
     const libCode = fs.readFileSync(assistantLibPath, "utf-8");
     const pageCode = fs.readFileSync(assistantPagePath, "utf-8");

@@ -221,14 +221,8 @@ describe('Landslide Mobile App — AI Assistant Service Unit Tests', () => {
   });
 
   it('verifies mobile code contains zero hardcoded Backboard API keys or signing secrets', () => {
-    const apiPath = path.resolve(
-      process.cwd(),
-      'landslide-app/src/services/api/assistantApi.ts'
-    );
-    const screenPath = path.resolve(
-      process.cwd(),
-      'landslide-app/src/screens/AssistantScreen.tsx'
-    );
+    const apiPath = new URL('../services/api/assistantApi.ts', import.meta.url);
+    const screenPath = new URL('../screens/AssistantScreen.tsx', import.meta.url);
 
     const apiCode = fs.readFileSync(apiPath, 'utf-8');
     const screenCode = fs.readFileSync(screenPath, 'utf-8');
