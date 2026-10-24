@@ -92,26 +92,41 @@ Inject the output into `COORDINATOR_API_KEY` and `SESSION_SIGNING_KEY` via your 
 
 ### Architecture & Rate Limiter Constraint
 > [!IMPORTANT]
-> The AI Assistant endpoints utilize an in-memory sliding-window rate limiter (5 threads/hr/IP, 10 queries/min/session) stored within Python process memory.
-> The backend Docker container is configured to run a **single Uvicorn worker process**. Do NOT scale the backend across multiple container replicas or multiple Uvicorn workers until a centralized Redis rate limiter is attached.
+> The AI Assistant endpoints utilize an in-memory sliding-window rate limiter:
+> - **Thread Creation**: Exactly 5 requests per hour per client IP (`THREAD_CREATION_RATE_LIMIT_REQUESTS = 5`, window = 3600s).
+> - **Assistant Queries**: Exactly 10 requests per minute per verified session (`QUERY_RATE_LIMIT_REQUESTS = 10`, window = 60s).
+>
+> *(Note: Any previous mention of 30 queries/minute in artifact diagrams was an erroneous documentation typo; the codebase, unit tests, and runtime enforcement have strictly enforced 10 queries/minute since inception).*
+>
+> The backend Docker container is configured to run a **single Uvicorn worker process** (`--workers 1`). Do NOT scale the backend across multiple container replicas or multiple Uvicorn workers until a centralized Redis rate limiter is attached.
 
 ### Starting Production Containers
-```bash
-cd LRMSG/LRM
+You can start the production containers from either the repository root or the `LRMSG/LRM` directory:
 
-# 1. Start database and backend containers
+```bash
+# Option A: From repository root (C:\Users\Swapnanil\Desktop\app2)
+docker compose -f LRMSG/LRM/docker-compose.prod.yml up -d
+
+# Option B: From LRM directory (LRMSG/LRM)
+cd LRMSG/LRM
 docker compose -f docker-compose.prod.yml up -d
 
-# 2. Check service status
+# Check service status
 docker compose -f docker-compose.prod.yml ps
 
-# 3. Stream backend logs
+# Stream backend logs
 docker compose -f docker-compose.prod.yml logs -f backend
 ```
 
 ---
 
 ## 7. Database Migrations & Data Preservation
+
+### Database Volume Identity & Storage Preservation
+Docker Compose prefixes declared volumes with the project name `<project>_<volume>`.
+* In local development, the Compose project defaults to `lrm` (derived from the `LRMSG/LRM` directory), creating the Docker Engine volume named **`lrm_lrm_pgdata`**.
+* To prevent accidental data loss or splitting if Compose is executed with a different project flag (e.g. `-p bhurakshak`) or from a different directory, `docker-compose.prod.yml` explicitly defines `name: lrm` and `volumes.lrm_pgdata.name: lrm_lrm_pgdata`.
+* This guarantees that the production stack binds to the exact existing PostGIS storage volume containing all application tables, audit logs, and spatial extension tables.
 
 1. **Verify Database Health**:
    ```bash
@@ -126,7 +141,7 @@ docker compose -f docker-compose.prod.yml logs -f backend
    docker compose -f docker-compose.prod.yml exec db pg_dump -U lrm -d lrm_db > backup_$(date +%Y%m%d).sql
    ```
 > [!WARNING]
-> Never execute `docker compose down -v`. The `-v` flag deletes Docker volumes, which will destroy the `lrm_pgdata` volume and all application records.
+> Never execute `docker compose down -v`. The `-v` flag deletes Docker volumes, which will destroy the underlying `lrm_lrm_pgdata` volume and all persistent database records.
 
 ---
 
@@ -206,3 +221,18 @@ For Expo / React Native release builds:
 * **HTTP 403 on Assistant Queries**: Verify the browser origin matches an entry in `TRUSTED_ORIGINS`.
 * **Mobile Build Error: Configuration Error**: Ensure `EXPO_PUBLIC_API_URL` is configured in release build secrets.
 * **Database Connection Refused**: Confirm container `lrm_postgres` is running and healthy on internal port 5432.
+
+---
+
+## 13. Operational Boundaries & Environmental Limitations
+
+Before authorizing a public operational release, operational teams must account for the following boundaries:
+1. **Physical Hardware Field Validation**:
+   - Automated verification has been completed across simulated environments, Android emulators, and browsers.
+   - Physical field verification with actual device camera sensors (varying focal lengths and lighting), hardware GPS receivers (high-altitude satellite fix accuracy), and cellular SMS gateways remains required prior to life-safety deployment.
+2. **Retired Landslide ML Models**:
+   - All legacy ML landslide prediction endpoints under `/api/prediction/*` are retired and return `HTTP 503 Service Unavailable`.
+   - The platform does not currently provide operational automated landslide hazard predictions; field reports, knowledge assistant grounding, and coordinator incident management represent the active system capabilities.
+3. **Single-Worker Process Invariant**:
+   - In-memory rate limiting is process-local. The container runs a single Uvicorn worker process (`--workers 1`).
+   - For multi-replica or multi-worker horizontal scaling, a distributed store (e.g. Redis) must be introduced before removing this constraint.

@@ -14,6 +14,8 @@
 #   docker compose -f docker-compose.prod.yml logs -f backend
 # =====================================================================
 
+name: lrm
+
 services:
   db:
     image: postgis/postgis:16-3.4
@@ -79,11 +81,15 @@ services:
       - lrm_internal_net
 
 volumes:
-  # Named volume preserving existing PostGIS database
+  # Explicit volume name 'lrm_lrm_pgdata' binds to the exact existing PostGIS database
+  # volume regardless of Compose project name or working directory overrides.
   lrm_pgdata:
+    name: lrm_lrm_pgdata
   # Persistent volume for uploaded field photographs
   lrm_uploads:
+    name: lrm_lrm_uploads
 
 networks:
   lrm_internal_net:
+    name: lrm_lrm_internal_net
     driver: bridge
