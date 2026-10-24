@@ -55,6 +55,12 @@ docker-compose.override.yml
 # Temporary data and scrape caches
 LRMSG/LRM/data/public_candidates/
 
+# Database backups & SQL dumps (CRITICAL: DO NOT COMMIT DATA DUMPS)
+backups/
+*.sql
+*.sql.gz
+*.dump
+
 # OS & Editor
 .DS_Store
 Thumbs.db
