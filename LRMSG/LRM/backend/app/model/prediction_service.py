@@ -4,7 +4,10 @@ import numpy as np
 import pandas as pd
 
 from backend.app.model.model_loader import load_all_models
-from final_calibration import calibrated_final_result
+try:
+    from final_calibration import calibrated_final_result
+except ImportError:
+    calibrated_final_result = None
 
 
 # ============================================================

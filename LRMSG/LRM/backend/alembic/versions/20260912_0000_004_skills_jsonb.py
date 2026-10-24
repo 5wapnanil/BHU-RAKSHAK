@@ -16,6 +16,10 @@ depends_on = None
 def upgrade() -> None:
     op.execute("""
         ALTER TABLE volunteer_profiles
+        ALTER COLUMN skills DROP DEFAULT;
+    """)
+    op.execute("""
+        ALTER TABLE volunteer_profiles
         ALTER COLUMN skills TYPE jsonb
         USING CASE
             WHEN skills IS NULL THEN '[]'::jsonb

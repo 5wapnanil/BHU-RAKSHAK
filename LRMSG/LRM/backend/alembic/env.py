@@ -39,6 +39,8 @@ if not DATABASE_URL:
         "DATABASE_URL_SYNC or DATABASE_URL must be set. "
         "See backend/.env.example for configuration."
     )
+if DATABASE_URL.startswith("postgresql://"):
+    DATABASE_URL = "postgresql+psycopg2://" + DATABASE_URL[len("postgresql://"):]
 config.set_main_option("sqlalchemy.url", DATABASE_URL)
 
 

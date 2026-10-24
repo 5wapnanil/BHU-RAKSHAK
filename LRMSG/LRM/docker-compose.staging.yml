@@ -1,0 +1,85 @@
+# =====================================================================
+# BhuRakshak / PahaarPulse — Private Staging Docker Compose Deployment
+# =====================================================================
+# ISOLATION NOTICE:
+# This compose specification operates under project name 'bhurakshak-staging'
+# using isolated volumes ('bhurakshak_staging_pgdata', 'bhurakshak_staging_uploads')
+# and isolated network ('bhurakshak_staging_net').
+#
+# It strictly binds published ports to loopback (127.0.0.1) on non-conflicting
+# port numbers (5433 for DB, 8001 for backend) and NEVER references or mounts
+# the development volume 'lrm_lrm_pgdata'.
+# =====================================================================
+
+name: bhurakshak-staging
+
+services:
+  db:
+    image: postgis/postgis:16-3.4
+    container_name: bhurakshak_staging_postgres
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:5433:5432"
+    environment:
+      POSTGRES_DB: ${DB_NAME:?Database name DB_NAME must be set}
+      POSTGRES_USER: ${DB_USER:?Database user DB_USER must be set}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:?Database password DB_PASSWORD must be set}
+    volumes:
+      - staging_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_NAME}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    networks:
+      - staging_internal_net
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: bhurakshak_staging_backend
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:8001:8000"
+    environment:
+      - ENVIRONMENT=production
+      - DATABASE_URL=postgresql://${DB_USER}:${DB_PASSWORD}@db:5432/${DB_NAME}
+      - DATABASE_URL_SYNC=postgresql://${DB_USER}:${DB_PASSWORD}@db:5432/${DB_NAME}
+      - DB_ECHO=false
+      - COORDINATOR_API_KEY=${COORDINATOR_API_KEY:?COORDINATOR_API_KEY must be set in staging}
+      - TRUSTED_ORIGINS=${TRUSTED_ORIGINS:?TRUSTED_ORIGINS must be set in staging}
+      - SESSION_SIGNING_KEY=${SESSION_SIGNING_KEY:?SESSION_SIGNING_KEY must be set in staging}
+      - TRUSTED_PROXIES=${TRUSTED_PROXIES:-}
+      - BACKBOARD_API_KEY=
+      - BACKBOARD_ASSISTANT_ID=
+      - BACKBOARD_BASE_URL=https://app.backboard.io/api
+      - BACKBOARD_TIMEOUT_SECONDS=60.0
+      - BACKBOARD_PROVIDER=mock
+      - SESSION_EXPIRY_HOURS=${SESSION_EXPIRY_HOURS:-24}
+      - FIELD_REPORT_UPLOAD_DIR=/app/backend/uploads/field_reports
+    volumes:
+      - staging_uploads:/app/backend/uploads/field_reports
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8000/health || exit 1"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    networks:
+      - staging_internal_net
+
+volumes:
+  staging_pgdata:
+    name: bhurakshak_staging_pgdata
+  staging_uploads:
+    name: bhurakshak_staging_uploads
+
+networks:
+  staging_internal_net:
+    name: bhurakshak_staging_net
+    driver: bridge
