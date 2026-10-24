@@ -5,18 +5,43 @@
  *   with window.location.hostname on port 8000 (or NEXT_PUBLIC_API_PORT).
  * - Falls back to http://localhost:8000 for SSR and local environments.
  */
-export function getApiBaseUrl(): string {
-  if (typeof process !== "undefined" && process.env?.NEXT_PUBLIC_API_URL) {
-    const configured = process.env.NEXT_PUBLIC_API_URL;
+export function resolveWebApiBaseUrl(
+  envUrl?: string,
+  isProd: boolean = typeof process !== "undefined" && process.env?.NODE_ENV === "production",
+  windowHost?: string,
+  portOverride?: string
+): string {
+  const configured = (
+    envUrl !== undefined
+      ? envUrl
+      : typeof process !== "undefined"
+      ? process.env?.NEXT_PUBLIC_API_URL
+      : undefined
+  )?.trim().replace(/\/+$/, "");
+
+  if (configured) {
     if (!configured.includes("localhost") && !configured.includes("127.0.0.1")) {
-      return configured.replace(/\/+$/, "");
+      if (isProd && !configured.startsWith("https://")) {
+        console.warn(
+          `[SECURITY WARNING] Insecure HTTP API URL configured for production: ${configured}. Production should use HTTPS.`
+        );
+      }
+      return configured;
     }
   }
-  if (typeof window !== "undefined" && window.location?.hostname) {
-    const port = (typeof process !== "undefined" && process.env?.NEXT_PUBLIC_API_PORT) || "8000";
-    return `http://${window.location.hostname}:${port}`;
+
+  if (windowHost || (typeof window !== "undefined" && window.location?.hostname)) {
+    const host = windowHost || (typeof window !== "undefined" ? window.location.hostname : "localhost");
+    const port =
+      portOverride || (typeof process !== "undefined" && process.env?.NEXT_PUBLIC_API_PORT) || "8000";
+    return `http://${host}:${port}`;
   }
-  return (typeof process !== "undefined" && process.env?.NEXT_PUBLIC_API_URL) || "http://localhost:8000";
+
+  return configured || "http://localhost:8000";
+}
+
+export function getApiBaseUrl(): string {
+  return resolveWebApiBaseUrl();
 }
 
 const API_URL = getApiBaseUrl();

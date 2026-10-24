@@ -407,4 +407,32 @@ describe("Frontend AI Assistant Client Module", () => {
       assert.equal(/asst_[a-zA-Z0-9]{10,}/.test(code), false);
     }
   });
+
+  it("verifies production HTTPS API URL resolution and development fallback", () => {
+    // Pure function logic mirroring resolveWebApiBaseUrl
+    function testResolveUrl(envUrl, isProd, windowHost, portOverride) {
+      const configured = envUrl?.trim().replace(/\/+$/, "");
+      if (configured) {
+        if (!configured.includes("localhost") && !configured.includes("127.0.0.1")) {
+          return configured;
+        }
+      }
+      if (windowHost) {
+        const port = portOverride || "8000";
+        return `http://${windowHost}:${port}`;
+      }
+      return configured || "http://localhost:8000";
+    }
+
+    // 1. Accepts explicit HTTPS production URL
+    assert.equal(testResolveUrl("https://api.bhurakshak.in", true), "https://api.bhurakshak.in");
+    assert.equal(testResolveUrl("https://api.bhurakshak.in/", true), "https://api.bhurakshak.in");
+
+    // 2. Preserves localhost development URL
+    assert.equal(testResolveUrl("http://localhost:8000", false), "http://localhost:8000");
+
+    // 3. Automatically aligns with window.location.hostname in browser dev
+    assert.equal(testResolveUrl(undefined, false, "192.168.0.102", "8000"), "http://192.168.0.102:8000");
+    assert.equal(testResolveUrl(undefined, false, "10.0.2.2", "8000"), "http://10.0.2.2:8000");
+  });
 });

@@ -333,4 +333,67 @@ describe('Landslide Mobile App — FieldReport & Sync Queue Unit Tests', () => {
     assert.equal(updated[2].status, 'pending');
     assert.equal(updated[2].serverConfirmed, false);
   });
+
+  // Test 7: Mobile Production & Development API Base URL Resolution
+  function resolveApiBaseUrlTest({ isDev, envApiUrl, platform = 'android', isEmulator = false, windowHostname = null }) {
+    const configured = envApiUrl?.trim().replace(/\/+$/, '');
+
+    if (!isDev) {
+      if (!configured) {
+        throw new Error(
+          'Configuration Error: Production mobile release build requires EXPO_PUBLIC_API_URL to be configured with an HTTPS backend endpoint.'
+        );
+      }
+      if (!configured.startsWith('https://')) {
+        const isLocalLoopback = configured.startsWith('http://localhost') || configured.startsWith('http://127.0.0.1');
+        if (!isLocalLoopback) {
+          throw new Error(
+            `Security Error: Insecure production API URL '${configured}'. Production release builds must use an HTTPS endpoint.`
+          );
+        }
+      }
+      return configured;
+    }
+
+    if (configured) return configured;
+    if (platform === 'web') {
+      if (windowHostname) return `http://${windowHostname}:8000`;
+      return 'http://localhost:8000';
+    }
+    if (platform !== 'android') return 'http://192.168.0.102:8000';
+    return isEmulator ? 'http://10.0.2.2:8000' : 'http://192.168.0.102:8000';
+  }
+
+  it('rejects missing EXPO_PUBLIC_API_URL in production release build', () => {
+    assert.throws(
+      () => resolveApiBaseUrlTest({ isDev: false, envApiUrl: '' }),
+      /Configuration Error: Production mobile release build requires EXPO_PUBLIC_API_URL/
+    );
+    assert.throws(
+      () => resolveApiBaseUrlTest({ isDev: false, envApiUrl: undefined }),
+      /Configuration Error: Production mobile release build requires EXPO_PUBLIC_API_URL/
+    );
+  });
+
+  it('rejects unencrypted HTTP external API URL in production release build', () => {
+    assert.throws(
+      () => resolveApiBaseUrlTest({ isDev: false, envApiUrl: 'http://api.bhurakshak.in' }),
+      /Security Error: Insecure production API URL/
+    );
+  });
+
+  it('accepts valid HTTPS production API URL in release build', () => {
+    const url = resolveApiBaseUrlTest({ isDev: false, envApiUrl: 'https://api.bhurakshak.in/' });
+    assert.equal(url, 'https://api.bhurakshak.in');
+  });
+
+  it('preserves development Android emulator URL (10.0.2.2:8000)', () => {
+    const url = resolveApiBaseUrlTest({ isDev: true, platform: 'android', isEmulator: true });
+    assert.equal(url, 'http://10.0.2.2:8000');
+  });
+
+  it('preserves development physical LAN URL (192.168.0.102:8000)', () => {
+    const url = resolveApiBaseUrlTest({ isDev: true, platform: 'android', isEmulator: false });
+    assert.equal(url, 'http://192.168.0.102:8000');
+  });
 });

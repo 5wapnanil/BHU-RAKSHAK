@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+from backend.app.api.deps import get_cors_configuration
 from backend.app.api.endpoints.health import router as health_router
 from backend.app.api.endpoints.prediction import router as prediction_router
 from backend.app.api.endpoints.environment import router as environment_router
@@ -12,15 +13,12 @@ app = FastAPI(
     version="1.0.0",
 )
 
+cors_config = get_cors_configuration()
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:3000",
-        "http://127.0.0.1:3000",
-        "http://192.168.0.102:3000",
-        "http://192.168.47.1:8000",
-    ],
-    allow_origin_regex=r"^https?://(localhost|127\.0\.0\.1|192\.168\.\d+\.\d+|10\.0\.2\.2)(:\d+)?$",
+    allow_origins=cors_config["allow_origins"],
+    allow_origin_regex=cors_config["allow_origin_regex"],
     allow_credentials=True,
     allow_methods=["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
     allow_headers=["*"],

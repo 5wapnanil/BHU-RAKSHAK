@@ -483,6 +483,90 @@ class TestApiAuthorization(unittest.TestCase):
             res = self.client.get("/health")
             self.assertEqual(res.status_code, 200)
 
+    def test_production_fails_closed_when_key_unconfigured(self):
+        """In production, missing coordinator key fails closed with HTTP 503."""
+        with patch.dict(os.environ, {"ENVIRONMENT": "production", "COORDINATOR_API_KEY": ""}):
+            res = self.client.post(
+                f"/api/volunteers/{uuid4()}/verify",
+            )
+            self.assertEqual(res.status_code, 503)
+            self.assertIn("Administrative access unavailable", res.json()["detail"])
+
+    def test_trusted_origins_and_cors_security_rules(self):
+        """Validate production and development origin filtering, format verification, and fail-closed behavior."""
+        from backend.app.api.deps import (
+            get_cors_configuration,
+            get_effective_trusted_origins,
+            is_trusted_origin,
+            validate_origin,
+        )
+
+        # 1. Format validation rules
+        # Valid origins
+        self.assertEqual(validate_origin("https://bhurakshak.in"), "https://bhurakshak.in")
+        self.assertEqual(validate_origin("https://bhurakshak.in/"), "https://bhurakshak.in")
+        self.assertEqual(validate_origin("https://app.bhurakshak.in:443"), "https://app.bhurakshak.in")
+        self.assertEqual(validate_origin("http://localhost:3000"), "http://localhost:3000")
+
+        # Wildcard rejection
+        with self.assertRaises(ValueError):
+            validate_origin("*")
+
+        # Path rejection
+        with self.assertRaises(ValueError):
+            validate_origin("https://bhurakshak.in/subpath")
+
+        # Query and fragment rejection
+        with self.assertRaises(ValueError):
+            validate_origin("https://bhurakshak.in?query=1")
+        with self.assertRaises(ValueError):
+            validate_origin("https://bhurakshak.in#fragment")
+
+        # Embedded credentials rejection
+        with self.assertRaises(ValueError):
+            validate_origin("https://user:pass@bhurakshak.in")
+
+        # Production insecure HTTP rejection
+        with self.assertRaises(ValueError):
+            validate_origin("http://bhurakshak.in", is_production=True)
+
+        # 2. Production fail-closed when TRUSTED_ORIGINS is missing
+        with patch.dict(os.environ, {"ENVIRONMENT": "production", "TRUSTED_ORIGINS": ""}):
+            effective = get_effective_trusted_origins(is_production=True)
+            self.assertEqual(effective, [])
+            # In production, unconfigured origins must return False even for local networks
+            self.assertFalse(is_trusted_origin("http://localhost:3000", is_production=True))
+            self.assertFalse(is_trusted_origin("http://192.168.1.50:3000", is_production=True))
+            self.assertFalse(is_trusted_origin("https://bhurakshak.in", is_production=True))
+
+            cors_conf = get_cors_configuration(is_production=True)
+            self.assertEqual(cors_conf["allow_origins"], [])
+            self.assertIsNone(cors_conf["allow_origin_regex"])
+
+        # 3. Production with configured HTTPS origins
+        with patch.dict(os.environ, {"ENVIRONMENT": "production", "TRUSTED_ORIGINS": "https://bhurakshak.in, https://admin.bhurakshak.in"}):
+            self.assertTrue(is_trusted_origin("https://bhurakshak.in", is_production=True))
+            self.assertTrue(is_trusted_origin("https://admin.bhurakshak.in", is_production=True))
+            self.assertFalse(is_trusted_origin("https://evil-attacker.com", is_production=True))
+            # Arbitrary private network IP must NOT pass in production
+            self.assertFalse(is_trusted_origin("http://192.168.1.100:3000", is_production=True))
+
+            cors_conf = get_cors_configuration(is_production=True)
+            self.assertIn("https://bhurakshak.in", cors_conf["allow_origins"])
+            self.assertIn("https://admin.bhurakshak.in", cors_conf["allow_origins"])
+            self.assertIsNone(cors_conf["allow_origin_regex"])
+
+        # 4. Development mode preserves local origins and emulator regex
+        with patch.dict(os.environ, {"ENVIRONMENT": "development", "TRUSTED_ORIGINS": ""}):
+            self.assertTrue(is_trusted_origin("http://localhost:3000", is_production=False))
+            self.assertTrue(is_trusted_origin("http://127.0.0.1:3000", is_production=False))
+            self.assertTrue(is_trusted_origin("http://10.0.2.2:3000", is_production=False))
+            self.assertTrue(is_trusted_origin("http://192.168.0.102:3000", is_production=False))
+
+            cors_conf = get_cors_configuration(is_production=False)
+            self.assertIn("http://localhost:3000", cors_conf["allow_origins"])
+            self.assertIsNotNone(cors_conf["allow_origin_regex"])
+
 
 if __name__ == "__main__":
     unittest.main()
