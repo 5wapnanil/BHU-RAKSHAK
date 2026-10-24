@@ -1,0 +1,89 @@
+# =====================================================================
+# BhuRakshak / PahaarPulse — Production Docker Compose Deployment
+# =====================================================================
+# ARCHITECTURAL NOTICE — RATE LIMITING CONSTRAINT:
+# The AI Assistant endpoints utilize an in-memory sliding-window rate limiter
+# (5 threads/hr/IP, 10 queries/min/session) stored within Python process memory.
+# This deployment packaging is strictly designed for a single backend worker process.
+# Do NOT scale the backend service across multiple replicas or workers until a
+# shared Redis store (e.g., fastapi-limiter) is attached.
+#
+# USAGE:
+#   docker compose -f docker-compose.prod.yml up -d
+#   docker compose -f docker-compose.prod.yml ps
+#   docker compose -f docker-compose.prod.yml logs -f backend
+# =====================================================================
+
+services:
+  db:
+    image: postgis/postgis:16-3.4
+    container_name: lrm_postgres
+    restart: unless-stopped
+    # Security: In production, database port is not exposed on public 0.0.0.0 interfaces.
+    # Accessible only within the internal Docker network (service name: db:5432) or local loopback.
+    ports:
+      - "127.0.0.1:${DB_PORT:-5432}:5432"
+    environment:
+      POSTGRES_DB: ${DB_NAME:?Database name DB_NAME must be set}
+      POSTGRES_USER: ${DB_USER:?Database user DB_USER must be set}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:?Database password DB_PASSWORD must be set}
+    volumes:
+      # Preserves existing PostgreSQL 16 + PostGIS 3.4 database storage
+      - lrm_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_NAME}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    networks:
+      - lrm_internal_net
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: lrm_backend
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "${BACKEND_PORT:-8000}:8000"
+    environment:
+      - ENVIRONMENT=production
+      - DATABASE_URL=postgresql://${DB_USER}:${DB_PASSWORD}@db:5432/${DB_NAME}
+      - DATABASE_URL_SYNC=postgresql://${DB_USER}:${DB_PASSWORD}@db:5432/${DB_NAME}
+      - DB_ECHO=false
+      - COORDINATOR_API_KEY=${COORDINATOR_API_KEY:?COORDINATOR_API_KEY must be set in production}
+      - TRUSTED_ORIGINS=${TRUSTED_ORIGINS:?TRUSTED_ORIGINS must be set in production}
+      - SESSION_SIGNING_KEY=${SESSION_SIGNING_KEY:?SESSION_SIGNING_KEY must be set in production}
+      - TRUSTED_PROXIES=${TRUSTED_PROXIES:-}
+      - BACKBOARD_API_KEY=${BACKBOARD_API_KEY:-}
+      - BACKBOARD_ASSISTANT_ID=${BACKBOARD_ASSISTANT_ID:-}
+      - BACKBOARD_BASE_URL=${BACKBOARD_BASE_URL:-https://app.backboard.io/api}
+      - BACKBOARD_TIMEOUT_SECONDS=${BACKBOARD_TIMEOUT_SECONDS:-60.0}
+      - BACKBOARD_PROVIDER=${BACKBOARD_PROVIDER:-mock}
+      - SESSION_EXPIRY_HOURS=${SESSION_EXPIRY_HOURS:-24}
+      - FIELD_REPORT_UPLOAD_DIR=/app/backend/uploads/field_reports
+    volumes:
+      # Persistent storage for observation photos
+      - lrm_uploads:/app/backend/uploads/field_reports
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8000/health || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+    networks:
+      - lrm_internal_net
+
+volumes:
+  # Named volume preserving existing PostGIS database
+  lrm_pgdata:
+  # Persistent volume for uploaded field photographs
+  lrm_uploads:
+
+networks:
+  lrm_internal_net:
+    driver: bridge

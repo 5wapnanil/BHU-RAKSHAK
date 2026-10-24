@@ -1,0 +1,36 @@
+# Git & CI/CD
+.git
+.gitignore
+.github
+
+# Environment files & secrets (MANDATORY: Never copy into Docker image)
+.env
+.env.*
+*.env
+backend/.env
+frontend/.env.local
+landslide-app/.env
+
+# Local state & caches
+backend/data/ingestion_state.json
+**/__pycache__
+**/*.pyc
+**/*.pyo
+**/*.pyd
+.pytest_cache
+.coverage
+htmlcov
+
+# Client code (isolated build contexts)
+frontend
+landslide-app
+node_modules
+
+# Uploaded test photographs
+backend/uploads/field_reports/*
+!backend/uploads/field_reports/.gitkeep
+
+# Documentation & audit artifacts
+docs
+audit
+scratch
